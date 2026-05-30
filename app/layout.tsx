@@ -10,20 +10,14 @@ export const metadata = {
     template: "%s | AWAIA",
   },
   description:
-    "Enterprise AI platforms for banking, insurance, NBFCs, financial institutions, and regulated industries.",
+    "Enterprise AI platforms for banking, insurance, NBFCs and regulated industries.",
 
-  keywords: [
-    "Enterprise AI",
-    "Conversational AI",
-    "Voice AI",
-    "Banking AI",
-    "BFSI AI",
-    "Agentic AI",
-    "AI Platform",
-    "Financial Services AI",
-    "MEERA",
-    "LEA",
-  ],
+  openGraph: {
+    title: "AWAIA Enterprise Products",
+    description:
+      "Enterprise AI platforms for regulated institutions.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({

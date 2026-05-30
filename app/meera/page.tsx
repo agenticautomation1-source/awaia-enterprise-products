@@ -224,6 +224,33 @@ export default function MeeraPage() {
   </div>
 </section>
 
+
+<section className="py-40 border-t">
+  <div className="max-w-5xl mx-auto px-8 text-center">
+
+    <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-6">
+      Executive Briefing
+    </p>
+
+    <h2 className="text-6xl font-light mb-8">
+      Explore MEERA Inside Your Enterprise.
+    </h2>
+
+    <p className="text-xl text-gray-600 mb-12">
+      Discuss deployment models, security requirements,
+      compliance controls, and implementation strategy.
+    </p>
+
+    <a
+      href="mailto:contact@awaia.ai"
+      className="inline-block px-8 py-4 bg-black text-white"
+    >
+      Request Executive Briefing
+    </a>
+
+  </div>
+</section>
+
     </main>
   );
 }

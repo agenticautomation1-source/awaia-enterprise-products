@@ -1,8 +1,8 @@
 export default function LeaPage() {
   return (
-    <main className="min-h-screen">
+    <main>
 
-      <section className="min-h-screen flex items-center">
+      <section className="min-h-screen flex items-center pt-32">
         <div className="max-w-7xl mx-auto px-8">
 
           <p className="uppercase tracking-[0.35em] text-sm mb-8 text-gray-500">
@@ -10,17 +10,15 @@ export default function LeaPage() {
           </p>
 
           <h1 className="text-7xl md:text-8xl font-light leading-[0.9]">
-            Investigation
-            <br />
-            Intelligence
-            <br />
+            Investigation Intelligence
             For Modern Enterprises.
           </h1>
 
-          <p className="mt-10 text-2xl max-w-3xl text-gray-600">
-            Accelerate investigations, compliance,
-            fraud detection, and evidence analysis
-            through AI-assisted workflows.
+          <p className="mt-10 text-2xl text-gray-600 max-w-3xl">
+            Accelerate fraud detection,
+            compliance investigations,
+            evidence analysis,
+            and case management workflows.
           </p>
 
         </div>
