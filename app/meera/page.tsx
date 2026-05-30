@@ -19,7 +19,7 @@ export default function MeeraPage() {
           <br />
           Voice Intelligence
           <br />
-          For Banking.
+          For Regulated Enterprises.
         </h1>
 
         <p className="mt-10 text-2xl text-gray-600 leading-relaxed max-w-2xl">
@@ -191,6 +191,38 @@ export default function MeeraPage() {
 
         </div>
       </section>
+
+
+
+<section className="py-32 border-t">
+  <div className="max-w-7xl mx-auto px-8">
+
+    <div className="grid md:grid-cols-4 gap-12">
+
+      <div>
+        <div className="text-5xl mb-3">24×7</div>
+        <p className="text-gray-500">Voice Operations</p>
+      </div>
+
+      <div>
+        <div className="text-5xl mb-3">100%</div>
+        <p className="text-gray-500">Audit Visibility</p>
+      </div>
+
+      <div>
+        <div className="text-5xl mb-3">Multi</div>
+        <p className="text-gray-500">Language Support</p>
+      </div>
+
+      <div>
+        <div className="text-5xl mb-3">Hybrid</div>
+        <p className="text-gray-500">Deployment Models</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
     </main>
   );
