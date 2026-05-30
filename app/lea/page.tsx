@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "LEA Investigation Intelligence Platform",
+  description:
+    "Investigation intelligence platform for fraud detection, compliance, and enforcement workflows.",
+};
+
+
 export default function LeaPage() {
   return (
     <main className="min-h-screen flex items-center pt-32">
