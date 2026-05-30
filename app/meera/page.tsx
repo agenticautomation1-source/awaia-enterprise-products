@@ -1,3 +1,6 @@
+
+import Architecture from "@/components/sections/Architecture";
+
 export default function MeeraPage() {
   return (
     <main>
@@ -71,32 +74,9 @@ export default function MeeraPage() {
   </div>
 </section>
 
-      {/* ARCHITECTURE */}
-      <section className="py-32 border-t">
-        <div className="max-w-7xl mx-auto px-8">
+<Architecture />
 
-          <p className="uppercase tracking-[0.3em] text-sm mb-8 text-gray-500">
-            Enterprise Architecture
-          </p>
-
-          <h2 className="text-5xl font-light mb-10">
-            Designed for Regulated Institutions.
-          </h2>
-
-          <p className="text-xl max-w-4xl leading-relaxed text-gray-600">
-            MEERA combines conversational AI,
-            authentication,
-            workflow orchestration,
-            human escalation,
-            audit logging,
-            analytics,
-            and compliance controls
-            into a unified enterprise platform.
-          </p>
-
-        </div>
-      </section>
-
+ 
       {/* DEPLOYMENT */}
       <section className="py-32 border-t">
         <div className="max-w-7xl mx-auto px-8">
@@ -192,39 +172,6 @@ export default function MeeraPage() {
         </div>
       </section>
 
-<section className="py-32 border-t">
-  <div className="max-w-7xl mx-auto px-8">
-
-    <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-12">
-      Enterprise Architecture
-    </p>
-
-    <div className="grid md:grid-cols-5 gap-8 text-center">
-
-      <div className="border p-8">
-        Voice Channels
-      </div>
-
-      <div className="border p-8">
-        MEERA Core
-      </div>
-
-      <div className="border p-8">
-        Authentication
-      </div>
-
-      <div className="border p-8">
-        Human Escalation
-      </div>
-
-      <div className="border p-8">
-        Audit Layer
-      </div>
-
-    </div>
-
-  </div>
-</section>
 
 
 
