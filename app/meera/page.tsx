@@ -1,5 +1,6 @@
-
+import InstitutionalReach from "@/components/sections/InstitutionalReach";
 import Architecture from "@/components/sections/Architecture";
+import ArchitectureDiagram from "@/components/sections/ArchitectureDiagram";
 
 export default function MeeraPage() {
   return (
@@ -43,31 +44,61 @@ export default function MeeraPage() {
 
       </div>
 
-      <div className="border rounded-3xl p-12">
+      <div className="border border-neutral-200 bg-neutral-50 rounded-3xl p-12 relative overflow-hidden">
 
-        <div className="space-y-8">
+  <div className="absolute top-8 right-8 flex gap-1">
+    <div className="w-1 h-4 bg-black animate-pulse"></div>
+    <div className="w-1 h-7 bg-black animate-pulse [animation-delay:150ms]"></div>
+    <div className="w-1 h-10 bg-black animate-pulse [animation-delay:300ms]"></div>
+    <div className="w-1 h-6 bg-black animate-pulse [animation-delay:450ms]"></div>
+  </div>
 
-          <div>Voice Channels</div>
+  <div className="mb-10 text-xs tracking-[0.25em] text-neutral-500 uppercase">
+    Live Enterprise Interaction
+  </div>
 
-          <div>↓</div>
+  <div className="space-y-6">
 
-          <div>MEERA Intelligence Layer</div>
-
-          <div>↓</div>
-
-          <div>Authentication & Verification</div>
-
-          <div>↓</div>
-
-          <div>Human Escalation</div>
-
-          <div>↓</div>
-
-          <div>Audit & Analytics</div>
-
-        </div>
-
+    <div className="border bg-white p-5">
+      <div className="text-[10px] uppercase text-neutral-400 mb-2">
+        Customer
       </div>
+
+      <div>
+        I need to check my overseas transaction limit.  
+      </div>
+    </div>
+
+    <div className="flex justify-center py-2">
+      <div className="flex gap-1">
+        <div className="w-1 h-3 bg-black animate-pulse"></div>
+        <div className="w-1 h-5 bg-black animate-pulse"></div>
+        <div className="w-1 h-7 bg-black animate-pulse"></div>
+        <div className="w-1 h-4 bg-black animate-pulse"></div>
+      </div>
+    </div>
+
+    <div className="bg-black text-white p-5 ml-12">
+      <div className="text-[10px] uppercase text-neutral-400 mb-2">
+        MEERA
+      </div>
+
+      <div>
+        Your current limit is ₹50,00,000. Would you like a temporary increase request?
+      </div>
+    </div>
+
+  </div>
+
+  <div className="mt-12 pt-8 border-t flex justify-between text-[11px] uppercase tracking-widest text-neutral-500">
+
+    <span>Voice Gateway</span>
+    <span>Policy Engine</span>
+    <span>Core Banking</span>
+
+  </div>
+
+</div>
 
     </div>
 
@@ -75,6 +106,7 @@ export default function MeeraPage() {
 </section>
 
 <Architecture />
+<ArchitectureDiagram />
 
  
       {/* DEPLOYMENT */}
@@ -112,46 +144,70 @@ export default function MeeraPage() {
         </div>
       </section>
 
-      {/* SECURITY */}
-      <section className="py-32 border-t">
-        <div className="max-w-7xl mx-auto px-8">
+     <div className="grid md:grid-cols-3 gap-10 mt-12">
 
-          <h2 className="text-5xl font-light mb-12">
-            Security & Compliance
-          </h2>
+  <div>
+    <div className="mb-4 text-xl">🛡</div>
+    <h3 className="mb-3 text-xl">Governance Controls</h3>
+    <p className="text-neutral-600">
+      Policy-driven execution with enterprise auditability.
+    </p>
+  </div>
 
-          <ul className="space-y-4 text-xl">
-            <li>End-to-End Encryption</li>
-            <li>Complete Audit Trails</li>
-            <li>Data Residency Controls</li>
-            <li>Human Escalation Framework</li>
-            <li>OTP & Authentication Workflows</li>
-            <li>Customer-Owned Infrastructure</li>
-          </ul>
+  <div>
+    <div className="mb-4 text-xl">🔐</div>
+    <h3 className="mb-3 text-xl">Customer-Owned Data</h3>
+    <p className="text-neutral-600">
+      On-premise, sovereign cloud and private deployment options.
+    </p>
+  </div>
 
-        </div>
-      </section>
+  <div>
+    <div className="mb-4 text-xl">🌐</div>
+    <h3 className="mb-3 text-xl">Multi-Language Support</h3>
+    <p className="text-neutral-600">
+      Native support for multilingual customer interactions.
+    </p>
+  </div>
 
-      {/* USE CASES */}
-      <section className="py-32 border-t">
-        <div className="max-w-7xl mx-auto px-8">
+</div>
 
-          <h2 className="text-5xl font-light mb-12">
-            BFSI Use Cases
-          </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>Customer Service Automation</div>
-            <div>Collections Automation</div>
-            <div>Loan Servicing</div>
-            <div>Insurance Servicing</div>
-            <div>Customer Authentication</div>
-            <div>Relationship Manager Escalation</div>
-          </div>
+<div className="grid md:grid-cols-4 gap-0 mt-12 border">
 
-        </div>
-      </section>
+  <div className="p-8 border-r border-b">
+    Banking
+  </div>
 
+  <div className="p-8 border-r border-b">
+    Insurance
+  </div>
+
+  <div className="p-8 border-r border-b">
+    NBFC
+  </div>
+
+  <div className="p-8 border-b">
+    Fintech
+  </div>
+
+  <div className="p-8 border-r">
+    Capital Markets
+  </div>
+
+  <div className="p-8 border-r">
+    Government
+  </div>
+
+  <div className="p-8 border-r">
+    Healthcare
+  </div>
+
+  <div className="p-8">
+    Manufacturing
+  </div>
+
+</div>
       {/* CTA */}
       <section className="py-32 border-t">
         <div className="max-w-7xl mx-auto px-8 text-center">
@@ -205,6 +261,7 @@ export default function MeeraPage() {
   </div>
 </section>
 
+<InstitutionalReach />
 
 <section className="py-40 border-t">
   <div className="max-w-5xl mx-auto px-8 text-center">
