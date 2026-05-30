@@ -51,3 +51,14 @@ a {
 button {
   cursor: pointer;
 }
+
+body {
+  background:
+    radial-gradient(circle at top right,
+      rgba(99,102,241,0.06),
+      transparent 35%),
+    radial-gradient(circle at bottom left,
+      rgba(99,102,241,0.04),
+      transparent 40%),
+    #fafafa;
+}
