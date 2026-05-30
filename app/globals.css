@@ -62,3 +62,48 @@ body {
       transparent 40%),
     #fafafa;
 }
+
+.waveform-bar {
+  width: 8px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+  180deg,
+  #9b8cff 0%,
+  #7c6cff 45%,
+  #5b4df7 100%
+);
+
+  transform-origin: bottom;
+
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+@keyframes wave {
+
+  0%,100% {
+    transform: scaleY(0.4);
+  }
+
+  50% {
+    transform: scaleY(1.4);
+  }
+
+}
+
+@keyframes floatCard {
+
+  0%,100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+}
+
+.float-card {
+  animation: floatCard 8s ease-in-out infinite;
+}

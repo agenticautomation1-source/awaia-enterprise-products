@@ -8,7 +8,11 @@ export default function Header() {
         </div>
 
         <nav className="flex gap-10 text-sm text-gray-600">
-          <a href="/meera">MEERA</a>
+          <a href="/meera"><span className="text-[#3F5E8C]">
+  MEERA
+</span>
+<div className="h-px bg-[#3F5E8C] mt-2"></div>
+</a>
           <a href="/lea">LEA</a>
         </nav>
 

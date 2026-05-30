@@ -1,3 +1,4 @@
+import SignalBars from "@/components/ui/SignalBars";
 import InstitutionalReach from "@/components/sections/InstitutionalReach";
 import Architecture from "@/components/sections/Architecture";
 import ArchitectureDiagram from "@/components/sections/ArchitectureDiagram";
@@ -7,7 +8,15 @@ export default function MeeraPage() {
     <main>
 
       {/* HERO */}
-      <section className="min-h-screen flex items-center pt-32">
+      <section className="min-h-screen flex items-center pt-32 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+
+  <div className="absolute top-20 right-20 w-[700px] h-[700px] rounded-full bg-violet-200/20 blur-[140px]" />
+
+  <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-indigo-100/20 blur-[120px]" />
+
+</div>
+
   <div className="max-w-7xl mx-auto px-8 w-full">
 
     <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -18,13 +27,26 @@ export default function MeeraPage() {
           Enterprise Voice Intelligence Platform
         </p>
 
-        <h1 className="text-7xl md:text-8xl font-light leading-[0.9]">
-          Enterprise
-          <br />
-          Voice Intelligence
-          <br />
-          For Regulated Enterprises.
-        </h1>
+        <h1 className="leading-[0.88] font-light">
+
+  <span className="block text-7xl md:text-[110px] tracking-[-0.06em]">
+    Enterprise
+  </span>
+
+  <span className="block text-7xl md:text-[110px] tracking-[-0.06em]">
+    Voice Intelligence
+  </span>
+
+  <span className="block text-7xl md:text-[110px] tracking-[-0.06em]">
+    For
+    <span className="text-[#5D6B87]"> Regulated</span>
+  </span>
+
+  <span className="block text-7xl md:text-[110px] tracking-[-0.06em]">
+    Enterprises.
+  </span>
+
+</h1>
 
         <p className="mt-10 text-2xl text-gray-600 leading-relaxed max-w-2xl">
           Deploy conversational AI inside your bank,
@@ -33,25 +55,52 @@ export default function MeeraPage() {
         </p>
 
         <div className="mt-12 flex gap-4">
-          <button className="px-8 py-4 bg-black text-white">
+          <button className="
+px-8
+py-4
+bg-black
+text-white
+rounded-full
+hover:scale-105
+transition
+duration-300
+">
             Request Briefing
           </button>
 
-          <button className="px-8 py-4 border border-gray-300">
+          <button
+  className="
+  px-8
+  py-4
+  border
+  border-gray-300
+  rounded-full
+  bg-white/70
+  backdrop-blur-sm
+  hover:bg-white
+  transition-all
+  duration-300
+  "
+>
             Explore Architecture
           </button>
         </div>
 
       </div>
 
-      <div className="border border-neutral-200 bg-neutral-50 rounded-3xl p-12 relative overflow-hidden">
+      <div className="
+float-card
+border
+border-white/60
+bg-white/70
+backdrop-blur-xl
+shadow-[0_20px_80px_rgba(0,0,0,0.08)]
+rounded-[32px]
+p-12
+relative
+overflow-hidden
+">
 
-  <div className="absolute top-8 right-8 flex gap-1">
-    <div className="w-1 h-4 bg-black animate-pulse"></div>
-    <div className="w-1 h-7 bg-black animate-pulse [animation-delay:150ms]"></div>
-    <div className="w-1 h-10 bg-black animate-pulse [animation-delay:300ms]"></div>
-    <div className="w-1 h-6 bg-black animate-pulse [animation-delay:450ms]"></div>
-  </div>
 
   <div className="mb-10 text-xs tracking-[0.25em] text-neutral-500 uppercase">
     Live Enterprise Interaction
@@ -69,14 +118,11 @@ export default function MeeraPage() {
       </div>
     </div>
 
-    <div className="flex justify-center py-2">
-      <div className="flex gap-1">
-        <div className="w-1 h-3 bg-black animate-pulse"></div>
-        <div className="w-1 h-5 bg-black animate-pulse"></div>
-        <div className="w-1 h-7 bg-black animate-pulse"></div>
-        <div className="w-1 h-4 bg-black animate-pulse"></div>
-      </div>
+    <div className="flex justify-center py-6">
+       <SignalBars />
+    
     </div>
+
 
     <div className="bg-black text-white p-5 ml-12">
       <div className="text-[10px] uppercase text-neutral-400 mb-2">
@@ -173,46 +219,20 @@ export default function MeeraPage() {
 </div>
 
 
-<div className="grid md:grid-cols-4 gap-0 mt-12 border">
 
-  <div className="p-8 border-r border-b">
-    Banking
-  </div>
-
-  <div className="p-8 border-r border-b">
-    Insurance
-  </div>
-
-  <div className="p-8 border-r border-b">
-    NBFC
-  </div>
-
-  <div className="p-8 border-b">
-    Fintech
-  </div>
-
-  <div className="p-8 border-r">
-    Capital Markets
-  </div>
-
-  <div className="p-8 border-r">
-    Government
-  </div>
-
-  <div className="p-8 border-r">
-    Healthcare
-  </div>
-
-  <div className="p-8">
-    Manufacturing
-  </div>
-
-</div>
       {/* CTA */}
       <section className="py-32 border-t">
         <div className="max-w-7xl mx-auto px-8 text-center">
 
-          <h2 className="text-6xl font-light mb-8">
+          <h2 className="
+text-5xl
+md:text-7xl
+leading-[0.95]
+font-light
+mb-8
+max-w-4xl
+mx-auto
+">
             Ready for an Executive Briefing?
           </h2>
 
@@ -221,7 +241,16 @@ export default function MeeraPage() {
             inside your enterprise environment.
           </p>
 
-          <button className="px-8 py-4 bg-black text-white">
+          <button className="
+px-8
+py-4
+bg-black
+text-white
+rounded-full
+hover:scale-105
+transition
+duration-300
+">
             Contact AWAIA
           </button>
 
@@ -264,13 +293,40 @@ export default function MeeraPage() {
 <InstitutionalReach />
 
 <section className="py-40 border-t">
-  <div className="max-w-5xl mx-auto px-8 text-center">
+  <div className="
+max-w-6xl
+mx-auto
+px-8
+text-center
+relative
+rounded-[40px]
+border
+border-neutral-200
+bg-white
+shadow-[0_20px_80px_rgba(0,0,0,0.06)]
+py-24
+overflow-hidden
+">
+
+  <div className="absolute inset-0 pointer-events-none">
+
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-violet-200/20 blur-[120px]" />
+
+</div>
 
     <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-6">
       Executive Briefing
     </p>
 
-    <h2 className="text-6xl font-light mb-8">
+    <h2 className="
+text-5xl
+md:text-7xl
+leading-[0.95]
+font-light
+mb-8
+max-w-4xl
+mx-auto
+">
       Explore MEERA Inside Your Enterprise.
     </h2>
 
@@ -279,12 +335,27 @@ export default function MeeraPage() {
       compliance controls, and implementation strategy.
     </p>
 
-    <a
-      href="mailto:contact@awaia.ai"
-      className="inline-block px-8 py-4 bg-black text-white"
-    >
-      Request Executive Briefing
-    </a>
+<a
+  href="mailto:contact@awaia.ai"
+  className="
+  inline-flex
+  items-center
+  justify-center
+  min-w-[360px]
+  px-12
+  py-5
+  rounded-full
+  bg-black
+  hover:scale-105
+  transition-all
+  duration-300
+  shadow-[0_12px_40px_rgba(0,0,0,0.25)]
+  "
+>
+  <span className="!text-white text-lg font-medium">
+    Request Executive Briefing →
+  </span>
+</a>
 
   </div>
 </section>
