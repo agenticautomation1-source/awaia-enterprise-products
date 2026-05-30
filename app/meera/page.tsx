@@ -192,6 +192,40 @@ export default function MeeraPage() {
         </div>
       </section>
 
+<section className="py-32 border-t">
+  <div className="max-w-7xl mx-auto px-8">
+
+    <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-12">
+      Enterprise Architecture
+    </p>
+
+    <div className="grid md:grid-cols-5 gap-8 text-center">
+
+      <div className="border p-8">
+        Voice Channels
+      </div>
+
+      <div className="border p-8">
+        MEERA Core
+      </div>
+
+      <div className="border p-8">
+        Authentication
+      </div>
+
+      <div className="border p-8">
+        Human Escalation
+      </div>
+
+      <div className="border p-8">
+        Audit Layer
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
 
 <section className="py-32 border-t">
