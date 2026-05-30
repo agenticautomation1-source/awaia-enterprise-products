@@ -4,24 +4,72 @@ export default function MeeraPage() {
 
       {/* HERO */}
       <section className="min-h-screen flex items-center pt-32">
-        <div className="max-w-7xl mx-auto px-8">
+  <div className="max-w-7xl mx-auto px-8 w-full">
 
-          <p className="uppercase tracking-[0.35em] text-sm mb-8 text-gray-500">
-            Enterprise Voice Intelligence Platform
-          </p>
+    <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-          <h1 className="text-7xl md:text-8xl font-light leading-[0.9] max-w-5xl">
-            Enterprise Voice Intelligence Built for Regulated Institutions.
-          </h1>
+      <div>
 
-          <p className="mt-10 text-2xl text-gray-600 max-w-3xl leading-relaxed">
-            Deploy conversational AI inside your bank,
-            cloud, or data center without exposing
-            customer data to public AI systems.
-          </p>
+        <p className="uppercase tracking-[0.35em] text-sm mb-8 text-gray-500">
+          Enterprise Voice Intelligence Platform
+        </p>
+
+        <h1 className="text-7xl md:text-8xl font-light leading-[0.9]">
+          Enterprise
+          <br />
+          Voice Intelligence
+          <br />
+          For Banking.
+        </h1>
+
+        <p className="mt-10 text-2xl text-gray-600 leading-relaxed max-w-2xl">
+          Deploy conversational AI inside your bank,
+          private cloud, or data center without exposing
+          customer data to public AI systems.
+        </p>
+
+        <div className="mt-12 flex gap-4">
+          <button className="px-8 py-4 bg-black text-white">
+            Request Briefing
+          </button>
+
+          <button className="px-8 py-4 border border-gray-300">
+            Explore Architecture
+          </button>
+        </div>
+
+      </div>
+
+      <div className="border rounded-3xl p-12">
+
+        <div className="space-y-8">
+
+          <div>Voice Channels</div>
+
+          <div>↓</div>
+
+          <div>MEERA Intelligence Layer</div>
+
+          <div>↓</div>
+
+          <div>Authentication & Verification</div>
+
+          <div>↓</div>
+
+          <div>Human Escalation</div>
+
+          <div>↓</div>
+
+          <div>Audit & Analytics</div>
 
         </div>
-      </section>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* ARCHITECTURE */}
       <section className="py-32 border-t">
