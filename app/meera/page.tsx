@@ -8,7 +8,7 @@ export default function MeeraPage() {
     <main>
 
       {/* HERO */}
-      <section className="min-h-screen flex items-center pt-32 relative overflow-hidden">
+<section className="min-h-[60vh] flex items-start pt-16 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
 
   <div className="absolute top-20 right-20 w-[700px] h-[700px] rounded-full bg-violet-200/20 blur-[140px]" />
@@ -19,7 +19,7 @@ export default function MeeraPage() {
 
   <div className="max-w-7xl mx-auto px-8 w-full">
 
-    <div className="grid lg:grid-cols-2 gap-20 items-center">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
 
       <div>
 
@@ -27,34 +27,59 @@ export default function MeeraPage() {
           Enterprise Voice Intelligence Platform
         </p>
 
-        <h1 className="leading-[0.88] font-light">
+        <h1 className="leading-[0.82] font-light">
 
-  <span className="block text-7xl md:text-[110px] tracking-[-0.06em]">
+  <span className="block text-4xl md:text-[52px] tracking-[-0.06em]">
     Enterprise
   </span>
 
-  <span className="block text-7xl md:text-[110px] tracking-[-0.06em]">
+  <span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
     Voice Intelligence
   </span>
 
-  <span className="block text-7xl md:text-[110px] tracking-[-0.06em]">
-    For
-    <span className="text-[#5D6B87]"> Regulated</span>
-  </span>
+<span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
+  For <span className="text-[#5D6B87]">Regulated</span>
+</span>
 
-  <span className="block text-7xl md:text-[110px] tracking-[-0.06em]">
-    Enterprises.
-  </span>
+<span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
+  Enterprises.
+</span>
 
 </h1>
 
-        <p className="mt-10 text-2xl text-gray-600 leading-relaxed max-w-2xl">
-          Deploy conversational AI inside your bank,
-          private cloud, or data center without exposing
-          customer data to public AI systems.
-        </p>
+       <p className="text-lg text-neutral-600 leading-relaxed max-w-xl mt-4">
+  MEERA transforms customer conversations into
+  authenticated, compliant and action-oriented
+  enterprise workflows across banking, insurance,
+  NBFC and regulated industries.
+</p>
 
-        <div className="mt-12 flex flex-wrap gap-5 items-center">
+
+<div className="mt-6">
+
+  <div className="text-[#3F5E8C] text-sm uppercase tracking-[0.25em] mb-3">
+    Enterprise Outcomes
+  </div>
+
+  <div className="space-y-2 text-neutral-700">
+
+    <div>✓ No waiting in IVR queues</div>
+
+    <div>✓ 24×7×365 customer availability</div>
+
+    <div>✓ No customer data leaves your environment</div>
+
+    <div>✓ Authenticate before execution</div>
+
+    <div>✓ Human-like multilingual conversations</div>
+
+  </div>
+
+</div>
+
+
+
+        <div className="mt-8 flex flex-wrap gap-4 items-center">
           <button className="
 px-8
 py-4
@@ -428,11 +453,11 @@ overflow-hidden
   <div className="max-w-7xl mx-auto px-8">
 
     <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
-      Operational Impact
+      Operational Economics
     </p>
 
     <h2 className="text-5xl font-light mb-16 max-w-5xl">
-      Scale customer engagement without scaling operational headcount.
+      Increase customer service capacity while reducing operational friction.
     </h2>
 
     <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -443,38 +468,38 @@ overflow-hidden
 
         <div className="space-y-8">
 
-          <div className="border-b border-neutral-200 pb-5">
+          <div className="border-b border-neutral-200 pb-6">
 
             <div className="text-sm uppercase tracking-widest text-neutral-500 mb-2">
-              Monthly Customer Interactions
+              Cost Efficiency
             </div>
 
-            <div className="text-4xl">
-              100,000+
+            <div className="text-3xl md:text-4xl">
+              Lower Cost Per Interaction
             </div>
 
           </div>
 
-          <div className="border-b border-neutral-200 pb-5">
+          <div className="border-b border-neutral-200 pb-6">
 
             <div className="text-sm uppercase tracking-widest text-neutral-500 mb-2">
-              Typical Automation Potential
+              Workforce Scaling
             </div>
 
-            <div className="text-4xl">
-              40% - 70%
+            <div className="text-3xl md:text-4xl">
+              Growth Without Proportional FTE Expansion
             </div>
 
           </div>
 
-          <div className="border-b border-neutral-200 pb-5">
+          <div className="border-b border-neutral-200 pb-6">
 
             <div className="text-sm uppercase tracking-widest text-neutral-500 mb-2">
-              Availability
+              Service Availability
             </div>
 
-            <div className="text-4xl">
-              24×7×365
+            <div className="text-3xl md:text-4xl">
+              24×7×365 Customer Engagement
             </div>
 
           </div>
@@ -511,7 +536,7 @@ overflow-hidden
           <div className="flex gap-4">
             <div className="w-2 h-2 rounded-full bg-[#3F5E8C] mt-2" />
             <div>
-              Increase service coverage without proportional FTE growth.
+              Increase service coverage without proportional headcount growth.
             </div>
           </div>
 
@@ -525,14 +550,21 @@ overflow-hidden
           <div className="flex gap-4">
             <div className="w-2 h-2 rounded-full bg-[#3F5E8C] mt-2" />
             <div>
-              Lower cost-per-interaction across high-volume workflows.
+              Eliminate queue dependency across high-volume interactions.
             </div>
           </div>
 
           <div className="flex gap-4">
             <div className="w-2 h-2 rounded-full bg-[#3F5E8C] mt-2" />
             <div>
-              Support multilingual operations at enterprise scale.
+              Support multilingual operations across customer segments.
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="w-2 h-2 rounded-full bg-[#3F5E8C] mt-2" />
+            <div>
+              Maintain consistent service quality across every interaction.
             </div>
           </div>
 
@@ -653,6 +685,92 @@ overflow-hidden
 
 </section>
 
+
+<section className="py-28 border-t">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+      How MEERA Works
+    </p>
+
+    <h2 className="text-5xl font-light mb-20 max-w-4xl">
+      From customer conversation to enterprise action.
+    </h2>
+
+    <div className="grid md:grid-cols-4 gap-8">
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-4">01</div>
+        <h3 className="text-xl mb-3">Customer Speaks</h3>
+        <p className="text-neutral-600">
+          Customer initiates a natural voice conversation.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-4">02</div>
+        <h3 className="text-xl mb-3">Intent Detection</h3>
+        <p className="text-neutral-600">
+          MEERA understands context, intent and objective.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-4">03</div>
+        <h3 className="text-xl mb-3">Identity Verification</h3>
+        <p className="text-neutral-600">
+          OTP, DTMF and workflow-based authentication.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-4">04</div>
+        <h3 className="text-xl mb-3">Policy Validation</h3>
+        <p className="text-neutral-600">
+          Enterprise rules and permissions are checked.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-4">05</div>
+        <h3 className="text-xl mb-3">System Access</h3>
+        <p className="text-neutral-600">
+          MEERA securely accesses CRM and core platforms.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-4">06</div>
+        <h3 className="text-xl mb-3">Workflow Execution</h3>
+        <p className="text-neutral-600">
+          Service requests, updates and actions are executed.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-4">07</div>
+        <h3 className="text-xl mb-3">Audit Logging</h3>
+        <p className="text-neutral-600">
+          Every interaction remains traceable and auditable.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-4">08</div>
+        <h3 className="text-xl mb-3">Response Delivered</h3>
+        <p className="text-neutral-600">
+          Customer receives a completed outcome or next step.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
 <section className="py-28 border-t">
 
   <div className="max-w-7xl mx-auto px-8">
@@ -692,15 +810,16 @@ overflow-hidden
       {/* CENTER */}
 
       <div
-        className="
-        border
-        border-[#3F5E8C]
-        rounded-[36px]
-        bg-white
-        p-10
-        text-center
-        "
-      >
+  className="
+  border
+  border-[#3F5E8C]
+  rounded-[36px]
+  bg-white
+  p-12
+  text-center
+  relative
+  "
+>
 
         <div className="text-xs tracking-[0.3em] uppercase text-[#3F5E8C] mb-4">
           MEERA CORE
@@ -796,6 +915,68 @@ overflow-hidden
 
 </section>
 
+<section className="py-28 border-t">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+      Enterprise Readiness
+    </p>
+
+    <h2 className="text-5xl font-light mb-16 max-w-5xl">
+      Built for regulated environments where security,
+      governance and control are non-negotiable.
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-10">
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <h3 className="text-xl mb-3">Private Cloud</h3>
+        <p className="text-neutral-600">
+          Deploy within enterprise-controlled cloud environments.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <h3 className="text-xl mb-3">On-Premise</h3>
+        <p className="text-neutral-600">
+          Run entirely inside organizational infrastructure.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <h3 className="text-xl mb-3">Customer-Owned Data</h3>
+        <p className="text-neutral-600">
+          Conversations, transcripts and records remain under enterprise control.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <h3 className="text-xl mb-3">Audit Traceability</h3>
+        <p className="text-neutral-600">
+          Every interaction is logged and reviewable.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <h3 className="text-xl mb-3">Human Escalation</h3>
+        <p className="text-neutral-600">
+          Seamlessly transfer conversations when required.
+        </p>
+      </div>
+
+      <div className="border border-neutral-200 rounded-[24px] p-8 bg-white hover-lift">
+        <h3 className="text-xl mb-3">Role-Based Access</h3>
+        <p className="text-neutral-600">
+          Enterprise-grade access control and permissions.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 <section className="py-28 border-t">
 
@@ -1155,75 +1336,26 @@ overflow-hidden
 
 </section>
 
-      {/* CTA */}
-      <section className="py-32 border-t">
-        <div className="max-w-7xl mx-auto px-8 text-center">
 
-          <h2 className="
-text-5xl
-md:text-7xl
-leading-[0.95]
-font-light
-mb-8
-max-w-4xl
-mx-auto
-">
-            Ready for an Executive Briefing?
-          </h2>
+<div className="flex flex-wrap justify-center gap-8 mb-10 text-sm text-neutral-600">
 
-          <p className="text-xl text-gray-600 mb-12">
-            Explore how MEERA can be deployed
-            inside your enterprise environment.
-          </p>
+  <div>Deployment Models</div>
 
-          <button className="
-px-8
-py-4
-bg-black
-text-white
-rounded-full
-hover:scale-105
-transition
-duration-300
-">
-            Contact AWAIA
-          </button>
+  <div>Security Architecture</div>
 
-        </div>
-      </section>
+  <div>Integration Strategy</div>
+
+  <div>Implementation Roadmap</div>
+
+  <div>Business Outcomes</div>
+
+</div>
 
 
 
 
-<section className="py-32 border-t">
-  <div className="max-w-7xl mx-auto px-8">
 
-    <div className="grid md:grid-cols-4 gap-12">
 
-      <div>
-        <div className="text-5xl mb-3">24×7</div>
-        <p className="text-gray-500">Voice Operations</p>
-      </div>
-
-      <div>
-        <div className="text-5xl mb-3">100%</div>
-        <p className="text-gray-500">Audit Visibility</p>
-      </div>
-
-      <div>
-        <div className="text-5xl mb-3">Multi</div>
-        <p className="text-gray-500">Language Support</p>
-      </div>
-
-      <div>
-        <div className="text-5xl mb-3">Hybrid</div>
-        <p className="text-gray-500">Deployment Models</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
 
 <InstitutionalReach />
 

@@ -77,9 +77,25 @@ return ( <section className="py-28 border-t">
               className="text-[#3F5E8C] mb-5"
             />
 
-            <h3 className="text-xl mb-5">
+            <h3 className="text-xl mb-3 font-medium">
               {item.title}
             </h3>
+
+<p className="text-sm text-neutral-500 mb-5">
+
+  {item.title === "Conversation Intelligence" &&
+    "Natural enterprise conversations with context awareness."}
+
+  {item.title === "Authentication" &&
+    "Identity verification before action execution."}
+
+  {item.title === "Workflow Automation" &&
+    "Execute business processes directly from conversations."}
+
+  {item.title === "Enterprise Systems" &&
+    "Connect with existing platforms and repositories."}
+
+</p>
 
             <div className="space-y-3">
 
@@ -103,7 +119,6 @@ return ( <section className="py-28 border-t">
   </div>
 
 </section>
-
 
 );
 }
