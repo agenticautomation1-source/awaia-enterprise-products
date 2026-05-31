@@ -653,6 +653,508 @@ overflow-hidden
 
 </section>
 
+<section className="py-28 border-t">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+      Integration Ecosystem
+    </p>
+
+    <h2 className="text-5xl font-light mb-16 max-w-5xl">
+      MEERA orchestrates enterprise systems instead of replacing them.
+    </h2>
+
+    <div className="grid lg:grid-cols-3 gap-12 items-center">
+
+      {/* LEFT */}
+
+      <div className="space-y-5">
+
+        <div className="border border-neutral-200 bg-white rounded-2xl p-5 hover-lift">
+          CRM Systems
+        </div>
+
+        <div className="border border-neutral-200 bg-white rounded-2xl p-5 hover-lift">
+          Core Banking Platforms
+        </div>
+
+        <div className="border border-neutral-200 bg-white rounded-2xl p-5 hover-lift">
+          Loan Origination Systems
+        </div>
+
+        <div className="border border-neutral-200 bg-white rounded-2xl p-5 hover-lift">
+          Policy Administration Systems
+        </div>
+
+      </div>
+
+      {/* CENTER */}
+
+      <div
+        className="
+        border
+        border-[#3F5E8C]
+        rounded-[36px]
+        bg-white
+        p-10
+        text-center
+        "
+      >
+
+        <div className="text-xs tracking-[0.3em] uppercase text-[#3F5E8C] mb-4">
+          MEERA CORE
+        </div>
+
+        <div className="space-y-4">
+
+          <div>Speech Engine</div>
+
+          <div>Conversation Engine</div>
+
+          <div>Authentication Layer</div>
+
+          <div>Policy Engine</div>
+
+          <div>Workflow Engine</div>
+
+          <div>Analytics Layer</div>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT */}
+
+      <div className="space-y-5">
+
+        <div className="border border-neutral-200 bg-white rounded-2xl p-5 hover-lift">
+          ERP Platforms
+        </div>
+
+        <div className="border border-neutral-200 bg-white rounded-2xl p-5 hover-lift">
+          Identity & Access Systems
+        </div>
+
+        <div className="border border-neutral-200 bg-white rounded-2xl p-5 hover-lift">
+          Knowledge Repositories
+        </div>
+
+        <div className="border border-neutral-200 bg-white rounded-2xl p-5 hover-lift">
+          Payment & Transaction Systems
+        </div>
+
+      </div>
+
+    </div>
+
+    <div className="mt-16 grid md:grid-cols-4 gap-8">
+
+      <div>
+        <div className="text-[#3F5E8C] mb-2">
+          CRM
+        </div>
+
+        <div className="text-neutral-600 text-sm">
+          Customer profile and interaction history.
+        </div>
+      </div>
+
+      <div>
+        <div className="text-[#3F5E8C] mb-2">
+          Core Systems
+        </div>
+
+        <div className="text-neutral-600 text-sm">
+          Banking, insurance and enterprise platforms.
+        </div>
+      </div>
+
+      <div>
+        <div className="text-[#3F5E8C] mb-2">
+          Security
+        </div>
+
+        <div className="text-neutral-600 text-sm">
+          Identity providers, SSO and access controls.
+        </div>
+      </div>
+
+      <div>
+        <div className="text-[#3F5E8C] mb-2">
+          Knowledge
+        </div>
+
+        <div className="text-neutral-600 text-sm">
+          Enterprise documents, FAQs and repositories.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section className="py-28 border-t">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+      Real Enterprise Use Cases
+    </p>
+
+    <h2 className="text-5xl font-light mb-16 max-w-5xl">
+      Move beyond conversations and execute real business workflows.
+    </h2>
+
+    <div className="grid lg:grid-cols-3 gap-10">
+
+      {/* BANKING */}
+
+      <div className="border border-neutral-200 rounded-[28px] bg-white p-8 hover-lift">
+
+        <div className="text-xs uppercase tracking-[0.25em] text-[#3F5E8C] mb-6">
+          Banking
+        </div>
+
+        <div className="space-y-4">
+
+          <div className="text-neutral-500 text-sm">
+            Customer
+          </div>
+
+          <div>
+            I want to increase my transaction limit before travelling.
+          </div>
+
+          <div className="border-t pt-4 space-y-3 text-neutral-600">
+
+            <div>✓ Authenticate customer</div>
+
+            <div>✓ Check account profile</div>
+
+            <div>✓ Validate policy rules</div>
+
+            <div>✓ Create service request</div>
+
+            <div>✓ Confirm request status</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* INSURANCE */}
+
+      <div className="border border-neutral-200 rounded-[28px] bg-white p-8 hover-lift">
+
+        <div className="text-xs uppercase tracking-[0.25em] text-[#3F5E8C] mb-6">
+          Insurance
+        </div>
+
+        <div className="space-y-4">
+
+          <div className="text-neutral-500 text-sm">
+            Customer
+          </div>
+
+          <div>
+            What is the status of my claim?
+          </div>
+
+          <div className="border-t pt-4 space-y-3 text-neutral-600">
+
+            <div>✓ Verify identity</div>
+
+            <div>✓ Access claim platform</div>
+
+            <div>✓ Explain claim status</div>
+
+            <div>✓ Provide next steps</div>
+
+            <div>✓ Schedule escalation if required</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* NBFC */}
+
+      <div className="border border-neutral-200 rounded-[28px] bg-white p-8 hover-lift">
+
+        <div className="text-xs uppercase tracking-[0.25em] text-[#3F5E8C] mb-6">
+          NBFC
+        </div>
+
+        <div className="space-y-4">
+
+          <div className="text-neutral-500 text-sm">
+            Customer
+          </div>
+
+          <div>
+            I missed my EMI payment.
+          </div>
+
+          <div className="border-t pt-4 space-y-3 text-neutral-600">
+
+            <div>✓ Verify customer</div>
+
+            <div>✓ Retrieve dues</div>
+
+            <div>✓ Offer payment options</div>
+
+            <div>✓ Execute workflow</div>
+
+            <div>✓ Generate confirmation</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section className="py-28 border-t">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+      Why Enterprises Choose MEERA
+    </p>
+
+    <h2 className="text-5xl font-light mb-16 max-w-5xl">
+      Built for environments where customer experience,
+      operational efficiency and governance matter equally.
+    </h2>
+
+    <div className="grid lg:grid-cols-3 gap-10">
+
+      <div className="hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-3">
+          01
+        </div>
+
+        <h3 className="text-xl mb-3">
+          No IVR Queues
+        </h3>
+
+        <p className="text-neutral-600">
+          Eliminate menu navigation and provide instant customer engagement.
+        </p>
+      </div>
+
+      <div className="hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-3">
+          02
+        </div>
+
+        <h3 className="text-xl mb-3">
+          24×7×365 Availability
+        </h3>
+
+        <p className="text-neutral-600">
+          Continue servicing customers beyond business hours.
+        </p>
+      </div>
+
+      <div className="hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-3">
+          03
+        </div>
+
+        <h3 className="text-xl mb-3">
+          Multilingual Conversations
+        </h3>
+
+        <p className="text-neutral-600">
+          Support Hindi, English, Hinglish and regional languages.
+        </p>
+      </div>
+
+      <div className="hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-3">
+          04
+        </div>
+
+        <h3 className="text-xl mb-3">
+          Enterprise Workflow Execution
+        </h3>
+
+        <p className="text-neutral-600">
+          Move beyond conversations and execute business actions.
+        </p>
+      </div>
+
+      <div className="hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-3">
+          05
+        </div>
+
+        <h3 className="text-xl mb-3">
+          Customer-Owned Data
+        </h3>
+
+        <p className="text-neutral-600">
+          Keep conversations, transcripts and customer information under enterprise control.
+        </p>
+      </div>
+
+      <div className="hover-lift">
+        <div className="text-[#3F5E8C] text-sm mb-3">
+          06
+        </div>
+
+        <h3 className="text-xl mb-3">
+          Lower Cost Per Interaction
+        </h3>
+
+        <p className="text-neutral-600">
+          Increase service capacity without proportional FTE growth.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section className="py-28 border-t">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+      Customer Experience Transformation
+    </p>
+
+    <h2 className="text-5xl font-light mb-16 max-w-5xl">
+      Replace frustrating IVR journeys with intelligent customer conversations.
+    </h2>
+
+    <div className="grid lg:grid-cols-2 gap-12">
+
+      {/* IVR */}
+
+      <div
+        className="
+        border
+        border-neutral-200
+        bg-white
+        rounded-[32px]
+        p-10
+        "
+      >
+
+        <div className="text-sm uppercase tracking-widest text-neutral-500 mb-8">
+          Traditional IVR Experience
+        </div>
+
+        <div className="space-y-5">
+
+          <div className="flex gap-4">
+            <div className="text-red-500">✕</div>
+            <div>Press 1 for Banking</div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="text-red-500">✕</div>
+            <div>Press 4 for Account Services</div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="text-red-500">✕</div>
+            <div>Wait in queue</div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="text-red-500">✕</div>
+            <div>Repeat information to an agent</div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="text-red-500">✕</div>
+            <div>Limited operating hours</div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="text-red-500">✕</div>
+            <div>Customer frustration and abandonment</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* MEERA */}
+
+      <div
+        className="
+        border
+        border-[#3F5E8C]
+        bg-white
+        rounded-[32px]
+        p-10
+        "
+      >
+
+        <div className="text-sm uppercase tracking-widest text-[#3F5E8C] mb-8">
+          MEERA Experience
+        </div>
+
+        <div className="space-y-5">
+
+          <div className="flex gap-4">
+            <div className="text-green-600">✓</div>
+            <div>Hello Rahul, how may I help you today?</div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="text-green-600">✓</div>
+            <div>Natural conversation without menu navigation</div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="text-green-600">✓</div>
+            <div>Instant customer authentication</div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="text-green-600">✓</div>
+            <div>Real-time access to enterprise systems</div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="text-green-600">✓</div>
+            <div>Execute workflow and resolve request</div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="text-green-600">✓</div>
+            <div>24×7×365 availability</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
       {/* CTA */}
       <section className="py-32 border-t">
         <div className="max-w-7xl mx-auto px-8 text-center">
