@@ -53,14 +53,24 @@ button {
 }
 
 body {
-  background:
-    radial-gradient(circle at top right,
-      rgba(99,102,241,0.06),
-      transparent 35%),
-    radial-gradient(circle at bottom left,
-      rgba(99,102,241,0.04),
-      transparent 40%),
-    #fafafa;
+
+  background-color: #fafafa;
+
+  background-image:
+
+    linear-gradient(
+      rgba(15,23,42,0.035) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(15,23,42,0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+
 }
 
 .waveform-bar {
@@ -106,4 +116,12 @@ body {
 
 .float-card {
   animation: floatCard 8s ease-in-out infinite;
+}
+
+.hover-lift {
+transition: all .35s ease;
+}
+
+.hover-lift:hover {
+transform: translateY(-6px);
 }

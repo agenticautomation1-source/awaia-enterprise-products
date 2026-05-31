@@ -54,7 +54,7 @@ export default function MeeraPage() {
           customer data to public AI systems.
         </p>
 
-        <div className="mt-12 flex gap-4">
+        <div className="mt-12 flex flex-wrap gap-5 items-center">
           <button className="
 px-8
 py-4
@@ -84,6 +84,25 @@ duration-300
 >
             Explore Architecture
           </button>
+
+          <div className="flex items-center gap-3 ml-2">
+
+  <div className="flex -space-x-2">
+
+    <div className="w-8 h-8 rounded-full bg-[#d9dde5] border border-white"></div>
+
+    <div className="w-8 h-8 rounded-full bg-[#c8cfdb] border border-white"></div>
+
+    <div className="w-8 h-8 rounded-full bg-[#b8c2d3] border border-white"></div>
+
+  </div>
+
+  <span className="text-sm text-neutral-500">
+    Trusted by regulated institutions
+  </span>
+
+</div>
+
         </div>
 
       </div>
@@ -156,68 +175,376 @@ overflow-hidden
 
  
       {/* DEPLOYMENT */}
-      <section className="py-32 border-t">
-        <div className="max-w-7xl mx-auto px-8">
+      <section className="py-28 border-t">
 
-          <h2 className="text-5xl font-light mb-16">
-            Deployment Models
-          </h2>
+  <div className="max-w-7xl mx-auto px-8">
 
-          <div className="grid md:grid-cols-2 gap-12">
+    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+      Business Problems Solved
+    </p>
 
-            <div>
-              <h3 className="text-2xl mb-4">On-Premise</h3>
-              <p>Deploy completely within customer infrastructure.</p>
+    <h2 className="text-5xl font-light mb-16 max-w-4xl">
+      Eliminate operational bottlenecks across customer interactions.
+    </h2>
+
+    <div className="grid lg:grid-cols-2 gap-x-20 gap-y-12">
+
+      <div>
+        <h3 className="text-xl mb-3">
+          No Waiting In IVR Queues
+        </h3>
+
+        <p className="text-neutral-600 leading-relaxed">
+          Customers receive immediate, human-like assistance without navigating
+          complex IVR trees.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl mb-3">
+          24×7×365 Service Availability
+        </h3>
+
+        <p className="text-neutral-600 leading-relaxed">
+          Deliver uninterrupted customer engagement beyond business hours.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl mb-3">
+          Customer Data Remains Internal
+        </h3>
+
+        <p className="text-neutral-600 leading-relaxed">
+          Customer conversations, transcripts and sensitive information remain
+          under enterprise control.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl mb-3">
+          Authenticate Before Action
+        </h3>
+
+        <p className="text-neutral-600 leading-relaxed">
+          OTP, DTMF and workflow validation before executing customer requests.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl mb-3">
+          Multilingual Customer Support
+        </h3>
+
+        <p className="text-neutral-600 leading-relaxed">
+          Engage naturally in Hindi, English, Hinglish and regional languages.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl mb-3">
+          Enterprise Workflow Execution
+        </h3>
+
+        <p className="text-neutral-600 leading-relaxed">
+          Move beyond conversations and execute real enterprise actions.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section className="py-28 border-t">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+      Enterprise Data & Security
+    </p>
+
+    <h2 className="text-5xl font-light mb-16">
+      Built for environments where data matters.
+    </h2>
+
+    <div className="grid lg:grid-cols-3 gap-10">
+
+      <div>
+        <h3 className="mb-4 text-xl">
+          Customer Conversations
+        </h3>
+
+        <p className="text-neutral-600">
+          Voice interactions across support, collections,
+          servicing and engagement workflows.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="mb-4 text-xl">
+          Personally Identifiable Information
+        </h3>
+
+        <p className="text-neutral-600">
+          Secure handling of customer profile and identity data.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="mb-4 text-xl">
+          Authentication Data
+        </h3>
+
+        <p className="text-neutral-600">
+          OTP validation, DTMF workflows and consent capture.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="mb-4 text-xl">
+          Financial Information
+        </h3>
+
+        <p className="text-neutral-600">
+          Account servicing, transaction inquiries and policy workflows.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="mb-4 text-xl">
+          Call Recordings & Transcripts
+        </h3>
+
+        <p className="text-neutral-600">
+          Conversation history, summaries and audit records.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="mb-4 text-xl">
+          Enterprise Integrations
+        </h3>
+
+        <p className="text-neutral-600">
+          CRM, Core Banking, ERP and enterprise systems.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section className="py-28 border-t">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+      Business Impact
+    </p>
+
+    <h2 className="text-5xl font-light mb-16 max-w-5xl">
+      Scale customer operations without scaling operational costs.
+    </h2>
+
+    <div className="grid lg:grid-cols-2 gap-16">
+
+      <div
+        className="
+        border
+        border-neutral-200
+        rounded-[28px]
+        bg-white
+        p-10
+        "
+      >
+
+        <div className="text-sm uppercase tracking-widest text-neutral-500 mb-6">
+          Traditional Contact Center
+        </div>
+
+        <div className="space-y-5 text-neutral-600">
+
+          <div>Human agent availability constraints</div>
+
+          <div>Limited operating hours</div>
+
+          <div>Training and onboarding cycles</div>
+
+          <div>Queue build-up during peak demand</div>
+
+          <div>High cost per interaction</div>
+
+          <div>Scaling requires additional headcount</div>
+
+        </div>
+
+      </div>
+
+      <div
+        className="
+        border
+        border-[#3F5E8C]
+        rounded-[28px]
+        bg-white
+        p-10
+        "
+      >
+
+        <div className="text-sm uppercase tracking-widest text-[#3F5E8C] mb-6">
+          MEERA Voice Intelligence
+        </div>
+
+        <div className="space-y-5 text-neutral-700">
+
+          <div>24×7×365 availability</div>
+
+          <div>Instant customer engagement</div>
+
+          <div>Consistent service quality</div>
+
+          <div>Multilingual support at scale</div>
+
+          <div>Reduce cost-per-interaction while increasing service coverage</div>
+
+          <div>Scale customer operations without proportional FTE growth</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+     
+<section className="py-28 border-t">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+      Operational Impact
+    </p>
+
+    <h2 className="text-5xl font-light mb-16 max-w-5xl">
+      Scale customer engagement without scaling operational headcount.
+    </h2>
+
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+      {/* LEFT */}
+
+      <div>
+
+        <div className="space-y-8">
+
+          <div className="border-b border-neutral-200 pb-5">
+
+            <div className="text-sm uppercase tracking-widest text-neutral-500 mb-2">
+              Monthly Customer Interactions
             </div>
 
-            <div>
-              <h3 className="text-2xl mb-4">Private Cloud</h3>
-              <p>Dedicated cloud environments with enterprise governance.</p>
+            <div className="text-4xl">
+              100,000+
             </div>
 
-            <div>
-              <h3 className="text-2xl mb-4">Hybrid Cloud</h3>
-              <p>Balance flexibility, control, and compliance.</p>
+          </div>
+
+          <div className="border-b border-neutral-200 pb-5">
+
+            <div className="text-sm uppercase tracking-widest text-neutral-500 mb-2">
+              Typical Automation Potential
             </div>
 
-            <div>
-              <h3 className="text-2xl mb-4">Sovereign Cloud</h3>
-              <p>Meet regional data residency requirements.</p>
+            <div className="text-4xl">
+              40% - 70%
+            </div>
+
+          </div>
+
+          <div className="border-b border-neutral-200 pb-5">
+
+            <div className="text-sm uppercase tracking-widest text-neutral-500 mb-2">
+              Availability
+            </div>
+
+            <div className="text-4xl">
+              24×7×365
             </div>
 
           </div>
 
         </div>
-      </section>
 
-     <div className="grid md:grid-cols-3 gap-10 mt-12">
+      </div>
 
-  <div>
-    <div className="mb-4 text-xl">🛡</div>
-    <h3 className="mb-3 text-xl">Governance Controls</h3>
-    <p className="text-neutral-600">
-      Policy-driven execution with enterprise auditability.
-    </p>
+      {/* RIGHT */}
+
+      <div
+        className="
+        bg-white
+        border
+        border-[#3F5E8C]
+        rounded-[32px]
+        p-10
+        "
+      >
+
+        <div className="text-sm uppercase tracking-widest text-[#3F5E8C] mb-6">
+          Expected Business Outcomes
+        </div>
+
+        <div className="space-y-5">
+
+          <div className="flex gap-4">
+            <div className="w-2 h-2 rounded-full bg-[#3F5E8C] mt-2" />
+            <div>
+              Reduce repetitive customer servicing workload.
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="w-2 h-2 rounded-full bg-[#3F5E8C] mt-2" />
+            <div>
+              Increase service coverage without proportional FTE growth.
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="w-2 h-2 rounded-full bg-[#3F5E8C] mt-2" />
+            <div>
+              Improve customer experience through instant engagement.
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="w-2 h-2 rounded-full bg-[#3F5E8C] mt-2" />
+            <div>
+              Lower cost-per-interaction across high-volume workflows.
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            <div className="w-2 h-2 rounded-full bg-[#3F5E8C] mt-2" />
+            <div>
+              Support multilingual operations at enterprise scale.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div>
-    <div className="mb-4 text-xl">🔐</div>
-    <h3 className="mb-3 text-xl">Customer-Owned Data</h3>
-    <p className="text-neutral-600">
-      On-premise, sovereign cloud and private deployment options.
-    </p>
-  </div>
-
-  <div>
-    <div className="mb-4 text-xl">🌐</div>
-    <h3 className="mb-3 text-xl">Multi-Language Support</h3>
-    <p className="text-neutral-600">
-      Native support for multilingual customer interactions.
-    </p>
-  </div>
-
-</div>
-
+</section>
 
 
       {/* CTA */}
@@ -314,7 +641,13 @@ overflow-hidden
 
 </div>
 
-    <p className="uppercase tracking-[0.3em] text-sm text-gray-500 mb-6">
+    <p className="
+uppercase
+tracking-[0.35em]
+text-[11px]
+font-medium
+text-[#3F5E8C]
+">
       Executive Briefing
     </p>
 
