@@ -547,6 +547,112 @@ overflow-hidden
 </section>
 
 
+<section className="py-28 border-t">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+      MEERA vs Traditional IVR
+    </p>
+
+    <h2 className="text-5xl font-light mb-16 max-w-5xl">
+      Move beyond menus, queues and scripted customer journeys.
+    </h2>
+
+    <div className="overflow-hidden rounded-[28px] border border-neutral-200 bg-white">
+
+      {/* HEADER */}
+
+      <div className="grid grid-cols-3 border-b border-neutral-200 bg-neutral-50">
+
+        <div className="p-6 font-medium">
+          Capability
+        </div>
+
+        <div className="p-6 font-medium text-neutral-500">
+          Traditional IVR
+        </div>
+
+        <div className="p-6 font-medium text-[#3F5E8C]">
+          MEERA
+        </div>
+
+      </div>
+
+      {[
+        [
+          "Customer Experience",
+          "Menu navigation",
+          "Natural conversation",
+        ],
+        [
+          "Availability",
+          "Business hour dependency",
+          "24×7×365 availability",
+        ],
+        [
+          "Language Support",
+          "Limited",
+          "Multilingual",
+        ],
+        [
+          "Authentication",
+          "Basic validation",
+          "OTP + DTMF + workflow controls",
+        ],
+        [
+          "Customer Context",
+          "Session limited",
+          "Context-aware conversations",
+        ],
+        [
+          "Workflow Execution",
+          "Not supported",
+          "Enterprise action execution",
+        ],
+        [
+          "Scalability",
+          "Additional staffing required",
+          "Scale without proportional FTE growth",
+        ],
+        [
+          "Auditability",
+          "Limited visibility",
+          "Full audit traceability",
+        ],
+      ].map((row) => (
+        <div
+          key={row[0]}
+          className="
+          grid
+          grid-cols-3
+          border-b
+          border-neutral-100
+          last:border-0
+          "
+        >
+
+          <div className="p-6 font-medium">
+            {row[0]}
+          </div>
+
+          <div className="p-6 text-neutral-500">
+            {row[1]}
+          </div>
+
+          <div className="p-6 text-neutral-700">
+            {row[2]}
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
+
       {/* CTA */}
       <section className="py-32 border-t">
         <div className="max-w-7xl mx-auto px-8 text-center">
