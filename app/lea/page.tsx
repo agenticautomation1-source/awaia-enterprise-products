@@ -29,18 +29,37 @@ export default function LeaPage() {
 
   return (
     <main className="bg-white text-neutral-900">
-      <section className="min-h-screen flex items-center pt-32">
-        <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+            <section className="min-h-[700px] flex items-start pt-30 pb-24">
+        <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-[1.35fr_0.65fr] gap-20 items-start">
           <div>
             <p className="uppercase tracking-[0.35em] text-sm mb-8 text-neutral-500">
               LEA™ • Legal Enforcement Assistant
             </p>
 
-            <h1 className="text-6xl md:text-8xl font-light leading-[0.9] tracking-tight">
-              Transform Agency Requests Into
-              <span className="text-[#3F5E8C]"> Decision-Ready </span>
-              Response Packages.
-            </h1>
+<h1
+  className="
+  text-6xl
+  md:text-[5.4rem]
+  font-light
+  leading-[0.92]
+  tracking-[-0.04em]
+  "
+>
+  Decision Support
+  <br />
+
+  Platform For
+
+  <br />
+
+  <span className="text-[#3F5E8C]">
+    BFSI Regulatory
+  </span>
+
+  <br />
+
+  & Legal Responses.
+</h1>
 
             <p className="mt-10 text-xl text-neutral-600 max-w-2xl">
               LEA autonomously discovers, collects, correlates and organizes
