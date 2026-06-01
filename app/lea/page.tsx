@@ -364,135 +364,282 @@ export default function LeaPage() {
 
      
 {/* =======================================================
-    RESPONSE READINESS JOURNEY
+    LEA OPERATIONAL JOURNEY
 ======================================================= */}
 
-<section className="py-40 bg-[#F7F7F5] overflow-hidden">
+<section className="py-40 bg-white">
 
   <div className="max-w-7xl mx-auto px-8">
 
-    <div className="max-w-4xl mb-28">
+    <div className="max-w-4xl mb-32">
 
       <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
-        Operational Flow
+        Operational Journey
       </p>
 
       <h2 className="text-5xl md:text-7xl font-light leading-[0.95] tracking-[-0.04em]">
-        The Response
+        From agency request
         <br />
-        Readiness Journey.
+        to decision-ready
+        <br />
+        response package.
       </h2>
 
     </div>
 
     <div className="relative">
 
-      <div className="absolute left-[31px] top-0 bottom-0 w-px bg-neutral-200" />
+      {/* CENTER SIGNAL LINE */}
+
+      <div
+        className="
+        absolute
+        left-1/2
+        top-0
+        bottom-0
+        w-px
+        bg-neutral-200
+        hidden lg:block
+        "
+      >
+        <motion.div
+          animate={{
+            y: ["0%", "100%", "0%"],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+          }}
+          className="
+          absolute
+          top-0
+          left-0
+          w-full
+          h-40
+          bg-gradient-to-b
+          from-[#3F5E8C]
+          to-transparent
+          "
+        />
+      </div>
 
       {[
         {
           id: "01",
+          phase: "REQUEST",
           title: "Agency Request Received",
-          desc: "Agency requests enter through designated communication channels."
+          desc: "LEA continuously monitors authorized agency channels and registered intake sources."
         },
         {
           id: "02",
+          phase: "INTAKE",
           title: "Request Intake",
-          desc: "LEA validates request source, authority and urgency."
+          desc: "Authority, case references, identifiers and timelines are validated."
         },
         {
           id: "03",
+          phase: "UNDERSTANDING",
           title: "Request Understanding",
-          desc: "Entities, accounts, customers and identifiers are extracted."
+          desc: "Accounts, customers, entities and required information are identified."
         },
         {
           id: "04",
+          phase: "PLANNING",
           title: "Information Planning",
-          desc: "Required systems and repositories are identified."
+          desc: "Relevant systems, repositories and records are mapped."
         },
         {
           id: "05",
+          phase: "RETRIEVAL",
           title: "Information Retrieval",
-          desc: "Relevant records are collected from enterprise systems."
+          desc: "Records are gathered from CBS, CRM, DMS and supporting platforms."
         },
         {
           id: "06",
+          phase: "INTELLIGENCE",
           title: "Relationship Intelligence",
-          desc: "Accounts, transactions and beneficiaries are connected."
+          desc: "Connections across customers, accounts and related entities are identified."
         },
         {
           id: "07",
+          phase: "CORRELATION",
           title: "Cross-System Correlation",
-          desc: "Data from multiple repositories is correlated."
+          desc: "Information from multiple systems is organized into a unified context."
         },
         {
           id: "08",
+          phase: "REGULATORY",
           title: "Regulatory Intelligence",
-          desc: "Policies, circulars and internal controls are referenced."
+          desc: "Policies, circulars and procedural obligations are referenced."
         },
         {
           id: "09",
+          phase: "ASSEMBLY",
           title: "Decision Package Assembly",
-          desc: "LEA builds a complete decision support package."
+          desc: "A structured response package is prepared for review."
         },
         {
           id: "10",
+          phase: "REVIEW",
           title: "Human Decision Desk",
-          desc: "Final package is presented for review and action."
+          desc: "Designated teams review and determine the final action."
         },
         {
           id: "11",
+          phase: "TRACKING",
           title: "Outcome Tracking",
-          desc: "Case status and actions remain fully traceable."
+          desc: "Complete traceability is maintained throughout the response lifecycle."
         },
       ].map((step, index) => (
 
         <motion.div
           key={step.id}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: index * 0.05,
-            duration: 0.6,
-          }}
           viewport={{ once: true }}
-          className="relative flex gap-10 mb-16"
+          transition={{
+            duration: 0.7,
+            delay: index * 0.05,
+          }}
+          className={`
+            relative
+            flex
+            items-center
+            gap-12
+            mb-24
+
+            ${
+              index % 2 === 0
+                ? "lg:flex-row"
+                : "lg:flex-row-reverse"
+            }
+          `}
         >
+
+          {/* CONTENT */}
+
+          <div className="flex-1">
+
+            <motion.div
+              whileHover={{
+                y: -8,
+              }}
+              className="
+              bg-white
+              border
+              border-neutral-200
+              rounded-[28px]
+              p-10
+              shadow-sm
+              hover:shadow-xl
+              transition-all
+              duration-500
+              "
+            >
+
+              <p
+                className="
+                uppercase
+                tracking-[0.25em]
+                text-[10px]
+                text-[#3F5E8C]
+                mb-4
+                "
+              >
+                {step.phase}
+              </p>
+
+              <h3 className="text-3xl font-light mb-4">
+                {step.title}
+              </h3>
+
+              <p className="text-neutral-600 leading-relaxed">
+                {step.desc}
+              </p>
+
+            </motion.div>
+
+          </div>
+
+          {/* SIGNAL NODE */}
 
           <div
             className="
-            w-16
-            h-16
-            rounded-full
-            bg-white
-            border
-            border-neutral-200
-            flex
+            relative
+            hidden
+            lg:flex
             items-center
             justify-center
-            text-sm
-            tracking-wider
-            z-10
             "
           >
-            {step.id}
+
+            <motion.div
+              animate={{
+                scale: [1, 1.15, 1],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+              }}
+              className="
+              w-16
+              h-16
+              rounded-full
+              bg-[#111111]
+              text-white
+              flex
+              items-center
+              justify-center
+              text-sm
+              tracking-wider
+              z-20
+              "
+            >
+              {step.id}
+            </motion.div>
+
+            <motion.div
+              animate={{
+                scale: [1, 1.6, 1],
+                opacity: [0.4, 0, 0.4],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+              }}
+              className="
+              absolute
+              inset-0
+              rounded-full
+              bg-[#3F5E8C]/20
+              "
+            />
+
           </div>
 
-          <div className="pt-2 border-b border-neutral-200 pb-10 flex-1">
+          {/* SPACER */}
 
-            <h3 className="text-3xl font-light mb-4">
-              {step.title}
-            </h3>
-
-            <p className="text-neutral-600 text-lg max-w-3xl leading-relaxed">
-              {step.desc}
-            </p>
-
-          </div>
+          <div className="flex-1 hidden lg:block" />
 
         </motion.div>
 
       ))}
+
+    </div>
+
+    <div className="mt-40 text-center max-w-3xl mx-auto">
+
+      <div className="w-px h-24 bg-neutral-200 mx-auto mb-10" />
+
+      <h3 className="text-4xl font-light mb-6">
+        Built For Institutional Readiness.
+      </h3>
+
+      <p className="text-neutral-600 text-lg leading-relaxed">
+        LEA transforms fragmented information retrieval into
+        structured decision support, enabling faster and more
+        traceable response readiness across BFSI institutions.
+      </p>
 
     </div>
 
@@ -502,156 +649,190 @@ export default function LeaPage() {
 
 
 
-```tsx
 {/* =======================================================
-    CONNECTED ENTERPRISE ECOSYSTEM
+    CROSS-SYSTEM CORRELATION ENGINE
 ======================================================= */}
 
-<section className="py-40 overflow-visible">
+<section className="py-40 bg-neutral-50 overflow-visible">
 
   <div className="max-w-7xl mx-auto px-8">
 
-    <div className="max-w-4xl mb-28">
+    <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-20 items-start">
 
-      <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
-        Enterprise Ecosystem
-      </p>
+      {/* LEFT */}
 
-      <h2 className="text-5xl md:text-7xl font-light leading-[0.95] tracking-[-0.04em]">
-        Connecting enterprise
-        <br />
-        information across
-        <br />
-        banking systems.
-      </h2>
+      <div>
 
-    </div>
+        <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
+          Correlation Engine
+        </p>
 
-    <div className="relative h-[1000px] flex items-center justify-center overflow-visible">
+        <h2 className="text-5xl md:text-7xl font-light leading-[0.95] tracking-[-0.04em] mb-10">
+          Correlating
+          <br />
+          relationships across
+          <br />
+          fragmented enterprise
+          <br />
+          information.
+        </h2>
 
-      {/* OUTER ORBIT */}
+        <p className="text-xl text-neutral-600 leading-relaxed max-w-xl">
+          LEA identifies relationships across customers,
+          accounts, transactions, communications, devices,
+          documents and digital artefacts to assemble
+          decision-ready response packages.
+        </p>
 
-      <motion.div
-        className="absolute w-[700px] h-[700px] rounded-full border border-[#3F5E8C]/10"
-        animate={{ rotate: 360 }}
-        transition={{
-          duration: 120,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
+      </div>
 
-      {/* INNER ORBIT */}
+      {/* RIGHT */}
 
-      <motion.div
-        className="absolute w-[550px] h-[550px] rounded-full border border-dashed border-[#3F5E8C]/15"
-        animate={{ rotate: -360 }}
-        transition={{
-          duration: 90,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
+      <div className="relative h-[1150px]">
 
-      {/* LEA CORE */}
+        {/* CUSTOMER */}
 
-      <motion.div
-        animate={{
-          scale: [1, 1.05, 1],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-        }}
-        className="
-          w-80
-          h-80
-          rounded-full
-          bg-[#3F5E8C]
-          text-white
-          flex
-          items-center
-          justify-center
-          text-center
-          z-20
-          shadow-2xl
-        "
-      >
-        <div>
-          <div className="text-5xl font-light mb-3">
-            LEA
-          </div>
+        {[
+          {
+            title: "Customer",
+            top: "4%",
+          },
+          {
+            title: "Accounts",
+            top: "16%",
+          },
+          {
+            title: "Transactions",
+            top: "28%",
+          },
+          {
+            title: "Beneficiaries",
+            top: "40%",
+          },
+          {
+            title: "Communications",
+            top: "52%",
+          },
+          {
+            title: "Devices",
+            top: "64%",
+          },
+          {
+            title: "Documents",
+            top: "76%",
+          },
+        ].map((item, index) => (
 
-          <div className="text-xs tracking-[0.3em] uppercase opacity-70">
-            Intelligence Core
-          </div>
-        </div>
-      </motion.div>
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.08,
+            }}
+            viewport={{ once: true }}
+            className="absolute left-1/2 -translate-x-1/2"
+            style={{ top: item.top }}
+          >
 
-      {[
-        { label: "CBS", left: "18%", top: "35%" },
-        { label: "CRM", left: "82%", top: "35%" },
+            <motion.div
+              animate={{
+                y: [-4, 4, -4],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+              }}
+              className="
+                w-[280px]
+                bg-white
+                border
+                border-neutral-200
+                rounded-full
+                py-5
+                text-center
+                shadow-xl
+              "
+            >
+              <span className="text-lg">
+                {item.title}
+              </span>
+            </motion.div>
 
-        { label: "ERP", left: "18%", top: "65%" },
-        { label: "DMS", left: "82%", top: "65%" },
+            {index < 6 && (
+              <motion.div
+                animate={{
+                  opacity: [0.2, 1, 0.2],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                }}
+                className="
+                  w-px
+                  h-20
+                  bg-gradient-to-b
+                  from-[#3F5E8C]
+                  via-[#3F5E8C]/60
+                  to-transparent
+                  mx-auto
+                "
+              />
+            )}
 
-        { label: "AML", left: "50%", top: "12%" },
-        { label: "Fraud Systems", left: "50%", top: "88%" },
+          </motion.div>
 
-        { label: "Email", left: "30%", top: "18%" },
-        { label: "Contact Center", left: "70%", top: "18%" },
-      ].map((node, index) => (
+        ))}
+
+        {/* DECISION PACKAGE */}
 
         <motion.div
-          key={node.label}
           animate={{
-            y: [-10, 10, -10],
+            scale: [1, 1.03, 1],
           }}
           transition={{
-            duration: 4 + index * 0.3,
+            duration: 4,
             repeat: Infinity,
           }}
           className="
             absolute
-            bg-white
-            border
-            border-neutral-200
-            rounded-full
-            px-8
-            py-4
-            shadow-xl
-            z-30
-            text-sm
-            font-medium
+            left-1/2
+            -translate-x-1/2
+            top-[90%]
+            w-[360px]
+            h-[140px]
+            rounded-[32px]
+            bg-[#3F5E8C]
+            text-white
+            flex
+            items-center
+            justify-center
+            shadow-2xl
           "
-          style={{
-            left: node.left,
-            top: node.top,
-            transform: "translate(-50%, -50%)",
-          }}
         >
-          {node.label}
+
+          <div className="text-center">
+
+            <div className="text-3xl font-light mb-2">
+              Decision Package
+            </div>
+
+            <div className="uppercase tracking-[0.3em] text-xs opacity-70">
+              Human Review Ready
+            </div>
+
+          </div>
+
         </motion.div>
 
-      ))}
-
-    </div>
-
-    <div className="max-w-5xl mx-auto text-center mt-10">
-
-      <p className="text-xl text-neutral-600 leading-relaxed">
-        LEA autonomously retrieves, correlates and organizes
-        records, transactions, communications, documents and
-        technical artefacts from enterprise systems into a
-        unified decision support package.
-      </p>
+      </div>
 
     </div>
 
   </div>
 
 </section>
-
 
 {/* =======================================================
     DATA SOVEREIGNTY & SECURITY
