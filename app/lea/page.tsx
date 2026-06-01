@@ -13,6 +13,8 @@ import {
   Lock,
   ArrowRight,
   CheckCircle2,
+  Folder,
+  Users,
 } from "lucide-react";
 
 export default function LeaPage() {
@@ -75,32 +77,164 @@ export default function LeaPage() {
                 Explore Architecture
               </button>
             </div>
+
+
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="border rounded-3xl p-8 shadow-sm"
-          >
-            <div className="text-sm text-neutral-500 mb-6">
-              RESPONSE READINESS BOARD
-            </div>
 
-            {[
-              "Request Received",
-              "Customer Records Retrieved",
-              "KYC Retrieved",
-              "Statements Retrieved",
-              "Communications Retrieved",
-              "Device Logs Retrieved",
-              "Response Package Ready",
-            ].map((i) => (
-              <div key={i} className="flex items-center gap-3 py-3 border-b">
-                <CheckCircle2 className="w-5 h-5 text-[#3F5E8C]" />
-                <span>{i}</span>
-              </div>
-            ))}
-          </motion.div>
+<div className="relative h-[750px] hidden lg:flex items-center justify-center overflow-visible">
+
+  {/* OUTER ORBIT */}
+
+  <motion.div
+    animate={{ rotate: 360 }}
+    transition={{
+      duration: 120,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+    className="
+    absolute
+    w-[720px]
+    h-[720px]
+    rounded-full
+    border
+    border-[#3F5E8C]/10
+    "
+  />
+
+  {/* INNER ORBIT */}
+
+  <motion.div
+    animate={{ rotate: -360 }}
+    transition={{
+      duration: 90,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+    className="
+    absolute
+    w-[560px]
+    h-[560px]
+    rounded-full
+    border
+    border-dashed
+    border-[#3F5E8C]/15
+    "
+  />
+
+  {/* LEA CORE */}
+
+  <motion.div
+    animate={{
+      scale: [1, 1.04, 1],
+    }}
+    transition={{
+      duration: 4,
+      repeat: Infinity,
+    }}
+    className="
+    w-[170px]
+    h-[170px]
+    rounded-full
+    bg-[#3F5E8C]
+    text-white
+    flex
+    items-center
+    justify-center
+    text-center
+    shadow-2xl
+    z-20
+    "
+  >
+    <div>
+
+      <div className="text-5xl font-light mb-2">
+        LEA
+      </div>
+
+      <div className="uppercase tracking-[0.3em] text-[10px] opacity-70">
+        Decision Support Platform
+      </div>
+
+    </div>
+  </motion.div>
+
+  {[
+    { icon: FileText, label: "Agency Requests", angle: -90 },
+    { icon: Building2, label: "Core Banking", angle: -135 },
+    { icon: Users, label: "CRM", angle: -45 },
+    { icon: Shield, label: "KYC Records", angle: 135 },
+    { icon: Folder, label: "Document Systems", angle: 45 },
+    { icon: Mail, label: "Email Archive", angle: 90 },
+  ].map((node, i) => {
+
+    const radius = 280;
+
+    const radians =
+      (node.angle * Math.PI) / 180;
+
+    const x = Math.round(
+      Math.cos(radians) * radius
+    );
+
+    const y = Math.round(
+      Math.sin(radians) * radius
+    );
+
+    return (
+
+      <div
+        key={node.label}
+        className="absolute z-30"
+        style={{
+          left: `calc(50% + ${x}px)`,
+          top: `calc(50% + ${y}px)`,
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+
+        <motion.div
+          animate={{
+            scale: [1, 1.03, 1],
+          }}
+          transition={{
+            duration: 4 + i * 0.5,
+            repeat: Infinity,
+          }}
+          className="
+          bg-white
+          border
+          border-neutral-200
+          rounded-full
+          px-5
+          py-3
+          shadow-xl
+          text-sm
+          whitespace-nowrap
+          "
+        >
+
+          <div className="flex items-center gap-2">
+
+            <node.icon
+              size={15}
+              className="text-[#3F5E8C]"
+            />
+
+            <span>{node.label}</span>
+
+          </div>
+
+        </motion.div>
+
+      </div>
+
+    );
+
+  })}
+
+</div>
         </div>
       </section>
 
@@ -177,47 +311,7 @@ export default function LeaPage() {
 
       {/* RIGHT */}
 
-      <div className="p-12 md:p-16 bg-[#3F5E8C] text-white">
-
-        <div className="mb-12">
-
-          <p className="uppercase tracking-[0.25em] text-xs text-white/70 mb-4">
-            LEA Workflow
-          </p>
-
-          <h3 className="text-3xl font-light">
-            Decision Support Platform
-          </h3>
-
-        </div>
-
-        <div className="space-y-8">
-
-          {[
-            "Request understood automatically",
-            "Relevant systems identified",
-            "Information retrieved autonomously",
-            "Relationships correlated",
-            "Decision package assembled",
-            "Response readiness achieved",
-            "Human desk review enabled",
-          ].map((item) => (
-            <div
-              key={item}
-              className="flex items-center gap-4"
-            >
-              <div className="w-2 h-2 rounded-full bg-white" />
-
-              <span className="text-lg">
-                {item}
-              </span>
-            </div>
-          ))}
-
-        </div>
-
-      </div>
-
+      
     </div>
 
   </div>
@@ -226,140 +320,6 @@ export default function LeaPage() {
 
 
 
-
- <section className="py-40 overflow-visible">
-
-  <div className="max-w-7xl mx-auto px-8">
-
-    <div className="max-w-4xl mb-24">
-
-      <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
-        LEA Intelligence Core
-      </p>
-
-      <h2 className="text-5xl md:text-7xl font-light leading-[0.95] tracking-[-0.04em]">
-        Connecting fragmented
-        <br />
-        enterprise systems into
-        <br />
-        decision-ready intelligence.
-      </h2>
-
-    </div>
-
-    <div className="relative h-[1000px] flex items-center justify-center overflow-visible">
-
-      {/* OUTER ORBIT */}
-
-      <motion.div
-        className="absolute w-[700px] h-[700px] rounded-full border border-[#3F5E8C]/10"
-        animate={{ rotate: 360 }}
-        transition={{
-          duration: 120,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
-
-      {/* INNER ORBIT */}
-
-      <motion.div
-        className="absolute w-[550px] h-[550px] rounded-full border border-dashed border-[#3F5E8C]/20"
-        animate={{ rotate: -360 }}
-        transition={{
-          duration: 90,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
-
-      {/* LEA CORE */}
-
-      <motion.div
-        animate={{
-          scale: [1, 1.05, 1],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-        }}
-        className="
-          w-80
-          h-80
-          rounded-full
-          bg-[#3F5E8C]
-          text-white
-          flex
-          items-center
-          justify-center
-          text-center
-          shadow-2xl
-          z-20
-        "
-      >
-        <div>
-          <div className="text-5xl font-light mb-3">
-            LEA
-          </div>
-
-          <div className="uppercase tracking-[0.3em] text-xs opacity-70">
-            Intelligence Core
-          </div>
-        </div>
-      </motion.div>
-
-      {[
-        { label: "CBS", left: "18%", top: "35%" },
-        { label: "CRM", left: "75%", top: "35%" },
-
-        { label: "ERP", left: "18%", top: "65%" },
-        { label: "DMS", left: "75%", top: "65%" },
-
-        { label: "AML", left: "50%", top: "12%" },
-        { label: "Fraud Systems", left: "50%", top: "88%" },
-
-        { label: "Email", left: "30%", top: "18%" },
-        { label: "Contact Center", left: "70%", top: "18%" },
-      ].map((node, index) => (
-        <motion.div
-          key={node.label}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          animate={{
-            y: [-8, 8, -8],
-          }}
-          transition={{
-            duration: 4 + index * 0.3,
-            repeat: Infinity,
-          }}
-          className="
-            absolute
-            bg-white
-            border
-            border-neutral-200
-            rounded-full
-            px-8
-            py-4
-            shadow-xl
-            z-30
-            text-sm
-            font-medium
-          "
-          style={{
-            left: node.left,
-            top: node.top,
-            transform: "translate(-50%, -50%)",
-          }}
-        >
-          {node.label}
-        </motion.div>
-      ))}
-
-    </div>
-
-  </div>
-
-</section>
 
 
      
@@ -679,7 +639,7 @@ export default function LeaPage() {
 
         <p className="text-xl text-neutral-600 leading-relaxed max-w-xl">
           LEA identifies relationships across customers,
-          accounts, transactions, communications, devices,
+          accounts, transactions, KYC records,
           documents and digital artefacts to assemble
           decision-ready response packages.
         </p>
@@ -714,7 +674,7 @@ export default function LeaPage() {
             top: "52%",
           },
           {
-            title: "Devices",
+            title: "KYC Records",
             top: "64%",
           },
           {
@@ -834,67 +794,77 @@ export default function LeaPage() {
 
 </section>
 
+
+
+
+
+
+
 {/* =======================================================
-    DATA SOVEREIGNTY & SECURITY
+    TRADITIONAL VS LEA
 ======================================================= */}
 
-<section className="py-40 bg-[#111111] text-white overflow-hidden">
+<section className="py-40 bg-white">
 
   <div className="max-w-7xl mx-auto px-8">
 
-    <div className="max-w-4xl mb-28">
+    <div className="text-center mb-24">
 
       <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
-        Security & Sovereignty
+        Process Transformation
       </p>
 
       <h2 className="text-5xl md:text-7xl font-light leading-[0.95] tracking-[-0.04em]">
-        No data leaves
+        From fragmented
         <br />
-        the institution.
+        coordination to
+        <br />
+        structured response readiness.
       </h2>
 
     </div>
 
-    <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-20 items-center">
+    <div className="grid lg:grid-cols-2 gap-12">
 
-      {/* LEFT SIDE */}
+      {/* TRADITIONAL */}
 
-      <div>
+      <div className="border border-neutral-200 rounded-[32px] p-12">
 
-        <p className="text-xl text-neutral-400 leading-relaxed max-w-2xl mb-16">
-          LEA operates entirely within the institution's
-          controlled environment. All information retrieval,
-          correlation and package assembly occurs inside
-          bank-owned infrastructure.
-        </p>
+        <div className="mb-10">
 
-        <div className="grid md:grid-cols-2 gap-10">
+          <span className="text-xs tracking-[0.25em] uppercase text-neutral-500">
+            Traditional Process
+          </span>
+
+          <h3 className="text-4xl font-light mt-4">
+            Manual Coordination
+          </h3>
+
+        </div>
+
+        <div className="space-y-8">
 
           {[
-            "On-Premise Deployment",
-            "Private Cloud Deployment",
-            "Air-Gapped Infrastructure",
-            "Internal Encryption Control",
-            "Immutable Audit Trails",
-            "Role Based Access Control",
+            "Agency emails distributed manually",
+            "Multiple teams gather information independently",
+            "Spreadsheet-based tracking",
+            "Repeated follow-ups across departments",
+            "Fragmented records and documents",
+            "Manual package preparation",
           ].map((item) => (
 
-            <motion.div
+            <div
               key={item}
-              whileHover={{ y: -5 }}
-              className="
-              border
-              border-white/10
-              rounded-[24px]
-              p-8
-              backdrop-blur-sm
-              "
+              className="flex gap-4 items-start"
             >
-              <div className="text-lg font-light">
+
+              <div className="w-2 h-2 rounded-full bg-neutral-400 mt-3" />
+
+              <p className="text-neutral-600">
                 {item}
-              </div>
-            </motion.div>
+              </p>
+
+            </div>
 
           ))}
 
@@ -902,76 +872,70 @@ export default function LeaPage() {
 
       </div>
 
-      {/* RIGHT SIDE */}
+      {/* LEA */}
 
-      <div className="relative h-[600px] flex items-center justify-center">
-
-        <motion.div
-          className="
-          absolute
-          w-[450px]
-          h-[450px]
-          rounded-full
-          border
-          border-white/10
-          "
-          animate={{ rotate: 360 }}
-          transition={{
-            duration: 120,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-
-        <motion.div
-          className="
-          absolute
-          w-[320px]
-          h-[320px]
-          rounded-full
-          border
-          border-dashed
-          border-white/20
-          "
-          animate={{ rotate: -360 }}
-          transition={{
-            duration: 80,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
+      <div className="bg-[#3F5E8C] text-white rounded-[32px] p-12 relative overflow-hidden">
 
         <motion.div
           animate={{
-            scale: [1, 1.05, 1],
+            scale: [1, 1.3, 1],
+            opacity: [0.05, 0.12, 0.05]
           }}
           transition={{
-            duration: 4,
-            repeat: Infinity,
+            duration: 8,
+            repeat: Infinity
           }}
           className="
-          w-56
-          h-56
+          absolute
+          w-[500px]
+          h-[500px]
           rounded-full
-          bg-[#3F5E8C]
-          flex
-          items-center
-          justify-center
-          text-center
-          shadow-2xl
+          border
+          border-white
+          -right-40
+          -top-40
           "
-        >
-          <div>
+        />
 
-            <Lock className="w-10 h-10 mx-auto mb-4" />
+        <div className="mb-10 relative z-10">
 
-            <div className="text-sm uppercase tracking-[0.3em]">
-              Secure
+          <span className="text-xs tracking-[0.25em] uppercase opacity-70">
+            LEA Platform
+          </span>
+
+          <h3 className="text-4xl font-light mt-4">
+            Orchestrated Response Readiness
+          </h3>
+
+        </div>
+
+        <div className="space-y-8 relative z-10">
+
+          {[
+            "Structured intake and request understanding",
+            "Automated retrieval from connected systems",
+            "Cross-system information correlation",
+            "Relationship intelligence generation",
+            "Decision package assembly",
+            "Human review and controlled response",
+          ].map((item) => (
+
+            <div
+              key={item}
+              className="flex gap-4 items-start"
+            >
+
+              <div className="w-2 h-2 rounded-full bg-white mt-3" />
+
+              <p>
+                {item}
+              </p>
+
             </div>
 
-          </div>
+          ))}
 
-        </motion.div>
+        </div>
 
       </div>
 
@@ -982,81 +946,206 @@ export default function LeaPage() {
 </section>
 
 
+
+
+
+
+
 {/* =======================================================
-    EXECUTIVE OUTCOMES
+    GOVERNANCE • SOVEREIGNTY • SECURITY
 ======================================================= */}
 
-<section className="py-40 bg-white">
+<section className="py-40 bg-[#0D1117] text-white overflow-hidden">
 
   <div className="max-w-7xl mx-auto px-8">
 
-    <div className="max-w-4xl mb-28">
+    <div className="max-w-4xl mb-24">
 
-      <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
-        Executive Outcomes
+      <p className="uppercase tracking-[0.3em] text-xs text-white/50 mb-6">
+        Institutional Controls
       </p>
 
       <h2 className="text-5xl md:text-7xl font-light leading-[0.95] tracking-[-0.04em]">
-        Designed for response
+        Built for governed,
         <br />
-        readiness at enterprise
+        auditable and sovereign
         <br />
-        scale.
+        BFSI environments.
       </h2>
 
     </div>
 
-    <div className="space-y-0 border-t border-neutral-200">
+    <div className="grid lg:grid-cols-3 gap-8">
+
+      {/* CARD 1 */}
+
+      <motion.div
+        whileHover={{ y: -10 }}
+        className="
+        rounded-[32px]
+        border
+        border-white/10
+        bg-white/[0.03]
+        backdrop-blur-sm
+        p-10
+        "
+      >
+
+        <div className="mb-8">
+
+          <div
+            className="
+            w-16
+            h-16
+            rounded-full
+            bg-[#3F5E8C]/20
+            flex
+            items-center
+            justify-center
+            text-2xl
+            "
+          >
+            👤
+          </div>
+
+        </div>
+
+        <h3 className="text-3xl font-light mb-6">
+          Human-in-the-Loop Governance
+        </h3>
+
+        <p className="text-white/70 leading-relaxed">
+          LEA prepares decision-ready response packages,
+          while all approvals, submissions and final actions
+          remain under designated human authority.
+        </p>
+
+      </motion.div>
+
+      {/* CARD 2 */}
+
+      <motion.div
+        whileHover={{ y: -10 }}
+        className="
+        rounded-[32px]
+        border
+        border-white/10
+        bg-white/[0.03]
+        backdrop-blur-sm
+        p-10
+        "
+      >
+
+        <div className="mb-8">
+
+          <div
+            className="
+            w-16
+            h-16
+            rounded-full
+            bg-[#3F5E8C]/20
+            flex
+            items-center
+            justify-center
+            text-2xl
+            "
+          >
+            🔒
+          </div>
+
+        </div>
+
+        <h3 className="text-3xl font-light mb-6">
+          Absolute Data Sovereignty
+        </h3>
+
+        <p className="text-white/70 leading-relaxed">
+          Deploy on-premise, private cloud or controlled
+          environments while maintaining institutional
+          ownership of data and operational controls.
+        </p>
+
+      </motion.div>
+
+      {/* CARD 3 */}
+
+      <motion.div
+        whileHover={{ y: -10 }}
+        className="
+        rounded-[32px]
+        border
+        border-white/10
+        bg-white/[0.03]
+        backdrop-blur-sm
+        p-10
+        "
+      >
+
+        <div className="mb-8">
+
+          <div
+            className="
+            w-16
+            h-16
+            rounded-full
+            bg-[#3F5E8C]/20
+            flex
+            items-center
+            justify-center
+            text-2xl
+            "
+          >
+            🛡️
+          </div>
+
+        </div>
+
+        <h3 className="text-3xl font-light mb-6">
+          Multi-Layered Security
+        </h3>
+
+        <p className="text-white/70 leading-relaxed">
+          Role-based access, audit trails, controlled
+          retrieval, approval workflows and complete
+          traceability across the response lifecycle.
+        </p>
+
+      </motion.div>
+
+    </div>
+
+    {/* LOWER BAR */}
+
+    <div
+      className="
+      mt-24
+      border-t
+      border-white/10
+      pt-12
+      grid
+      md:grid-cols-4
+      gap-8
+      "
+    >
 
       {[
-        {
-          metric: "01",
-          title: "Faster Response Readiness",
-          text: "Reduce time spent locating records, coordinating teams and assembling information."
-        },
-        {
-          metric: "02",
-          title: "Reduced Operational Coordination",
-          text: "Minimize dependency on manual follow-ups across branches and departments."
-        },
-        {
-          metric: "03",
-          title: "Improved Audit Readiness",
-          text: "Maintain complete traceability across information retrieval and package preparation."
-        },
-        {
-          metric: "04",
-          title: "Centralized Decision Support",
-          text: "Provide designated review teams with structured and decision-ready packages."
-        },
+        "Immutable Audit Trails",
+        "Role-Based Access Control",
+        "Policy-Aware Responses",
+        "Regulatory Alignment",
       ].map((item) => (
 
-        <motion.div
-          key={item.metric}
-          whileHover={{ x: 8 }}
-          className="
-          grid
-          lg:grid-cols-[180px_1fr_1fr]
-          gap-8
-          py-12
-          border-b
-          border-neutral-200
-          "
-        >
+        <div key={item}>
 
-          <div className="text-5xl font-light text-neutral-300">
-            {item.metric}
+          <div className="text-white/40 text-xs tracking-[0.25em] uppercase mb-3">
+            Capability
           </div>
 
-          <div className="text-3xl font-light">
-            {item.title}
+          <div className="text-lg">
+            {item}
           </div>
 
-          <div className="text-neutral-600 text-lg leading-relaxed">
-            {item.text}
-          </div>
-
-        </motion.div>
+        </div>
 
       ))}
 
@@ -1065,6 +1154,229 @@ export default function LeaPage() {
   </div>
 
 </section>
+
+
+
+
+
+{/* =======================================================
+    EXECUTIVE OUTCOMES
+======================================================= */}
+
+<section className="py-40 bg-white overflow-hidden">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <div className="max-w-4xl mb-24">
+
+      <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
+        Executive Outcomes
+      </p>
+
+      <h2 className="text-5xl md:text-7xl font-light leading-[0.95] tracking-[-0.04em]">
+        Transforming response
+        <br />
+        readiness into a strategic
+        <br />
+        institutional capability.
+      </h2>
+
+    </div>
+
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+      {/* LEFT SIDE */}
+
+      <div className="space-y-8">
+
+        {[
+          {
+            value: "10x",
+            title: "Faster Information Discovery",
+            desc: "Reduce manual coordination across departments and systems."
+          },
+          {
+            value: "100%",
+            title: "Response Traceability",
+            desc: "Maintain complete auditability across the lifecycle."
+          },
+          {
+            value: "24x7",
+            title: "Request Monitoring",
+            desc: "Continuously monitor registered agency intake channels."
+          },
+          {
+            value: "Single",
+            title: "Decision Package",
+            desc: "Unified response package for designated review teams."
+          }
+        ].map((item) => (
+
+          <motion.div
+            key={item.title}
+            whileHover={{ x: 8 }}
+            className="
+            border-b
+            border-neutral-200
+            pb-8
+            "
+          >
+
+            <div className="flex gap-8 items-start">
+
+              <div
+                className="
+                text-5xl
+                md:text-6xl
+                font-light
+                text-[#3F5E8C]
+                min-w-[120px]
+                "
+              >
+                {item.value}
+              </div>
+
+              <div>
+
+                <h3 className="text-2xl font-light mb-3">
+                  {item.title}
+                </h3>
+
+                <p className="text-neutral-600">
+                  {item.desc}
+                </p>
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
+        ))}
+
+      </div>
+
+   {/* RIGHT SIDE */}
+
+<div className="relative h-[650px] flex items-center justify-center">
+
+  {/* ORBIT */}
+
+  <motion.div
+    animate={{ rotate: 360 }}
+    transition={{
+      duration: 90,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+    className="
+    absolute
+    w-[520px]
+    h-[520px]
+    rounded-full
+    border
+    border-[#3F5E8C]/10
+    "
+  />
+
+  {/* LEA CORE */}
+
+  <motion.div
+  animate={{
+    scale: [1, 1.04, 1],
+    rotate: [0, 360],
+  }}
+  transition={{
+    scale: {
+      duration: 4,
+      repeat: Infinity,
+    },
+    rotate: {
+      duration: 30,
+      repeat: Infinity,
+      ease: "linear",
+    },
+  }}
+
+    className="
+    w-[240px]
+    h-[240px]
+    rounded-full
+    bg-[#3F5E8C]
+    text-white
+    flex
+    items-center
+    justify-center
+    text-center
+    shadow-2xl
+    z-20
+    "
+  >
+    <div>
+
+      <div className="text-5xl font-light mb-3">
+        LEA
+      </div>
+
+      <div className="uppercase tracking-[0.3em] text-[10px] opacity-70">
+        Decision Support Platform
+      </div>
+
+    </div>
+  </motion.div>
+
+  {[
+    { label: "CBS", x: "-220px", y: "-150px" },
+    { label: "CRM", x: "220px", y: "-120px" },
+    { label: "DMS", x: "240px", y: "90px" },
+    { label: "Email", x: "-240px", y: "120px" },
+    { label: "KYC", x: "-120px", y: "230px" },
+    { label: "Contact Centre", x: "120px", y: "230px" },
+    { label: "Agency Requests", x: "0px", y: "-250px" },
+  ].map((node, i) => (
+
+    <motion.div
+      key={node.label}
+      animate={{
+        y: [-6, 6, -6],
+      }}
+      transition={{
+        duration: 4 + i,
+        repeat: Infinity,
+      }}
+      className="
+      absolute
+      bg-white
+      border
+      border-neutral-200
+      rounded-full
+      px-6
+      py-3
+      shadow-xl
+      text-sm
+      z-10
+      "
+style={{
+  left: "50%",
+  top: "50%",
+  transform: `translate(${node.x}, ${node.y})`,
+}}
+    >
+      {node.label}
+    </motion.div>
+
+  ))}
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+
+
+
 
 
 
