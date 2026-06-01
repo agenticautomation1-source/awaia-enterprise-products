@@ -227,112 +227,137 @@ export default function LeaPage() {
 
 
 
-      <section className="py-40 overflow-hidden">
+ <section className="py-40 overflow-visible">
 
-<div className="max-w-7xl mx-auto px-8">
+  <div className="max-w-7xl mx-auto px-8">
 
-<div className="max-w-4xl mb-24">
+    <div className="max-w-4xl mb-24">
 
-<p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
-LEA Intelligence Core
-</p>
+      <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
+        LEA Intelligence Core
+      </p>
 
-<h2 className="text-5xl md:text-7xl font-light leading-[0.95] tracking-[-0.04em]">
-Connecting fragmented
-<br />
-enterprise systems into
-<br />
-decision-ready intelligence.
-</h2>
+      <h2 className="text-5xl md:text-7xl font-light leading-[0.95] tracking-[-0.04em]">
+        Connecting fragmented
+        <br />
+        enterprise systems into
+        <br />
+        decision-ready intelligence.
+      </h2>
 
-</div>
+    </div>
 
-<div className="relative h-[800px] flex items-center justify-center">
+    <div className="relative h-[1000px] flex items-center justify-center overflow-visible">
 
-<motion.div
-className="absolute w-[520px] h-[520px] rounded-full border border-[#3F5E8C]/20"
-animate={{ rotate: 360 }}
-transition={{
-duration: 80,
-repeat: Infinity,
-ease: "linear"
-}}
-/>
+      {/* OUTER ORBIT */}
 
-<motion.div
-className="absolute w-[420px] h-[420px] rounded-full border border-dashed border-[#3F5E8C]/20"
-animate={{ rotate: -360 }}
-transition={{
-duration: 120,
-repeat: Infinity,
-ease: "linear"
-}}
-/>
+      <motion.div
+        className="absolute w-[700px] h-[700px] rounded-full border border-[#3F5E8C]/10"
+        animate={{ rotate: 360 }}
+        transition={{
+          duration: 120,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      />
 
-<motion.div
-animate={{
-scale:[1,1.05,1]
-}}
-transition={{
-duration:4,
-repeat:Infinity
-}}
-className="
-w-72
-h-72
-rounded-full
-bg-[#3F5E8C]
-text-white
-flex
-items-center
-justify-center
-text-4xl
-font-light
-shadow-2xl
-z-20
-"
->
-LEA
-</motion.div>
+      {/* INNER ORBIT */}
 
-{[
-{label:"CBS",x:"-420px",y:"-180px"},
-{label:"CRM",x:"420px",y:"-180px"},
-{label:"ERP",x:"-420px",y:"180px"},
-{label:"DMS",x:"420px",y:"180px"},
-{label:"AML",x:"0px",y:"-320px"},
-{label:"Fraud",x:"0px",y:"320px"},
-].map((node)=>(
-<motion.div
-key={node.label}
-animate={{
-y:[-8,8,-8]
-}}
-transition={{
-duration:4,
-repeat:Infinity
-}}
-style={{
-transform:`translate(${node.x},${node.y})`
-}}
-className="
-absolute
-bg-white
-border
-rounded-full
-px-8
-py-4
-shadow-sm
-z-10
-"
->
-{node.label}
-</motion.div>
-))}
+      <motion.div
+        className="absolute w-[550px] h-[550px] rounded-full border border-dashed border-[#3F5E8C]/20"
+        animate={{ rotate: -360 }}
+        transition={{
+          duration: 90,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      />
 
-</div>
+      {/* LEA CORE */}
 
-</div>
+      <motion.div
+        animate={{
+          scale: [1, 1.05, 1],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+        }}
+        className="
+          w-80
+          h-80
+          rounded-full
+          bg-[#3F5E8C]
+          text-white
+          flex
+          items-center
+          justify-center
+          text-center
+          shadow-2xl
+          z-20
+        "
+      >
+        <div>
+          <div className="text-5xl font-light mb-3">
+            LEA
+          </div>
+
+          <div className="uppercase tracking-[0.3em] text-xs opacity-70">
+            Intelligence Core
+          </div>
+        </div>
+      </motion.div>
+
+      {[
+        { label: "CBS", left: "18%", top: "35%" },
+        { label: "CRM", left: "75%", top: "35%" },
+
+        { label: "ERP", left: "18%", top: "65%" },
+        { label: "DMS", left: "75%", top: "65%" },
+
+        { label: "AML", left: "50%", top: "12%" },
+        { label: "Fraud Systems", left: "50%", top: "88%" },
+
+        { label: "Email", left: "30%", top: "18%" },
+        { label: "Contact Center", left: "70%", top: "18%" },
+      ].map((node, index) => (
+        <motion.div
+          key={node.label}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          animate={{
+            y: [-8, 8, -8],
+          }}
+          transition={{
+            duration: 4 + index * 0.3,
+            repeat: Infinity,
+          }}
+          className="
+            absolute
+            bg-white
+            border
+            border-neutral-200
+            rounded-full
+            px-8
+            py-4
+            shadow-xl
+            z-30
+            text-sm
+            font-medium
+          "
+          style={{
+            left: node.left,
+            top: node.top,
+            transform: "translate(-50%, -50%)",
+          }}
+        >
+          {node.label}
+        </motion.div>
+      ))}
+
+    </div>
+
+  </div>
 
 </section>
 
@@ -477,11 +502,12 @@ z-10
 
 
 
+```tsx
 {/* =======================================================
     CONNECTED ENTERPRISE ECOSYSTEM
 ======================================================= */}
 
-<section className="py-40 overflow-hidden">
+<section className="py-40 overflow-visible">
 
   <div className="max-w-7xl mx-auto px-8">
 
@@ -501,19 +527,12 @@ z-10
 
     </div>
 
-    <div className="relative h-[900px] flex items-center justify-center">
+    <div className="relative h-[1000px] flex items-center justify-center overflow-visible">
 
-      {/* OUTER RING */}
+      {/* OUTER ORBIT */}
 
       <motion.div
-        className="
-        absolute
-        w-[700px]
-        h-[700px]
-        rounded-full
-        border
-        border-[#3F5E8C]/10
-        "
+        className="absolute w-[700px] h-[700px] rounded-full border border-[#3F5E8C]/10"
         animate={{ rotate: 360 }}
         transition={{
           duration: 120,
@@ -522,18 +541,10 @@ z-10
         }}
       />
 
-      {/* INNER RING */}
+      {/* INNER ORBIT */}
 
       <motion.div
-        className="
-        absolute
-        w-[550px]
-        h-[550px]
-        rounded-full
-        border
-        border-dashed
-        border-[#3F5E8C]/15
-        "
+        className="absolute w-[550px] h-[550px] rounded-full border border-dashed border-[#3F5E8C]/15"
         animate={{ rotate: -360 }}
         transition={{
           duration: 90,
@@ -553,42 +564,43 @@ z-10
           repeat: Infinity,
         }}
         className="
-        w-80
-        h-80
-        rounded-full
-        bg-[#3F5E8C]
-        text-white
-        flex
-        items-center
-        justify-center
-        text-center
-        z-20
-        shadow-2xl
+          w-80
+          h-80
+          rounded-full
+          bg-[#3F5E8C]
+          text-white
+          flex
+          items-center
+          justify-center
+          text-center
+          z-20
+          shadow-2xl
         "
       >
         <div>
-
-          <div className="text-4xl font-light mb-3">
+          <div className="text-5xl font-light mb-3">
             LEA
           </div>
 
-          <div className="text-sm tracking-[0.25em] uppercase opacity-70">
+          <div className="text-xs tracking-[0.3em] uppercase opacity-70">
             Intelligence Core
           </div>
-
         </div>
       </motion.div>
 
       {[
-        { label: "CBS", x: "-500px", y: "-220px" },
-        { label: "CRM", x: "500px", y: "-220px" },
-        { label: "ERP", x: "-500px", y: "220px" },
-        { label: "DMS", x: "500px", y: "220px" },
-        { label: "AML", x: "0px", y: "-360px" },
-        { label: "Fraud Systems", x: "0px", y: "360px" },
-        { label: "Email", x: "-300px", y: "-360px" },
-        { label: "Contact Center", x: "300px", y: "-360px" },
-      ].map((node) => (
+        { label: "CBS", left: "18%", top: "35%" },
+        { label: "CRM", left: "82%", top: "35%" },
+
+        { label: "ERP", left: "18%", top: "65%" },
+        { label: "DMS", left: "82%", top: "65%" },
+
+        { label: "AML", left: "50%", top: "12%" },
+        { label: "Fraud Systems", left: "50%", top: "88%" },
+
+        { label: "Email", left: "30%", top: "18%" },
+        { label: "Contact Center", left: "70%", top: "18%" },
+      ].map((node, index) => (
 
         <motion.div
           key={node.label}
@@ -596,23 +608,27 @@ z-10
             y: [-10, 10, -10],
           }}
           transition={{
-            duration: 5,
+            duration: 4 + index * 0.3,
             repeat: Infinity,
           }}
-          style={{
-            transform: `translate(${node.x}, ${node.y})`,
-          }}
           className="
-          absolute
-          bg-white
-          border
-          border-neutral-200
-          rounded-full
-          px-8
-          py-4
-          shadow-sm
-          z-10
+            absolute
+            bg-white
+            border
+            border-neutral-200
+            rounded-full
+            px-8
+            py-4
+            shadow-xl
+            z-30
+            text-sm
+            font-medium
           "
+          style={{
+            left: node.left,
+            top: node.top,
+            transform: "translate(-50%, -50%)",
+          }}
         >
           {node.label}
         </motion.div>
@@ -620,8 +636,6 @@ z-10
       ))}
 
     </div>
-
-    {/* OUTPUT */}
 
     <div className="max-w-5xl mx-auto text-center mt-10">
 
