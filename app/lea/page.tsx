@@ -10,6 +10,7 @@ import {
   Globe,
   FileText,
   Network,
+  Package,
   Lock,
   ArrowRight,
   CheckCircle2,
@@ -30,9 +31,9 @@ export default function LeaPage() {
   ];
 
   return (
-    <main className="bg-white text-neutral-900">
-            <section className="min-h-[700px] flex items-start pt-30 pb-24">
-        <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-[1.35fr_0.65fr] gap-20 items-start">
+    <main className="bg-white text-neutral-900 overflow-x-hidden">
+            <section className="min-h-[700px] flex items-start pt-24 pb-24 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-12 items-center">
           <div>
             <p className="uppercase tracking-[0.35em] text-sm mb-8 text-neutral-500">
               LEA™ • Legal Enforcement Assistant
@@ -40,11 +41,14 @@ export default function LeaPage() {
 
 <h1
   className="
-  text-6xl
-  md:text-[5.4rem]
+  text-[2.2rem]
+  sm:text-[3.8rem]
+  lg:text-[5.4rem]
   font-light
-  leading-[0.92]
+  leading-[0.90]
+  lg:leading-[0.92]
   tracking-[-0.04em]
+  break-words
   "
 >
   Decision Support
@@ -63,17 +67,17 @@ export default function LeaPage() {
   & Legal Responses.
 </h1>
 
-            <p className="mt-10 text-xl text-neutral-600 max-w-2xl">
+            <p className="mt-8 lg:mt-10 text-[15px] lg:text-xl text-neutral-600 max-w-2xl leading-relaxed">
               LEA autonomously discovers, collects, correlates and organizes
               enterprise records across banking systems to accelerate response
               readiness for regulatory and law-enforcement requests.
             </p>
 
-            <div className="flex gap-4 mt-10">
-              <button className="px-8 py-4 bg-black text-white rounded-full">
+            <div className="flex flex-col sm:flex-row gap-4 mt-8 lg:mt-10">
+              <button className="w-full sm:w-auto px-6 lg:px-8 py-4 bg-black text-white rounded-full">
                 Request Executive Briefing
               </button>
-              <button className="px-8 py-4 border rounded-full">
+              <button className="w-full sm:w-auto px-6 lg:px-8 py-4 border rounded-full">
                 Explore Architecture
               </button>
             </div>
@@ -82,9 +86,93 @@ export default function LeaPage() {
           </div>
 
 
-<div className="relative h-[750px] hidden lg:flex items-center justify-center overflow-visible">
+{/* ================= MOBILE HERO ================= */}
 
-  {/* OUTER ORBIT */}
+<div className="block lg:hidden relative h-[520px] mt-20 overflow-hidden">
+
+  <div className="absolute inset-0 flex items-center justify-center">
+
+    <div className="absolute w-[260px] h-[260px] rounded-full border border-[#3F5E8C]/10" />
+
+    <div className="absolute w-[190px] h-[190px] rounded-full border border-dashed border-[#3F5E8C]/15" />
+
+    <motion.div
+      animate={{
+        scale: [1, 1.04, 1],
+      }}
+      transition={{
+        duration: 4,
+        repeat: Infinity,
+      }}
+      className="
+      w-[110px]
+      h-[110px]
+      rounded-full
+      bg-[#3F5E8C]
+      text-white
+      flex
+      items-center
+      justify-center
+      text-center
+      shadow-2xl
+      z-20
+      "
+    >
+      <div>
+        <div className="text-3xl font-light">
+          LEA
+        </div>
+
+        <div className="uppercase tracking-[0.2em] text-[7px] opacity-70">
+          Decision Support Platform
+        </div>
+      </div>
+    </motion.div>
+
+    {[
+      { icon: FileText, label: "Agency Requests", left: "50%", top: "8%" },
+      { icon: Building2, label: "Core Banking", left: "28%", top: "30%" },
+      { icon: Users, label: "CRM", left: "78%", top: "30%" },
+      { icon: Shield, label: "KYC Records", left: "22%", top: "72%" },
+      { icon: Folder, label: "Document Systems", left: "72%", top: "72%" },
+      { icon: Mail, label: "Email Archive", left: "50%", top: "86%" },
+    ].map((node) => (
+      <div
+        key={node.label}
+        className="absolute"
+        style={{
+          left: node.left,
+          top: node.top,
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <div className="
+          bg-white
+          border
+          border-neutral-200
+          rounded-full
+          px-3
+          py-2
+          shadow-xl
+          text-[11px]
+          whitespace-nowrap
+        ">
+          <div className="flex items-center gap-2">
+            <node.icon size={12} className="text-[#3F5E8C]" />
+            <span>{node.label}</span>
+          </div>
+        </div>
+      </div>
+    ))}
+
+  </div>
+
+</div>
+
+
+{/* ================= DESKTOP HERO ================= */}
+
+<div className="hidden lg:flex relative h-[750px] items-center justify-center overflow-visible">
 
   <motion.div
     animate={{ rotate: 360 }}
@@ -95,15 +183,13 @@ export default function LeaPage() {
     }}
     className="
     absolute
-    w-[720px]
-    h-[720px]
+    w-[620px]
+    h-[620px]
     rounded-full
     border
     border-[#3F5E8C]/10
     "
   />
-
-  {/* INNER ORBIT */}
 
   <motion.div
     animate={{ rotate: -360 }}
@@ -114,16 +200,14 @@ export default function LeaPage() {
     }}
     className="
     absolute
-    w-[560px]
-    h-[560px]
+    w-[480px]
+    h-[480px]
     rounded-full
     border
     border-dashed
     border-[#3F5E8C]/15
     "
   />
-
-  {/* LEA CORE */}
 
   <motion.div
     animate={{
@@ -148,7 +232,6 @@ export default function LeaPage() {
     "
   >
     <div>
-
       <div className="text-5xl font-light mb-2">
         LEA
       </div>
@@ -156,7 +239,6 @@ export default function LeaPage() {
       <div className="uppercase tracking-[0.3em] text-[10px] opacity-70">
         Decision Support Platform
       </div>
-
     </div>
   </motion.div>
 
@@ -171,19 +253,13 @@ export default function LeaPage() {
 
     const radius = 280;
 
-    const radians =
-      (node.angle * Math.PI) / 180;
+    const radians = (node.angle * Math.PI) / 180;
 
-    const x = Math.round(
-      Math.cos(radians) * radius
-    );
+    const x = Math.round(Math.cos(radians) * radius);
 
-    const y = Math.round(
-      Math.sin(radians) * radius
-    );
+    const y = Math.round(Math.sin(radians) * radius);
 
     return (
-
       <div
         key={node.label}
         className="absolute z-30"
@@ -193,7 +269,6 @@ export default function LeaPage() {
           transform: "translate(-50%, -50%)",
         }}
       >
-
         <motion.div
           animate={{
             scale: [1, 1.03, 1],
@@ -214,22 +289,12 @@ export default function LeaPage() {
           whitespace-nowrap
           "
         >
-
           <div className="flex items-center gap-2">
-
-            <node.icon
-              size={15}
-              className="text-[#3F5E8C]"
-            />
-
+            <node.icon size={15} className="text-[#3F5E8C]" />
             <span>{node.label}</span>
-
           </div>
-
         </motion.div>
-
       </div>
-
     );
 
   })}
@@ -311,6 +376,83 @@ export default function LeaPage() {
 
       {/* RIGHT */}
 
+<div className="p-12 md:p-16 bg-[#F8F8F7]">
+
+  <div className="mb-12">
+
+    <p className="uppercase tracking-[0.25em] text-xs text-neutral-500 mb-4">
+      LEA Workflow
+    </p>
+
+    <h3 className="text-3xl font-light">
+      Structured Response Readiness
+    </h3>
+
+  </div>
+
+  <div className="space-y-10">
+
+    {[
+      {
+        step: "01",
+        title: "Request Intake",
+        desc: "Agency communication automatically registered.",
+      },
+      {
+        step: "02",
+        title: "Enterprise Discovery",
+        desc: "Relevant records identified across systems.",
+      },
+      {
+        step: "03",
+        title: "Correlation Engine",
+        desc: "Information consolidated and organized.",
+      },
+      {
+        step: "04",
+        title: "Review Package",
+        desc: "Structured response package generated.",
+      },
+      {
+        step: "05",
+        title: "Audit Archive",
+        desc: "Lifecycle retained for traceability.",
+      },
+    ].map((item) => (
+
+      <div
+        key={item.step}
+        className="flex gap-6 items-start"
+      >
+
+        <div className="text-[#3F5E8C] text-2xl font-light min-w-[60px]">
+          {item.step}
+        </div>
+
+        <div>
+
+          <h4 className="text-lg mb-2">
+            {item.title}
+          </h4>
+
+          <p className="text-neutral-500">
+            {item.desc}
+          </p>
+
+        </div>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</div>
+
+
+
+
+
       
     </div>
 
@@ -322,22 +464,31 @@ export default function LeaPage() {
 
 
 
-     
 {/* =======================================================
     LEA OPERATIONAL JOURNEY
 ======================================================= */}
 
-<section className="py-40 bg-white">
+<section className="py-24 lg:py-40 bg-white">
 
-  <div className="max-w-7xl mx-auto px-8">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-    <div className="max-w-4xl mb-32">
+    <div className="max-w-4xl mb-20 lg:mb-32">
 
       <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
         Operational Journey
       </p>
 
-      <h2 className="text-5xl md:text-7xl font-light leading-[0.95] tracking-[-0.04em]">
+      <h2
+        className="
+        text-3xl
+        sm:text-4xl
+        md:text-6xl
+        lg:text-7xl
+        font-light
+        leading-[0.95]
+        tracking-[-0.04em]
+        "
+      >
         From agency request
         <br />
         to decision-ready
@@ -354,12 +505,12 @@ export default function LeaPage() {
       <div
         className="
         absolute
-        left-1/2
+        left-6
+        lg:left-1/2
         top-0
         bottom-0
         w-px
         bg-neutral-200
-        hidden lg:block
         "
       >
         <motion.div
@@ -464,9 +615,14 @@ export default function LeaPage() {
           className={`
             relative
             flex
-            items-center
-            gap-12
-            mb-24
+            flex-col
+            lg:flex-row
+            items-start
+            lg:items-center
+            gap-6
+            lg:gap-12
+            mb-16
+            lg:mb-24
 
             ${
               index % 2 === 0
@@ -476,60 +632,17 @@ export default function LeaPage() {
           `}
         >
 
-          {/* CONTENT */}
-
-          <div className="flex-1">
-
-            <motion.div
-              whileHover={{
-                y: -8,
-              }}
-              className="
-              bg-white
-              border
-              border-neutral-200
-              rounded-[28px]
-              p-10
-              shadow-sm
-              hover:shadow-xl
-              transition-all
-              duration-500
-              "
-            >
-
-              <p
-                className="
-                uppercase
-                tracking-[0.25em]
-                text-[10px]
-                text-[#3F5E8C]
-                mb-4
-                "
-              >
-                {step.phase}
-              </p>
-
-              <h3 className="text-3xl font-light mb-4">
-                {step.title}
-              </h3>
-
-              <p className="text-neutral-600 leading-relaxed">
-                {step.desc}
-              </p>
-
-            </motion.div>
-
-          </div>
-
           {/* SIGNAL NODE */}
 
           <div
             className="
             relative
-            hidden
-            lg:flex
+            flex
             items-center
             justify-center
+            ml-[6px]
+            lg:ml-0
+            lg:min-w-[120px]
             "
           >
 
@@ -542,15 +655,20 @@ export default function LeaPage() {
                 repeat: Infinity,
               }}
               className="
-              w-16
-              h-16
+              w-12
+              h-12
+              md:w-14
+              md:h-14
+              lg:w-16
+              lg:h-16
               rounded-full
               bg-[#111111]
               text-white
               flex
               items-center
               justify-center
-              text-sm
+              text-xs
+              md:text-sm
               tracking-wider
               z-20
               "
@@ -577,7 +695,54 @@ export default function LeaPage() {
 
           </div>
 
-          {/* SPACER */}
+          {/* CONTENT */}
+
+          <div className="w-full lg:flex-1 lg:max-w-[520px]">
+
+            <motion.div
+              whileHover={{
+                y: -8,
+              }}
+              className="
+              bg-white
+              border
+              border-neutral-200
+              rounded-[28px]
+              p-6
+              md:p-8
+              lg:p-10
+              shadow-sm
+              hover:shadow-xl
+              transition-all
+              duration-500
+              "
+            >
+
+              <p
+                className="
+                uppercase
+                tracking-[0.25em]
+                text-[10px]
+                text-[#3F5E8C]
+                mb-4
+                "
+              >
+                {step.phase}
+              </p>
+
+              <h3 className="text-2xl lg:text-3xl font-light mb-4">
+                {step.title}
+              </h3>
+
+              <p className="text-neutral-600 leading-relaxed">
+                {step.desc}
+              </p>
+
+            </motion.div>
+
+          </div>
+
+          {/* DESKTOP SPACER */}
 
           <div className="flex-1 hidden lg:block" />
 
@@ -587,18 +752,40 @@ export default function LeaPage() {
 
     </div>
 
-    <div className="mt-40 text-center max-w-3xl mx-auto">
+    <div className="mt-24 text-center max-w-4xl mx-auto">
 
-      <div className="w-px h-24 bg-neutral-200 mx-auto mb-10" />
+      <div className="w-px h-16 bg-neutral-200 mx-auto mb-8" />
 
-      <h3 className="text-4xl font-light mb-6">
-        Built For Institutional Readiness.
+      <h3
+        className="
+        text-3xl
+        md:text-5xl
+        font-light
+        tracking-[-0.03em]
+        leading-[1]
+        mb-6
+        "
+      >
+        Built For
+        <span className="text-[#3F5E8C]">
+          {" "}
+          Institutional Readiness
+        </span>
       </h3>
 
-      <p className="text-neutral-600 text-lg leading-relaxed">
-        LEA transforms fragmented information retrieval into
-        structured decision support, enabling faster and more
-        traceable response readiness across BFSI institutions.
+      <p
+        className="
+        text-neutral-600
+        text-lg
+        leading-relaxed
+        max-w-2xl
+        mx-auto
+        "
+      >
+        LEA transforms fragmented information retrieval into structured
+        decision support, enabling faster response readiness, complete
+        traceability, and institution-wide coordination across BFSI
+        operations.
       </p>
 
     </div>
@@ -606,7 +793,6 @@ export default function LeaPage() {
   </div>
 
 </section>
-
 
 
 {/* =======================================================
@@ -1256,116 +1442,131 @@ export default function LeaPage() {
 
       </div>
 
-   {/* RIGHT SIDE */}
+{/* RIGHT SIDE */}
 
 <div className="relative h-[650px] flex items-center justify-center">
 
-  {/* ORBIT */}
+  <div className="relative w-full max-w-[420px]">
 
-  <motion.div
-    animate={{ rotate: 360 }}
-    transition={{
-      duration: 90,
-      repeat: Infinity,
-      ease: "linear",
-    }}
-    className="
-    absolute
-    w-[520px]
-    h-[520px]
-    rounded-full
-    border
-    border-[#3F5E8C]/10
-    "
-  />
+    {[
+      {
+        icon: FileText,
+        title: "Regulatory Notice Intake Engine",
+      },
+      {
+        icon: Database,
+        title: "Case Intelligence Engine",
+      },
+      {
+        icon: Network,
+        title: "Case Correlation & Routing Engine",
+      },
+      {
+        icon: Package,
+        title: "Regulatory Response Package",
+      },
+      {
+        icon: CheckCircle2,
+        title: "Response Submission & Closure",
+      },
+    ].map((step, i) => (
+      <div key={step.title}>
 
-  {/* LEA CORE */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: i * 0.15,
+            duration: 0.5,
+          }}
+          className="
+          relative
+          bg-white
+          border
+          border-neutral-200
+          rounded-[28px]
+          px-6
+          py-5
+          shadow-xl
+          flex
+          items-center
+          gap-4
+          z-10
+          "
+        >
 
-  <motion.div
-  animate={{
-    scale: [1, 1.04, 1],
-    rotate: [0, 360],
-  }}
-  transition={{
-    scale: {
-      duration: 4,
-      repeat: Infinity,
-    },
-    rotate: {
-      duration: 30,
-      repeat: Infinity,
-      ease: "linear",
-    },
-  }}
+          <div
+            className="
+            w-12
+            h-12
+            rounded-full
+            bg-[#3F5E8C]/10
+            flex
+            items-center
+            justify-center
+            "
+          >
+            <step.icon
+              size={22}
+              className="text-[#3F5E8C]"
+            />
+          </div>
 
-    className="
-    w-[240px]
-    h-[240px]
-    rounded-full
-    bg-[#3F5E8C]
-    text-white
-    flex
-    items-center
-    justify-center
-    text-center
-    shadow-2xl
-    z-20
-    "
-  >
-    <div>
+          <div>
 
-      <div className="text-5xl font-light mb-3">
-        LEA
+            <div className="text-xs tracking-[0.25em] uppercase text-neutral-400 mb-1">
+              Step {i + 1}
+            </div>
+
+            <div className="text-lg font-medium">
+              {step.title}
+            </div>
+
+          </div>
+
+        </motion.div>
+
+        {i < 4 && (
+
+          <div className="relative h-16 flex justify-center">
+
+            <div
+              className="
+              absolute
+              w-px
+              h-full
+              bg-neutral-200
+              "
+            />
+
+            <motion.div
+              animate={{
+                y: [0, 50, 0],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                delay: i * 0.4,
+              }}
+              className="
+              absolute
+              top-0
+              w-3
+              h-3
+              rounded-full
+              bg-[#3F5E8C]
+              "
+            />
+
+          </div>
+
+        )}
+
       </div>
+    ))}
 
-      <div className="uppercase tracking-[0.3em] text-[10px] opacity-70">
-        Decision Support Platform
-      </div>
-
-    </div>
-  </motion.div>
-
-  {[
-    { label: "CBS", x: "-220px", y: "-150px" },
-    { label: "CRM", x: "220px", y: "-120px" },
-    { label: "DMS", x: "240px", y: "90px" },
-    { label: "Email", x: "-240px", y: "120px" },
-    { label: "KYC", x: "-120px", y: "230px" },
-    { label: "Contact Centre", x: "120px", y: "230px" },
-    { label: "Agency Requests", x: "0px", y: "-250px" },
-  ].map((node, i) => (
-
-    <motion.div
-      key={node.label}
-      animate={{
-        y: [-6, 6, -6],
-      }}
-      transition={{
-        duration: 4 + i,
-        repeat: Infinity,
-      }}
-      className="
-      absolute
-      bg-white
-      border
-      border-neutral-200
-      rounded-full
-      px-6
-      py-3
-      shadow-xl
-      text-sm
-      z-10
-      "
-style={{
-  left: "50%",
-  top: "50%",
-  transform: `translate(${node.x}, ${node.y})`,
-}}
-    >
-      {node.label}
-    </motion.div>
-
-  ))}
+  </div>
 
 </div>
 
