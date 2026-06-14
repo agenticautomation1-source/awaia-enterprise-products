@@ -56,13 +56,15 @@ export default function LeaPage() {
 
     <div
   className="
-  max-w-2xl
+  max-w-[760px]
   mt-10
 bg-white/18
 backdrop-blur-md
 border
 border-white/20
 rounded-[32px]
+p-12
+lg:p-16
 shadow-[0_20px_80px_rgba(0,0,0,0.15)]
   "
 >
@@ -71,14 +73,14 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
           LEA™ • Legal Enforcement Assistant
         </p>
 
-        <h1
-          className="
-          text-[2.2rem]
-          sm:text-[3.8rem]
-          lg:text-[5.4rem]
+<h1
+  className="
+  text-[2.2rem]
+  sm:text-[3.8rem]
+  lg:text-[5rem]
           font-light
-          leading-[0.90]
-          lg:leading-[0.92]
+          leading-[0.95]
+          lg:leading-[0.96]
           tracking-[-0.04em]
           "
         >
@@ -100,7 +102,7 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
           readiness for regulatory and law-enforcement requests.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+        <div className="flex flex-col sm:flex-row gap-4 mt-10">
 
           <button className="px-8 py-4 bg-black text-white rounded-full">
             Request Executive Briefing
