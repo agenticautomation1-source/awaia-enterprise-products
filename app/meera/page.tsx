@@ -132,14 +132,14 @@ duration-300
 
       </div>
 
-      <div className="w-full h-[520px] overflow-hidden">
+      <div className="w-full h-[720px] overflow-hidden">
 
   <video
     autoPlay
     muted
     loop
     playsInline
-    className="w-full h-full object-cover"
+    className="w-full h-full object-cover rounded-[24px]"
   >
     <source
       src="/videos/meera-hero.mp4"
