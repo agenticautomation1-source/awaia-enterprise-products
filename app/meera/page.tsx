@@ -25,7 +25,7 @@ export default function MeeraPage() {
     />
   </video>
 
-  <div className="absolute inset-0 bg-black/25" />
+  <div className="absolute inset-0 bg-black/15" />
 
   <div className="relative z-10 h-full flex items-center">
 
