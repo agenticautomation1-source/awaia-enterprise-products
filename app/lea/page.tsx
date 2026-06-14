@@ -48,24 +48,25 @@ export default function LeaPage() {
     />
   </video>
 
-  <div className="absolute inset-0 bg-black/30" />
+  <div className="absolute inset-0 bg-black/10" />
 
-  <div className="relative z-10 h-full flex items-end">
+  <div className="relative z-10 h-full flex items-center">
 
-  <div className="w-full">
+  <div className="max-w-7xl mx-auto px-8 w-full">
 
- <div
-  className="
-  w-full
-  bg-white/30
-  backdrop-blur-sm
-  border-t
-  border-white/10
-  px-8
-  lg:px-20
-  py-10
-  "
->
+    <div
+      className="
+      max-w-2xl
+      bg-white/18
+      backdrop-blur-md
+      border
+      border-white/20
+      rounded-[32px]
+      p-10
+      lg:p-14
+      shadow-[0_20px_80px_rgba(0,0,0,0.15)]
+      "
+    >
 
         <p className="uppercase tracking-[0.35em] text-sm mb-8 text-neutral-500">
           LEA™ • Legal Enforcement Assistant
@@ -93,7 +94,7 @@ export default function LeaPage() {
           & Legal Responses.
         </h1>
 
-        <p className="mt-8 text-lg text-neutral-700 leading-relaxed">
+        <p className="mt-8 text-lg text-neutral-800 leading-relaxed max-w-xl">
           LEA autonomously discovers, collects,
           correlates and organizes enterprise records
           across banking systems to accelerate response
