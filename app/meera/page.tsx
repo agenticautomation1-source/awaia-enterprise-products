@@ -121,7 +121,7 @@ export default function MeeraPage() {
             border
             border-gray-300
             rounded-full
-            bg-white/70
+            bg-white/20
             backdrop-blur-sm
             hover:bg-white
             transition-all
