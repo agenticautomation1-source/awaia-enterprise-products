@@ -132,110 +132,28 @@ duration-300
 
       </div>
 
-      <div className="
-float-card
-border
-border-white/60
-bg-white/70
-backdrop-blur-xl
-shadow-[0_20px_80px_rgba(0,0,0,0.08)]
-rounded-[32px]
-p-12
-relative
-overflow-hidden
-">
+      <div className="w-full h-[520px] overflow-hidden">
 
-
-  <div className="mb-10 text-xs tracking-[0.25em] text-neutral-500 uppercase">
-    Live Enterprise Interaction
-  </div>
-
-  <div className="space-y-6">
-
-    <div className="border bg-white p-5">
-      <div className="text-[10px] uppercase text-neutral-400 mb-2">
-        Customer
-      </div>
-
-      <div>
-        I need to check my overseas transaction limit.  
-      </div>
-    </div>
-
-    <div className="flex justify-center py-6">
-       <SignalBars />
-    
-    </div>
-
-
-    <div className="bg-black text-white p-5 ml-12">
-      <div className="text-[10px] uppercase text-neutral-400 mb-2">
-        MEERA
-      </div>
-
-      <div>
-        Your current limit is ₹50,00,000. Would you like a temporary increase request?
-      </div>
-    </div>
-
-  </div>
-
-  <div className="mt-12 pt-8 border-t flex justify-between text-[11px] uppercase tracking-widest text-neutral-500">
-
-    <span>Voice Gateway</span>
-    <span>Policy Engine</span>
-    <span>Core Banking</span>
-
-  </div>
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover"
+  >
+    <source
+      src="/videos/meera-hero.mp4"
+      type="video/mp4"
+    />
+  </video>
 
 </div>
-
-    </div>
-
-  </div>
 </section>
-{/* MEERA VIDEO */}
 
-<section className="py-20 bg-white border-t">
-  <div className="max-w-7xl mx-auto px-8">
-
-    <div className="text-center mb-12">
-
-      <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-4">
-        Experience MEERA
-      </p>
-
-      <h2 className="text-5xl font-light">
-        Human-like Enterprise Voice Intelligence
-      </h2>
-
-    </div>
-
-    <div className="rounded-[32px] overflow-hidden shadow-2xl border border-neutral-200">
-
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="w-full h-auto"
-      >
-        <source
-          src="/videos/meera-hero.mp4"
-          type="video/mp4"
-        />
-      </video>
-
-    </div>
-
-  </div>
-</section>
 
 <Architecture />
 <ArchitectureDiagram />
 
-<Architecture />
-<ArchitectureDiagram />
 
  
       {/* DEPLOYMENT */}

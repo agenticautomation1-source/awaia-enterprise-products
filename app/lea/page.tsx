@@ -172,132 +172,20 @@ export default function LeaPage() {
 
 {/* ================= DESKTOP HERO ================= */}
 
-<div className="hidden lg:flex relative h-[750px] items-center justify-center overflow-visible">
+<div className="hidden lg:block w-full h-[520px] overflow-hidden">
 
-  <motion.div
-    animate={{ rotate: 360 }}
-    transition={{
-      duration: 120,
-      repeat: Infinity,
-      ease: "linear",
-    }}
-    className="
-    absolute
-    w-[620px]
-    h-[620px]
-    rounded-full
-    border
-    border-[#3F5E8C]/10
-    "
-  />
-
-  <motion.div
-    animate={{ rotate: -360 }}
-    transition={{
-      duration: 90,
-      repeat: Infinity,
-      ease: "linear",
-    }}
-    className="
-    absolute
-    w-[480px]
-    h-[480px]
-    rounded-full
-    border
-    border-dashed
-    border-[#3F5E8C]/15
-    "
-  />
-
-  <motion.div
-    animate={{
-      scale: [1, 1.04, 1],
-    }}
-    transition={{
-      duration: 4,
-      repeat: Infinity,
-    }}
-    className="
-    w-[170px]
-    h-[170px]
-    rounded-full
-    bg-[#3F5E8C]
-    text-white
-    flex
-    items-center
-    justify-center
-    text-center
-    shadow-2xl
-    z-20
-    "
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover"
   >
-    <div>
-      <div className="text-5xl font-light mb-2">
-        LEA
-      </div>
-
-      <div className="uppercase tracking-[0.3em] text-[10px] opacity-70">
-        Decision Support Platform
-      </div>
-    </div>
-  </motion.div>
-
-  {[
-    { icon: FileText, label: "Agency Requests", angle: -90 },
-    { icon: Building2, label: "Core Banking", angle: -135 },
-    { icon: Users, label: "CRM", angle: -45 },
-    { icon: Shield, label: "KYC Records", angle: 135 },
-    { icon: Folder, label: "Document Systems", angle: 45 },
-    { icon: Mail, label: "Email Archive", angle: 90 },
-  ].map((node, i) => {
-
-    const radius = 280;
-
-    const radians = (node.angle * Math.PI) / 180;
-
-    const x = Math.round(Math.cos(radians) * radius);
-
-    const y = Math.round(Math.sin(radians) * radius);
-
-    return (
-      <div
-        key={node.label}
-        className="absolute z-30"
-        style={{
-          left: `calc(50% + ${x}px)`,
-          top: `calc(50% + ${y}px)`,
-          transform: "translate(-50%, -50%)",
-        }}
-      >
-        <motion.div
-          animate={{
-            scale: [1, 1.03, 1],
-          }}
-          transition={{
-            duration: 4 + i * 0.5,
-            repeat: Infinity,
-          }}
-          className="
-          bg-white
-          border
-          border-neutral-200
-          rounded-full
-          px-5
-          py-3
-          shadow-xl
-          text-sm
-          whitespace-nowrap
-          "
-        >
-          <div className="flex items-center gap-2">
-            <node.icon size={15} className="text-[#3F5E8C]" />
-            <span>{node.label}</span>
-          </div>
-        </motion.div>
-      </div>
-    );
-
-  })}
+    <source
+      src="/videos/lea-hero.mp4"
+      type="video/mp4"
+    />
+  </video>
 
 </div>
         </div>
@@ -305,42 +193,6 @@ export default function LeaPage() {
 
 {/* LEA VIDEO */}
 
-<section className="py-20 bg-white border-t">
-
-  <div className="max-w-7xl mx-auto px-8">
-
-    <div className="text-center mb-12">
-
-      <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-4">
-        LEA In Action
-      </p>
-
-      <h2 className="text-5xl font-light">
-        Regulatory Intelligence & Decision Support
-      </h2>
-
-    </div>
-
-    <div className="rounded-[32px] overflow-hidden shadow-2xl border border-neutral-200">
-
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="w-full h-auto"
-      >
-        <source
-          src="/videos/lea-hero.mp4"
-          type="video/mp4"
-        />
-      </video>
-
-    </div>
-
-  </div>
-
-</section>
 
 {/* =======================================================
     FROM MANUAL COORDINATION TO RESPONSE READINESS
