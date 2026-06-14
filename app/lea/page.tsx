@@ -57,8 +57,8 @@ export default function LeaPage() {
  <div
   className="
   w-full
-  bg-white/45
-  backdrop-blur-md
+  bg-white/30
+  backdrop-blur-sm
   border-t
   border-white/10
   px-8
