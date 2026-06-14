@@ -54,18 +54,18 @@ export default function LeaPage() {
 
   <div className="w-full">
 
-      <div
-        className="
-        w-full
-        bg-white/82
-        backdrop-blur-xl
-        border-t
-        border-white/20
-        px-8
-        lg:px-20
-        py-10
-        "
-      >
+ <div
+  className="
+  w-full
+  bg-white/45
+  backdrop-blur-md
+  border-t
+  border-white/10
+  px-8
+  lg:px-20
+  py-10
+  "
+>
 
         <p className="uppercase tracking-[0.35em] text-sm mb-8 text-neutral-500">
           LEA™ • Legal Enforcement Assistant
