@@ -34,8 +34,8 @@ export default function MeeraPage() {
       <div
         className="
           max-w-2xl
-          bg-white/75
-          backdrop-blur-xl
+          bg-white/25
+          backdrop-blur-sm
           border
           border-white/40
           rounded-[32px]
@@ -121,7 +121,7 @@ export default function MeeraPage() {
             border
             border-gray-300
             rounded-full
-            bg-white/20
+            bg-white/70
             backdrop-blur-sm
             hover:bg-white
             transition-all
