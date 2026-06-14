@@ -34,7 +34,7 @@ export default function MeeraPage() {
       <div
         className="
           max-w-2xl
-          bg-white/25
+          bg-white/35
           backdrop-blur-sm
           border
           border-white/40
