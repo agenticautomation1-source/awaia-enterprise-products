@@ -69,7 +69,27 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
   "
 >
 
-        <p className="uppercase tracking-[0.35em] text-sm mb-8 text-neutral-500">
+
+<p
+  className="
+  inline-flex
+  items-center
+  uppercase
+  tracking-[0.25em]
+  text-xs
+  font-semibold
+  text-neutral-800
+  px-4
+  py-2
+  rounded-full
+  bg-white/60
+  backdrop-blur-sm
+  border
+  border-white/30
+  mb-10
+  "
+>
+
           LEA™ • Legal Enforcement Assistant
         </p>
 
