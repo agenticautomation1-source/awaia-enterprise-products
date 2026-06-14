@@ -148,8 +148,11 @@ duration-300
   </video>
 
 </div>
-</section>
 
+    </div>
+  </div>
+
+</section>
 
 <Architecture />
 <ArchitectureDiagram />

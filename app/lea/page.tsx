@@ -88,87 +88,24 @@ export default function LeaPage() {
 
 {/* ================= MOBILE HERO ================= */}
 
-<div className="block lg:hidden relative h-[520px] mt-20 overflow-hidden">
+<div className="block lg:hidden w-full h-[420px] overflow-hidden mt-10">
 
-  <div className="absolute inset-0 flex items-center justify-center">
-
-    <div className="absolute w-[260px] h-[260px] rounded-full border border-[#3F5E8C]/10" />
-
-    <div className="absolute w-[190px] h-[190px] rounded-full border border-dashed border-[#3F5E8C]/15" />
-
-    <motion.div
-      animate={{
-        scale: [1, 1.04, 1],
-      }}
-      transition={{
-        duration: 4,
-        repeat: Infinity,
-      }}
-      className="
-      w-[110px]
-      h-[110px]
-      rounded-full
-      bg-[#3F5E8C]
-      text-white
-      flex
-      items-center
-      justify-center
-      text-center
-      shadow-2xl
-      z-20
-      "
-    >
-      <div>
-        <div className="text-3xl font-light">
-          LEA
-        </div>
-
-        <div className="uppercase tracking-[0.2em] text-[7px] opacity-70">
-          Decision Support Platform
-        </div>
-      </div>
-    </motion.div>
-
-    {[
-      { icon: FileText, label: "Agency Requests", left: "50%", top: "8%" },
-      { icon: Building2, label: "Core Banking", left: "28%", top: "30%" },
-      { icon: Users, label: "CRM", left: "78%", top: "30%" },
-      { icon: Shield, label: "KYC Records", left: "22%", top: "72%" },
-      { icon: Folder, label: "Document Systems", left: "72%", top: "72%" },
-      { icon: Mail, label: "Email Archive", left: "50%", top: "86%" },
-    ].map((node) => (
-      <div
-        key={node.label}
-        className="absolute"
-        style={{
-          left: node.left,
-          top: node.top,
-          transform: "translate(-50%, -50%)",
-        }}
-      >
-        <div className="
-          bg-white
-          border
-          border-neutral-200
-          rounded-full
-          px-3
-          py-2
-          shadow-xl
-          text-[11px]
-          whitespace-nowrap
-        ">
-          <div className="flex items-center gap-2">
-            <node.icon size={12} className="text-[#3F5E8C]" />
-            <span>{node.label}</span>
-          </div>
-        </div>
-      </div>
-    ))}
-
-  </div>
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover"
+  >
+    <source
+      src="/videos/lea-hero.mp4"
+      type="video/mp4"
+    />
+  </video>
 
 </div>
 
+{/* ================= DESKTOP HERO ================= */}
 
 {/* ================= DESKTOP HERO ================= */}
 
