@@ -815,7 +815,7 @@ export default function LeaPage() {
 
   <div className="max-w-7xl mx-auto px-8">
 
-    <div className="text-left mb-24">
+    <div className="text-center mb-24">
 
       <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
         Process Transformation
