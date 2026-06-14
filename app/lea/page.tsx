@@ -50,20 +50,20 @@ export default function LeaPage() {
 
   <div className="absolute inset-0 bg-black/30" />
 
-  <div className="relative z-10 h-full flex items-center">
+  <div className="relative z-10 h-full flex items-end">
 
-    <div className="max-w-7xl mx-auto px-8 w-full">
+  <div className="w-full">
 
       <div
         className="
-        max-w-2xl
-        bg-white/80
+        w-full
+        bg-white/82
         backdrop-blur-xl
-        rounded-[32px]
-        p-10
-        border
-        border-white/30
-        shadow-2xl
+        border-t
+        border-white/20
+        px-8
+        lg:px-20
+        py-10
         "
       >
 
