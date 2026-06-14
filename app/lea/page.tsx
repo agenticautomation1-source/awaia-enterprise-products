@@ -130,11 +130,11 @@ export default function LeaPage() {
     FROM MANUAL COORDINATION TO RESPONSE READINESS
 ======================================================= */}
 
-<section className="py-40 border-t border-neutral-200">
+<section className="py-28 border-t border-neutral-200">
 
   <div className="max-w-7xl mx-auto px-8">
 
-    <div className="max-w-4xl mb-24">
+    <div className="max-w-4xl mb-16">
 
       <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
         Why LEA Exists
@@ -289,7 +289,7 @@ export default function LeaPage() {
     LEA OPERATIONAL JOURNEY
 ======================================================= */}
 
-<section className="py-24 lg:py-40 bg-white">
+<section className="py-24 lg:py-28 bg-white">
 
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -620,7 +620,7 @@ export default function LeaPage() {
     CROSS-SYSTEM CORRELATION ENGINE
 ======================================================= */}
 
-<section className="py-40 bg-neutral-50 overflow-visible">
+<section className="py-28 bg-neutral-50 overflow-visible">
 
   <div className="max-w-7xl mx-auto px-8">
 
@@ -811,11 +811,11 @@ export default function LeaPage() {
     TRADITIONAL VS LEA
 ======================================================= */}
 
-<section className="py-40 bg-white">
+<section className="py-28 bg-white">
 
   <div className="max-w-7xl mx-auto px-8">
 
-    <div className="text-center mb-24">
+    <div className="max-w-4xl mb-16">
 
       <p className="uppercase tracking-[0.3em] text-xs text-neutral-500 mb-6">
         Process Transformation
@@ -962,7 +962,7 @@ export default function LeaPage() {
     GOVERNANCE • SOVEREIGNTY • SECURITY
 ======================================================= */}
 
-<section className="py-40 bg-[#0D1117] text-white overflow-hidden">
+<section className="py-28 bg-[#0D1117] text-white overflow-hidden">
 
   <div className="max-w-7xl mx-auto px-8">
 
@@ -1170,7 +1170,7 @@ export default function LeaPage() {
     EXECUTIVE OUTCOMES
 ======================================================= */}
 
-<section className="py-40 bg-white overflow-hidden">
+<section className="py-28 bg-white overflow-hidden">
 
   <div className="max-w-7xl mx-auto px-8">
 
