@@ -8,138 +8,16 @@ export default function MeeraPage() {
     <main>
 
       {/* HERO */}
-<section className="min-h-[60vh] flex items-start pt-16 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-
-  <div className="absolute top-20 right-20 w-[700px] h-[700px] rounded-full bg-violet-200/20 blur-[140px]" />
-
-  <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-indigo-100/20 blur-[120px]" />
-
-</div>
-
-  <div className="max-w-7xl mx-auto px-8 w-full">
-
-    <div className="grid lg:grid-cols-2 gap-12 items-center">
-
-      <div>
-
-        <p className="uppercase tracking-[0.35em] text-sm mb-8 text-gray-500">
-          Enterprise Voice Intelligence Platform
-        </p>
-
-        <h1 className="leading-[0.82] font-light">
-
-  <span className="block text-4xl md:text-[52px] tracking-[-0.06em]">
-    Enterprise
-  </span>
-
-  <span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
-    Voice Intelligence
-  </span>
-
-<span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
-  For <span className="text-[#5D6B87]">Regulated</span>
-</span>
-
-<span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
-  Enterprises.
-</span>
-
-</h1>
-
-       <p className="text-lg text-neutral-600 leading-relaxed max-w-xl mt-4">
-  MEERA transforms customer conversations into
-  authenticated, compliant and action-oriented
-  enterprise workflows across banking, insurance,
-  NBFC and regulated industries.
-</p>
 
 
-<div className="mt-6">
-
-  <div className="text-[#3F5E8C] text-sm uppercase tracking-[0.25em] mb-3">
-    Enterprise Outcomes
-  </div>
-
-  <div className="space-y-2 text-neutral-700">
-
-    <div>✓ No waiting in IVR queues</div>
-
-    <div>✓ 24×7×365 customer availability</div>
-
-    <div>✓ No customer data leaves your environment</div>
-
-    <div>✓ Authenticate before execution</div>
-
-    <div>✓ Human-like multilingual conversations</div>
-
-  </div>
-
-</div>
-
-
-
-        <div className="mt-8 flex flex-wrap gap-4 items-center">
-          <button className="
-px-8
-py-4
-bg-black
-text-white
-rounded-full
-hover:scale-105
-transition
-duration-300
-">
-            Request Briefing
-          </button>
-
-          <button
-  className="
-  px-8
-  py-4
-  border
-  border-gray-300
-  rounded-full
-  bg-white/70
-  backdrop-blur-sm
-  hover:bg-white
-  transition-all
-  duration-300
-  "
->
-            Explore Architecture
-          </button>
-
-          <div className="flex items-center gap-3 ml-2">
-
-  <div className="flex -space-x-2">
-
-    <div className="w-8 h-8 rounded-full bg-[#d9dde5] border border-white"></div>
-
-    <div className="w-8 h-8 rounded-full bg-[#c8cfdb] border border-white"></div>
-
-    <div className="w-8 h-8 rounded-full bg-[#b8c2d3] border border-white"></div>
-
-  </div>
-
-  <span className="text-sm text-neutral-500">
-    Trusted by regulated institutions
-  </span>
-
-</div>
-
-        </div>
-
-      </div>
-
-      <div className="w-full h-[720px] overflow-hidden">
+<section className="relative h-screen overflow-hidden">
 
   <video
     autoPlay
     muted
     loop
     playsInline
-    className="w-full h-full object-cover rounded-[24px]"
+    className="absolute inset-0 w-full h-full object-cover"
   >
     <source
       src="/videos/meera-hero.mp4"
@@ -147,12 +25,122 @@ duration-300
     />
   </video>
 
-</div>
+  <div className="absolute inset-0 bg-black/25" />
+
+  <div className="relative z-10 h-full flex items-center">
+
+    <div className="max-w-7xl mx-auto px-8 w-full">
+
+      <div
+        className="
+          max-w-2xl
+          bg-white/75
+          backdrop-blur-xl
+          border
+          border-white/40
+          rounded-[32px]
+          p-10
+          shadow-2xl
+        "
+      >
+
+        <p className="uppercase tracking-[0.35em] text-sm mb-8 text-gray-500">
+          Enterprise Voice Intelligence Platform
+        </p>
+
+        <h1 className="leading-[0.82] font-light">
+
+          <span className="block text-4xl md:text-[52px] tracking-[-0.06em]">
+            Enterprise
+          </span>
+
+          <span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
+            Voice Intelligence
+          </span>
+
+          <span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
+            For <span className="text-[#5D6B87]">Regulated</span>
+          </span>
+
+          <span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
+            Enterprises.
+          </span>
+
+        </h1>
+
+        <p className="text-lg text-neutral-700 leading-relaxed max-w-xl mt-4">
+          MEERA transforms customer conversations into
+          authenticated, compliant and action-oriented
+          enterprise workflows across banking, insurance,
+          NBFC and regulated industries.
+        </p>
+
+        <div className="mt-6">
+
+          <div className="text-[#3F5E8C] text-sm uppercase tracking-[0.25em] mb-3">
+            Enterprise Outcomes
+          </div>
+
+          <div className="space-y-2 text-neutral-700">
+
+            <div>✓ No waiting in IVR queues</div>
+
+            <div>✓ 24×7×365 customer availability</div>
+
+            <div>✓ No customer data leaves your environment</div>
+
+            <div>✓ Authenticate before execution</div>
+
+            <div>✓ Human-like multilingual conversations</div>
+
+          </div>
+
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-4 items-center">
+
+          <button
+            className="
+            px-8
+            py-4
+            bg-black
+            text-white
+            rounded-full
+            hover:scale-105
+            transition
+            duration-300
+            "
+          >
+            Request Briefing
+          </button>
+
+          <button
+            className="
+            px-8
+            py-4
+            border
+            border-gray-300
+            rounded-full
+            bg-white/70
+            backdrop-blur-sm
+            hover:bg-white
+            transition-all
+            duration-300
+            "
+          >
+            Explore Architecture
+          </button>
+
+        </div>
+
+      </div>
 
     </div>
+
   </div>
 
 </section>
+
 
 <Architecture />
 <ArchitectureDiagram />

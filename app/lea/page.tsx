@@ -32,70 +32,15 @@ export default function LeaPage() {
 
   return (
     <main className="bg-white text-neutral-900 overflow-x-hidden">
-            <section className="min-h-[700px] flex items-start pt-24 pb-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-5 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-12 items-center">
-          <div>
-            <p className="uppercase tracking-[0.35em] text-sm mb-8 text-neutral-500">
-              LEA™ • Legal Enforcement Assistant
-            </p>
 
-<h1
-  className="
-  text-[2.2rem]
-  sm:text-[3.8rem]
-  lg:text-[5.4rem]
-  font-light
-  leading-[0.90]
-  lg:leading-[0.92]
-  tracking-[-0.04em]
-  break-words
-  "
->
-  Decision Support
-  <br />
-
-  Platform For
-
-  <br />
-
-  <span className="text-[#3F5E8C]">
-    BFSI Regulatory
-  </span>
-
-  <br />
-
-  & Legal Responses.
-</h1>
-
-            <p className="mt-8 lg:mt-10 text-[15px] lg:text-xl text-neutral-600 max-w-2xl leading-relaxed">
-              LEA autonomously discovers, collects, correlates and organizes
-              enterprise records across banking systems to accelerate response
-              readiness for regulatory and law-enforcement requests.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mt-8 lg:mt-10">
-              <button className="w-full sm:w-auto px-6 lg:px-8 py-4 bg-black text-white rounded-full">
-                Request Executive Briefing
-              </button>
-              <button className="w-full sm:w-auto px-6 lg:px-8 py-4 border rounded-full">
-                Explore Architecture
-              </button>
-            </div>
-
-
-          </div>
-
-
-{/* ================= MOBILE HERO ================= */}
-
-<div className="block lg:hidden w-full h-[420px] overflow-hidden mt-10">
+<section className="relative h-screen overflow-hidden">
 
   <video
     autoPlay
     muted
     loop
     playsInline
-    className="w-full h-full object-cover"
+    className="absolute inset-0 w-full h-full object-cover"
   >
     <source
       src="/videos/lea-hero.mp4"
@@ -103,30 +48,80 @@ export default function LeaPage() {
     />
   </video>
 
-</div>
+  <div className="absolute inset-0 bg-black/30" />
 
-{/* ================= DESKTOP HERO ================= */}
+  <div className="relative z-10 h-full flex items-center">
 
-{/* ================= DESKTOP HERO ================= */}
+    <div className="max-w-7xl mx-auto px-8 w-full">
 
-<div className="hidden lg:block w-full h-[520px] overflow-hidden">
+      <div
+        className="
+        max-w-2xl
+        bg-white/80
+        backdrop-blur-xl
+        rounded-[32px]
+        p-10
+        border
+        border-white/30
+        shadow-2xl
+        "
+      >
 
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="w-full h-full object-cover"
-  >
-    <source
-      src="/videos/lea-hero.mp4"
-      type="video/mp4"
-    />
-  </video>
+        <p className="uppercase tracking-[0.35em] text-sm mb-8 text-neutral-500">
+          LEA™ • Legal Enforcement Assistant
+        </p>
 
-</div>
+        <h1
+          className="
+          text-[2.2rem]
+          sm:text-[3.8rem]
+          lg:text-[5.4rem]
+          font-light
+          leading-[0.90]
+          lg:leading-[0.92]
+          tracking-[-0.04em]
+          "
+        >
+          Decision Support
+          <br />
+          Platform For
+          <br />
+          <span className="text-[#3F5E8C]">
+            BFSI Regulatory
+          </span>
+          <br />
+          & Legal Responses.
+        </h1>
+
+        <p className="mt-8 text-lg text-neutral-700 leading-relaxed">
+          LEA autonomously discovers, collects,
+          correlates and organizes enterprise records
+          across banking systems to accelerate response
+          readiness for regulatory and law-enforcement requests.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+
+          <button className="px-8 py-4 bg-black text-white rounded-full">
+            Request Executive Briefing
+          </button>
+
+          <button className="px-8 py-4 border rounded-full bg-white/70">
+            Explore Architecture
+          </button>
+
         </div>
-      </section>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
 
 {/* LEA VIDEO */}
 
