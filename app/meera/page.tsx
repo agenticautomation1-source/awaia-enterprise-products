@@ -31,18 +31,18 @@ export default function MeeraPage() {
 
     <div className="max-w-7xl mx-auto px-8 w-full">
 
-      <div
-        className="
-          max-w-2xl
-          bg-white/35
-          backdrop-blur-sm
-          border
-          border-white/40
-          rounded-[32px]
-          p-10
-          shadow-2xl
-        "
-      >
+<div
+  className="
+    max-w-2xl
+    bg-white/18
+    backdrop-blur-md
+    border
+    border-white/20
+    rounded-[32px]
+    p-10
+    shadow-[0_20px_80px_rgba(0,0,0,0.15)]
+  "
+>
 
         <p className="uppercase tracking-[0.35em] text-sm mb-8 text-gray-500">
           Enterprise Voice Intelligence Platform
