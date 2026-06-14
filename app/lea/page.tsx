@@ -303,7 +303,44 @@ export default function LeaPage() {
         </div>
       </section>
 
+{/* LEA VIDEO */}
 
+<section className="py-20 bg-white border-t">
+
+  <div className="max-w-7xl mx-auto px-8">
+
+    <div className="text-center mb-12">
+
+      <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-4">
+        LEA In Action
+      </p>
+
+      <h2 className="text-5xl font-light">
+        Regulatory Intelligence & Decision Support
+      </h2>
+
+    </div>
+
+    <div className="rounded-[32px] overflow-hidden shadow-2xl border border-neutral-200">
+
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="w-full h-auto"
+      >
+        <source
+          src="/videos/lea-hero.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+    </div>
+
+  </div>
+
+</section>
 
 {/* =======================================================
     FROM MANUAL COORDINATION TO RESPONSE READINESS

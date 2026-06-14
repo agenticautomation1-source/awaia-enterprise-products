@@ -194,6 +194,45 @@ overflow-hidden
 
   </div>
 </section>
+{/* MEERA VIDEO */}
+
+<section className="py-20 bg-white border-t">
+  <div className="max-w-7xl mx-auto px-8">
+
+    <div className="text-center mb-12">
+
+      <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-4">
+        Experience MEERA
+      </p>
+
+      <h2 className="text-5xl font-light">
+        Human-like Enterprise Voice Intelligence
+      </h2>
+
+    </div>
+
+    <div className="rounded-[32px] overflow-hidden shadow-2xl border border-neutral-200">
+
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="w-full h-auto"
+      >
+        <source
+          src="/videos/meera-hero.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+    </div>
+
+  </div>
+</section>
+
+<Architecture />
+<ArchitectureDiagram />
 
 <Architecture />
 <ArchitectureDiagram />
