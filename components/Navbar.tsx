@@ -2,15 +2,14 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ChevronDown } from "lucide-react";
 
 export default function Navbar() {
 const [scrolled, setScrolled] = useState(false);
-const [solutionsOpen, setSolutionsOpen] = useState(false);
+const [showSolutions, setShowSolutions] = useState(false);
 
 useEffect(() => {
 const handleScroll = () => {
-setScrolled(window.scrollY > 60);
+setScrolled(window.scrollY > 80);
 };
 
 ```
@@ -27,7 +26,7 @@ return (
 <header
 className={`
 fixed
-z-[100]
+z-50
 transition-all
 duration-500
 ease-out
@@ -40,25 +39,25 @@ ease-out
           left-1/2
           -translate-x-1/2
 
-          w-[92%]
-          max-w-[1380px]
+          w-[89%]
+          max-w-[1640px]
 
-          rounded-full
+          rounded-[22px]
 
-          bg-white/88
-          backdrop-blur-[24px]
+          bg-white/94
+          backdrop-blur-[20px]
 
           border
-          border-white/60
+          border-neutral-100
 
-          shadow-[0_10px_40px_rgba(15,23,42,0.08)]
+          shadow-[0_8px_30px_rgba(15,23,42,0.06)]
         `
         : `
           top-0
           left-0
           right-0
 
-          bg-white/45
+          bg-white/55
           backdrop-blur-xl
 
           border-b
@@ -71,18 +70,18 @@ ease-out
     className="
       max-w-7xl
       mx-auto
-      px-8
-      h-[72px]
+      px-10
+      h-[68px]
       flex
       items-center
       justify-between
     "
   >
     <Link
-      href="/"
+      href="https://automatewithaiagent.com"
       className="
-        text-[20px]
-        tracking-[0.18em]
+        text-[22px]
+        tracking-[0.14em]
         font-medium
         text-neutral-900
       "
@@ -93,10 +92,10 @@ ease-out
     <nav
       className="
         hidden
-        xl:flex
+        lg:flex
         items-center
         gap-8
-        text-[14px]
+        text-[15px]
         text-neutral-700
       "
     >
@@ -110,32 +109,47 @@ ease-out
 
       <div
         className="relative"
-        onMouseEnter={() => setSolutionsOpen(true)}
-        onMouseLeave={() => setSolutionsOpen(false)}
+        onMouseEnter={() => setShowSolutions(true)}
+        onMouseLeave={() => setShowSolutions(false)}
       >
         <button
           className="
             flex
             items-center
             gap-2
+            cursor-pointer
           "
         >
           Enterprise Solutions
 
-          <ChevronDown size={16} />
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M5 7.5L10 12.5L15 7.5"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
 
-        {solutionsOpen && (
+        {showSolutions && (
           <div
             className="
               absolute
               top-full
               left-0
               mt-4
-              w-[240px]
 
-              bg-white
+              min-w-[220px]
+
               rounded-2xl
+              bg-white
 
               border
               border-neutral-200
@@ -152,6 +166,7 @@ ease-out
                 px-6
                 py-4
                 hover:bg-neutral-50
+                transition-colors
               "
             >
               MEERA
@@ -164,6 +179,7 @@ ease-out
                 px-6
                 py-4
                 hover:bg-neutral-50
+                transition-colors
               "
             >
               LEA
@@ -220,7 +236,7 @@ ease-out
 
     <button
       className="
-        xl:hidden
+        lg:hidden
         text-sm
         font-medium
       "
