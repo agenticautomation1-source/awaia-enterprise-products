@@ -73,7 +73,7 @@ export default function MeeraPage() {
   m-0
   "
 >
-  MEERA™ • ENTERPRISE VOICE INTELLIGENCE PLATFORM
+  MEERA • ENTERPRISE VOICE INTELLIGENCE PLATFORM
 </p>
 
 </div>
