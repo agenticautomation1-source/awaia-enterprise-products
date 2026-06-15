@@ -112,7 +112,7 @@ className="
             Home
           </a>
 
-          <a href="https://automatewithaiagent.com/capabilities">
+          <a href="https://automatewithaiagent.com/#capabilities">
             Capabilities
           </a>
 
