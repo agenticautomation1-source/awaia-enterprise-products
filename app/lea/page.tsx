@@ -90,7 +90,7 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
   "
 >
 
-          LEA™ • Legal Enforcement Assistant
+          LEA • Legal Enforcement Assistant
         </p>
 
 <h1

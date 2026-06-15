@@ -60,18 +60,22 @@ export default function MeeraPage() {
   max-w-fit
   "
 >
-  <p
-    className="
-    uppercase
-    tracking-[0.35em]
-    text-sm
-    text-neutral-700
-    font-medium
-    m-0
-    "
-  >
-    MEERA™ • Enterprise Voice Intelligence Platform
-  </p>
+<p
+  className="
+  uppercase
+  tracking-[0.14em]
+  text-[11px]
+  lg:text-[12px]
+  text-neutral-700
+  font-semibold
+  whitespace-nowrap
+  leading-none
+  m-0
+  "
+>
+  MEERA™ • ENTERPRISE VOICE INTELLIGENCE PLATFORM
+</p>
+
 </div>
 
 
