@@ -79,26 +79,24 @@ export default function MeeraPage() {
 </div>
 
 
+<h1 className="leading-[0.86] font-light">
 
-        <h1 className="leading-[0.82] font-light">
+  <span className="block text-[52px] tracking-[-0.06em]">
+    Enterprise
+  </span>
 
-          <span className="block text-4xl md:text-[52px] tracking-[-0.06em]">
-            Enterprise
-          </span>
+  <span className="block text-[52px] tracking-[-0.06em]">
+    Voice Intelligence For
+  </span>
 
-          <span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
-            Voice Intelligence
-          </span>
+  <span className="block text-[52px] tracking-[-0.06em]">
+    <span className="text-[#5D6B87]">
+      Regulated
+    </span>{" "}
+    Enterprises.
+  </span>
 
-          <span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
-            For <span className="text-[#5D6B87]">Regulated</span>
-          </span>
-
-          <span className="block text-5xl md:text-[52px] tracking-[-0.06em]">
-            Enterprises.
-          </span>
-
-        </h1>
+</h1>
 
         <p className="text-lg text-neutral-900 leading-relaxed max-w-xl mt-4 font-medium">
           MEERA transforms customer conversations into
