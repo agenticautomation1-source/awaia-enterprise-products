@@ -36,7 +36,7 @@ export default function MeeraPage() {
 
 <div
   className="
-    max-w-[760px]
+    max-w-[640px]
     bg-white/22
     backdrop-blur-xl
     border
@@ -79,17 +79,17 @@ export default function MeeraPage() {
 </div>
 
 
-<h1 className="leading-[0.86] font-light">
+<h1 className="leading-[0.95] font-light">
 
-  <span className="block text-[52px] tracking-[-0.06em]">
+  <span className="block text-[52px] tracking-[-0.03em]">
     Enterprise
   </span>
 
-  <span className="block text-[52px] tracking-[-0.06em]">
+  <span className="block text-[52px] tracking-[-0.03em]">
     Voice Intelligence For
   </span>
 
-  <span className="block text-[52px] tracking-[-0.06em]">
+  <span className="block text-[52px] tracking-[-0.03em]">
     <span className="text-[#5D6B87]">
       Regulated
     </span>{" "}
@@ -362,7 +362,9 @@ export default function MeeraPage() {
         border-neutral-200
         rounded-[28px]
         bg-white
-        p-10
+        px-10
+pt-8
+pb-8
         "
       >
 
