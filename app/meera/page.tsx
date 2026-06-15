@@ -8,12 +8,12 @@ export default function MeeraPage() {
   return (
   
     <main>
-  <Navbar />`
+  <Navbar />
   
       {/* HERO */}
 
 
-<section className="relative min-h-screen overflow-hidden">
+<section className="relative h-screen overflow-hidden -mt-14">
 
   <video
     autoPlay
@@ -32,10 +32,19 @@ export default function MeeraPage() {
 
   <div className="relative z-10 h-full flex items-start">
 
-    <div className="max-w-7xl mx-auto px-8 w-full">
+    <div
+  className="
+    max-w-7xl
+    mx-auto
+    px-8
+    w-full
+    pt-28
+  "
+>
 
 <div
   className="
+    mt-20
     max-w-[640px]
     bg-white/22
     backdrop-blur-xl
@@ -46,6 +55,7 @@ export default function MeeraPage() {
     shadow-[0_20px_80px_rgba(0,0,0,0.15)]
   "
 >
+
 <div
   className="
   inline-flex

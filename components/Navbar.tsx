@@ -90,11 +90,11 @@ export default function Navbar() {
     width={1200}
     height={380}
     priority
-    className="
-      w-[170px]
-      h-auto
-      object-contain
-    "
+className="
+  w-[118px]
+  h-auto
+  object-contain
+"
   />
 </Link>
 
@@ -212,34 +212,7 @@ export default function Navbar() {
           </a>
         </nav>
 
-        <a
-          href="https://automatewithaiagent.com/contact"
-          className="
-            hidden
-            md:inline-flex
-
-            items-center
-            justify-center
-
-            px-5
-            py-2.5
-
-            rounded-full
-
-            bg-black
-            text-white
-
-            text-[13px]
-            font-medium
-
-            transition-all
-            duration-300
-
-            hover:scale-105
-          "
-        >
-          Request Briefing
-        </a>
+      
 
         <button
           className="
