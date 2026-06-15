@@ -44,7 +44,7 @@ export default function MeeraPage() {
   "
 >
 
-        <p
+<p
   className="
   uppercase
   tracking-[0.35em]
@@ -54,7 +54,7 @@ export default function MeeraPage() {
   font-medium
   "
 >
-  MEERA™ • Enterprise Voice Intelligence Platform
+  MEERA™ • Enterprise Voice Assistant Platform
 </p>
 
         <h1 className="leading-[0.82] font-light">
