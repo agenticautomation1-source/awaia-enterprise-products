@@ -44,18 +44,35 @@ export default function MeeraPage() {
   "
 >
 
-<p
+<div
   className="
-  uppercase
-  tracking-[0.35em]
-  text-sm
+  inline-flex
+  items-center
+  rounded-full
+  bg-white/55
+  backdrop-blur-xl
+  border
+  border-white/40
+  px-6
+  py-3
   mb-8
-  text-gray-700
-  font-medium
+  shadow-[0_8px_30px_rgba(0,0,0,0.08)]
   "
 >
-  MEERA™ • Enterprise Voice Assistant Platform
-</p>
+  <p
+    className="
+    uppercase
+    tracking-[0.35em]
+    text-sm
+    text-neutral-700
+    font-medium
+    m-0
+    "
+  >
+    MEERA™ • Enterprise Voice Intelligence Platform
+  </p>
+</div>
+
 
         <h1 className="leading-[0.82] font-light">
 
