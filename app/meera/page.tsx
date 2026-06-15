@@ -13,7 +13,7 @@ export default function MeeraPage() {
       {/* HERO */}
 
 
-<section className="relative h-screen overflow-hidden -mt-14">
+<section className="relative min-h-screen overflow-hidden -mt-14">
 
   <video
     autoPlay
@@ -38,13 +38,13 @@ export default function MeeraPage() {
     mx-auto
     px-8
     w-full
-    pt-28
+    pt-20
   "
 >
 
 <div
   className="
-    mt-6
+    mt-8
     max-w-[640px]
     bg-white/22
     backdrop-blur-xl
@@ -115,7 +115,7 @@ export default function MeeraPage() {
           NBFC and regulated industries.
         </p>
 
-        <div className="mt-6">
+        <div className="mt-7">
 
           <div className="text-[#2F4E7A] text-sm uppercase font-semibold tracking-[0.25em] mb-3">
             Enterprise Outcomes
@@ -137,41 +137,45 @@ export default function MeeraPage() {
 
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-4 items-center">
+        <div className="mt-8 flex flex-wrap gap-3 items-center">
 
-          <button
-            className="
-            px-8
-            py-4
-            bg-black
-            text-white
-            rounded-full
-            hover:scale-105
-            transition
-            duration-300
-            "
-          >
-            Request Briefing
-          </button>
+  <button
+    className="
+      px-7
+      py-3
+      bg-black
+      text-white
+      rounded-full
+      text-[15px]
+      font-medium
+      hover:scale-[1.02]
+      transition-all
+      duration-300
+    "
+  >
+    Request Briefing
+  </button>
 
-          <button
-            className="
-            px-8
-            py-4
-            border
-            border-gray-300
-            rounded-full
-            bg-white/70
-            backdrop-blur-sm
-            hover:bg-white
-            transition-all
-            duration-300
-            "
-          >
-            Explore Architecture
-          </button>
+  <button
+    className="
+      px-7
+      py-3
+      border
+      border-white/40
+      rounded-full
+      bg-white/80
+      backdrop-blur-sm
+      text-[15px]
+      font-medium
+      hover:bg-white
+      transition-all
+      duration-300
+    "
+  >
+    Explore Architecture
+  </button>
 
-        </div>
+</div>
 
       </div>
 
