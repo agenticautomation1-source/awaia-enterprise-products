@@ -53,11 +53,11 @@ export default function MeeraPage() {
   backdrop-blur-xl
   border
   border-white/40
-  px-8
-  py-4
+  px-9
+  py-3
   mb-8
   shadow-[0_8px_30px_rgba(0,0,0,0.08)]
-  whitespace-nowrap
+  max-w-fit
   "
 >
   <p
