@@ -85,7 +85,7 @@ export default function Navbar() {
   "
 >
   <Image
-    src="/images/awaia-logo-desktop.png"
+    src="/images/awaia-logo-desktop.webp"
     alt="AWAIA"
     width={1200}
     height={380}
