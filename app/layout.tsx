@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     default: "AWAIA Enterprise Products",
     template: "%s | AWAIA",
   },
+
   description:
     "Enterprise AI platforms for banking, insurance, NBFCs and regulated industries.",
 
@@ -24,7 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/cwf4kog.css"
+        />
+      </head>
+
+      <body>
+        {children}
+      </body>
     </html>
   );
 }

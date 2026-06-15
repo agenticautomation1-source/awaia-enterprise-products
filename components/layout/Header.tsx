@@ -1,7 +1,21 @@
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
+    <header
+  className="
+  fixed
+  top-4
+  left-4
+  right-4
+  z-50
+  bg-white/70
+  backdrop-blur-xl
+  border
+  border-white/30
+  rounded-2xl
+  shadow-[0_10px_40px_rgba(0,0,0,0.08)]
+  "
+>
+      <div className="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
 
         <div className="font-medium tracking-tight">
           AWAIA
