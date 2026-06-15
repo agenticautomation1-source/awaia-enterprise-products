@@ -8,12 +8,12 @@ export default function MeeraPage() {
   return (
   
     <main>
-  <Navbar />
+  <Navbar />`
   
       {/* HERO */}
 
 
-<section className="relative h-screen overflow-hidden">
+<section className="relative min-h-screen overflow-hidden pt-28">
 
   <video
     autoPlay
@@ -30,14 +30,14 @@ export default function MeeraPage() {
 
   <div className="absolute inset-0 bg-black/15" />
 
-  <div className="relative z-10 h-full flex items-center pt-28">
+  <div className="relative z-10 h-full flex items-start">
 
     <div className="max-w-7xl mx-auto px-8 w-full">
 
 <div
   className="
     max-w-[760px]
-    bg-white/12
+    bg-white/22
     backdrop-blur-xl
     border
     border-white/20
@@ -46,17 +46,16 @@ export default function MeeraPage() {
     shadow-[0_20px_80px_rgba(0,0,0,0.15)]
   "
 >
-
 <div
   className="
   inline-flex
   items-center
   rounded-full
-  bg-white/55
+  bg-white/70
   backdrop-blur-xl
   border
-  border-white/40
-  px-7
+  border-white/50
+  px-6
   py-2
   mb-8
   shadow-[0_8px_30px_rgba(0,0,0,0.08)]
@@ -65,17 +64,17 @@ export default function MeeraPage() {
   <p
     className="
     uppercase
-    tracking-[0.08em]
+    tracking-[0.10em]
     text-[10px]
     lg:text-[11px]
-    text-neutral-700
-    font-medium
+    text-neutral-800
+    font-semibold
     whitespace-nowrap
     leading-none
     m-0
     "
   >
-    MEERA™ • ENTERPRISE VOICE INTELLIGENCE PLATFORM
+    MEERA • ENTERPRISE VOICE INTELLIGENCE PLATFORM
   </p>
 </div>
 
@@ -101,7 +100,7 @@ export default function MeeraPage() {
 
         </h1>
 
-        <p className="text-lg text-neutral-700 leading-relaxed max-w-xl mt-4">
+        <p className="text-lg text-neutral-900 leading-relaxed max-w-xl mt-4 font-medium">
           MEERA transforms customer conversations into
           authenticated, compliant and action-oriented
           enterprise workflows across banking, insurance,
@@ -110,11 +109,11 @@ export default function MeeraPage() {
 
         <div className="mt-6">
 
-          <div className="text-[#3F5E8C] text-sm uppercase tracking-[0.25em] mb-3">
+          <div className="text-[#2F4E7A] text-sm uppercase font-semibold tracking-[0.25em] mb-3">
             Enterprise Outcomes
           </div>
 
-          <div className="space-y-2 text-neutral-700">
+          <div className="space-y-2 text-neutral-900 font-medium">
 
             <div>✓ No waiting in IVR queues</div>
 
