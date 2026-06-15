@@ -32,14 +32,14 @@ export default function Navbar() {
         ${
           scrolled
             ? `
-              top-4
+              top-5
               left-1/2
               -translate-x-1/2
 
-              w-[78%]
+              w-[82%]
               max-w-[1400px]
 
-              rounded-[14px]
+              rounded-[28px]
 
               bg-white/82
               backdrop-blur-xl
@@ -76,23 +76,27 @@ export default function Navbar() {
           justify-between
         "
       >
-        <Link
-          href="https://automatewithaiagent.com"
-          className="
-            flex
-            items-center
-            shrink-0
-          "
-        >
-          <Image
-            src="/images/awaia-logo.webp"
-            alt="AWAIA"
-            width={180}
-            height={48}
-            priority
-            className="h-auto w-[150px]"
-          />
-        </Link>
+  <Link
+  href="https://automatewithaiagent.com"
+  className="
+    flex
+    items-center
+    shrink-0
+  "
+>
+  <Image
+    src="/images/awaia-logo-desktop.png"
+    alt="AWAIA"
+    width={1200}
+    height={380}
+    priority
+    className="
+      w-[170px]
+      h-auto
+      object-contain
+    "
+  />
+</Link>
 
         <nav
           className="
