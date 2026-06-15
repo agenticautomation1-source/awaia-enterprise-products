@@ -13,7 +13,7 @@ export default function MeeraPage() {
       {/* HERO */}
 
 
-<section className="relative min-h-screen overflow-hidden pt-28">
+<section className="relative min-h-screen overflow-hidden">
 
   <video
     autoPlay
