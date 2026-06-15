@@ -36,9 +36,9 @@ export default function MeeraPage() {
 
 <div
   className="
-    max-w-2xl
-    bg-white/18
-    backdrop-blur-md
+    max-w-[760px]
+    bg-white/12
+    backdrop-blur-xl
     border
     border-white/20
     rounded-[32px]
@@ -56,29 +56,27 @@ export default function MeeraPage() {
   backdrop-blur-xl
   border
   border-white/40
-  px-9
-  py-3
+  px-7
+  py-2
   mb-8
   shadow-[0_8px_30px_rgba(0,0,0,0.08)]
-  max-w-fit
   "
 >
-<p
-  className="
-  uppercase
-  tracking-[0.14em]
-  text-[11px]
-  lg:text-[12px]
-  text-neutral-700
-  font-semibold
-  whitespace-nowrap
-  leading-none
-  m-0
-  "
->
-  MEERA • ENTERPRISE VOICE INTELLIGENCE PLATFORM
-</p>
-
+  <p
+    className="
+    uppercase
+    tracking-[0.10em]
+    text-[10px]
+    lg:text-[11px]
+    text-neutral-700
+    font-medium
+    whitespace-nowrap
+    leading-none
+    m-0
+    "
+  >
+    MEERA™ • ENTERPRISE VOICE INTELLIGENCE PLATFORM
+  </p>
 </div>
 
 
