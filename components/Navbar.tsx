@@ -195,7 +195,7 @@ className="
             )}
           </div>
 
-          <a href="/iso-iec-42001-2023/">
+          <a href="https://automatewithaiagent.com/iso-iec-42001-2023/">
             ISO/IEC 42001:2023
           </a>
 
