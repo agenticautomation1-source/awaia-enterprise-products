@@ -30,7 +30,7 @@ export default function MeeraPage() {
 
   <div className="absolute inset-0 bg-black/15" />
 
-  <div className="relative z-10 h-full flex items-center">
+  <div className="relative z-10 h-full flex items-center pt-28">
 
     <div className="max-w-7xl mx-auto px-8 w-full">
 
@@ -65,7 +65,7 @@ export default function MeeraPage() {
   <p
     className="
     uppercase
-    tracking-[0.10em]
+    tracking-[0.08em]
     text-[10px]
     lg:text-[11px]
     text-neutral-700
@@ -78,6 +78,7 @@ export default function MeeraPage() {
     MEERA™ • ENTERPRISE VOICE INTELLIGENCE PLATFORM
   </p>
 </div>
+
 
 
         <h1 className="leading-[0.82] font-light">

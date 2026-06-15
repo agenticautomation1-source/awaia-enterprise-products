@@ -20,11 +20,9 @@ body {
   color: var(--foreground);
 
   font-family:
-    "Avenir Next",
-    Avenir,
-    "Segoe UI",
-    Arial,
-    sans-serif;
+  "neue-haas-grotesk-display",
+  "neue-haas-grotesk-text",
+  sans-serif;
 
   margin: 0;
   padding: 0;
