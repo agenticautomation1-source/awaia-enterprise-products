@@ -64,7 +64,7 @@ export default function MeeraPage() {
     uppercase
     tracking-[0.35em]
     text-sm
-    text-neutral-700
+    text-neutral-500
     font-medium
     m-0
     "
