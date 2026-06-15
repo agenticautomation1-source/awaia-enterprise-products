@@ -44,7 +44,7 @@ export default function MeeraPage() {
 
 <div
   className="
-    mt-20
+    mt-6
     max-w-[640px]
     bg-white/22
     backdrop-blur-xl
