@@ -9,7 +9,7 @@ const [showSolutions, setShowSolutions] = useState(false);
 
 useEffect(() => {
 const handleScroll = () => {
-setScrolled(window.scrollY > 80);
+setScrolled(window.scrollY > 60);
 };
 
 ```
@@ -26,7 +26,7 @@ return (
 <header
 className={`
 fixed
-z-50
+z-[100]
 transition-all
 duration-500
 ease-out
@@ -35,22 +35,22 @@ ease-out
     ${
       scrolled
         ? `
-          top-5
+          top-3
           left-1/2
           -translate-x-1/2
 
-          w-[89%]
-          max-w-[1640px]
+          w-[84%]
+          max-w-[1520px]
 
-          rounded-[22px]
+          rounded-[18px]
 
-          bg-white/94
-          backdrop-blur-[20px]
+          bg-white/96
+          backdrop-blur-xl
 
           border
           border-neutral-100
 
-          shadow-[0_8px_30px_rgba(15,23,42,0.06)]
+          shadow-[0_6px_24px_rgba(15,23,42,0.05)]
         `
         : `
           top-0
@@ -70,8 +70,11 @@ ease-out
     className="
       max-w-7xl
       mx-auto
-      px-10
-      h-[68px]
+
+      px-8
+
+      h-[58px]
+
       flex
       items-center
       justify-between
@@ -80,8 +83,8 @@ ease-out
     <Link
       href="https://automatewithaiagent.com"
       className="
-        text-[22px]
-        tracking-[0.14em]
+        text-[18px]
+        tracking-[0.12em]
         font-medium
         text-neutral-900
       "
@@ -94,8 +97,10 @@ ease-out
         hidden
         lg:flex
         items-center
-        gap-8
-        text-[15px]
+
+        gap-7
+
+        text-[14px]
         text-neutral-700
       "
     >
@@ -117,7 +122,6 @@ ease-out
             flex
             items-center
             gap-2
-            cursor-pointer
           "
         >
           Enterprise Solutions
@@ -144,17 +148,18 @@ ease-out
               absolute
               top-full
               left-0
-              mt-4
+              mt-3
 
               min-w-[220px]
 
-              rounded-2xl
+              rounded-xl
+
               bg-white
 
               border
               border-neutral-200
 
-              shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+              shadow-[0_16px_40px_rgba(0,0,0,0.08)]
 
               overflow-hidden
             "
@@ -163,10 +168,9 @@ ease-out
               href="/meera"
               className="
                 block
-                px-6
-                py-4
+                px-5
+                py-3
                 hover:bg-neutral-50
-                transition-colors
               "
             >
               MEERA
@@ -176,10 +180,9 @@ ease-out
               href="/lea"
               className="
                 block
-                px-6
-                py-4
+                px-5
+                py-3
                 hover:bg-neutral-50
-                transition-colors
               "
             >
               LEA
@@ -214,15 +217,15 @@ ease-out
         items-center
         justify-center
 
-        px-6
-        py-3
+        px-5
+        py-2.5
 
         rounded-full
 
         bg-black
         text-white
 
-        text-sm
+        text-[13px]
         font-medium
 
         transition-all
