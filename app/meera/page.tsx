@@ -1,12 +1,15 @@
 import SignalBars from "@/components/ui/SignalBars";
+import Navbar from "@/components/Navbar";
 import InstitutionalReach from "@/components/sections/InstitutionalReach";
 import Architecture from "@/components/sections/Architecture";
 import ArchitectureDiagram from "@/components/sections/ArchitectureDiagram";
 
 export default function MeeraPage() {
   return (
+  
     <main>
-
+  <Navbar />
+  
       {/* HERO */}
 
 
