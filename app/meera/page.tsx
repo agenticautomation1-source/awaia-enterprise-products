@@ -53,10 +53,11 @@ export default function MeeraPage() {
   backdrop-blur-xl
   border
   border-white/40
-  px-6
-  py-3
+  px-8
+  py-4
   mb-8
   shadow-[0_8px_30px_rgba(0,0,0,0.08)]
+  whitespace-nowrap
   "
 >
   <p
@@ -64,7 +65,7 @@ export default function MeeraPage() {
     uppercase
     tracking-[0.35em]
     text-sm
-    text-neutral-500
+    text-neutral-700
     font-medium
     m-0
     "
