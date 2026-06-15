@@ -39,10 +39,10 @@ ease-out
           left-1/2
           -translate-x-1/2
 
-          w-[84%]
+          w-[78%]
           max-w-[1520px]
 
-          rounded-[18px]
+          rounded-[14px]
 
           bg-white/96
           backdrop-blur-xl
@@ -66,20 +66,17 @@ ease-out
     }
   `}
 >
-  <div
-    className="
-      max-w-7xl
-      mx-auto
-
-      px-8
-
-      h-[58px]
-
-      flex
-      items-center
-      justify-between
-    "
-  >
+<div
+  className="
+    max-w-7xl
+    mx-auto
+    px-6
+    h-14
+    flex
+    items-center
+    justify-between
+  "
+>
     <Link
       href="https://automatewithaiagent.com"
       className="
