@@ -1,5 +1,5 @@
 "use client";
-
+import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
 import {
   Shield,
@@ -31,6 +31,9 @@ export default function LeaPage() {
   ];
 
   return (
+  <>
+    <Navbar />
+
     <main className="bg-white text-neutral-900 overflow-x-hidden">
 
 <section className="relative h-screen overflow-hidden">
@@ -52,19 +55,19 @@ export default function LeaPage() {
 
   <div className="relative z-10 h-full flex items-center">
 
-  <div className="max-w-7xl mx-auto px-8 w-full">
+  <div className="max-w-7xl mx-auto px-4 lg:px-0 w-full">
 
     <div
   className="
-  max-w-[760px]
-  mt-10
+  max-w-[630px]
+  mt-12
 bg-white/18
 backdrop-blur-md
 border
 border-white/20
 rounded-[32px]
 p-12
-lg:p-16
+lg:p-12
 shadow-[0_20px_80px_rgba(0,0,0,0.15)]
   "
 >
@@ -86,7 +89,7 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
   backdrop-blur-sm
   border
   border-white/30
-  mb-10
+  mb-12
   "
 >
 
@@ -95,12 +98,12 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 
 <h1
   className="
-  text-[2.2rem]
-  sm:text-[3.8rem]
-  lg:text-[5rem]
+  text-[2rem]
+  sm:text-[3.4rem]
+  lg:text-[4.2rem]
           font-light
-          leading-[0.95]
-          lg:leading-[0.96]
+          leading-[0.88]
+          lg:leading-[0.90]
           tracking-[-0.04em]
           "
         >
@@ -115,7 +118,7 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
           & Legal Responses.
         </h1>
 
-        <p className="mt-8 text-lg text-neutral-800 leading-relaxed max-w-xl">
+        <p className="mt-8 text-lg text-neutral-900 leading-relaxed max-w-2xl">
           LEA autonomously discovers, collects,
           correlates and organizes enterprise records
           across banking systems to accelerate response
@@ -124,13 +127,62 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 
         <div className="flex flex-col sm:flex-row gap-4 mt-10">
 
-          <button className="px-8 py-4 bg-black text-white rounded-full">
-            Request Executive Briefing
-          </button>
+<button
+  className="
+    w-[240px]
+    h-[64px]
 
-          <button className="px-8 py-4 border rounded-full bg-white/70">
-            Explore Architecture
-          </button>
+    flex
+    items-center
+    justify-center
+
+    bg-black
+    text-white
+
+    rounded-full
+
+    text-[18px]
+    font-normal
+    tracking-[-0.01em]
+
+    hover:scale-105
+
+    transition
+    duration-300
+  "
+>
+  Request Briefing
+</button>
+
+<button
+  className="
+    w-[240px]
+    h-[64px]
+
+    flex
+    items-center
+    justify-center
+
+    border
+    border-gray-300
+
+    rounded-full
+
+    bg-white/70
+    backdrop-blur-sm
+
+    text-[18px]
+    font-normal
+    tracking-[-0.01em]
+
+    hover:bg-white
+
+    transition-all
+    duration-300
+  "
+>
+  Explore Architecture
+</button>
 
         </div>
 
@@ -1436,5 +1488,6 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
         </div>
       </section>
     </main>
+  </>
   );
 }

@@ -59,8 +59,6 @@ export default function Navbar() {
               border-transparent
 
               shadow-none
-
-              backdrop-blur-0
             `
         }
       `}
@@ -76,45 +74,61 @@ export default function Navbar() {
           justify-between
         "
       >
-  <Link
-  href="https://automatewithaiagent.com"
-  className="
-    flex
-    items-center
-    shrink-0
-  "
->
-  <Image
-    src="/images/awaia-logo-desktop.webp"
-    alt="AWAIA"
-    width={1200}
-    height={380}
-    priority
-className="
-  w-[118px]
-  h-auto
-  object-contain
-"
-  />
-</Link>
+        {/* Logo */}
+
+        <Link
+          href="https://automatewithaiagent.com"
+          className="
+            flex
+            items-center
+            shrink-0
+          "
+        >
+          <Image
+            src={
+              scrolled
+                ? "/images/awaia-logo-desktop.webp"
+                : "/images/awaia-logo-white.png"
+            }
+            alt="AWAIA"
+            width={1200}
+            height={380}
+            priority
+            className="
+              w-[118px]
+              h-auto
+              object-contain
+            "
+          />
+        </Link>
+
+        {/* Navigation */}
 
         <nav
-          className="
-            hidden
-            lg:flex
+          className={`
+            flex
             items-center
             gap-6
             text-[14px]
-            text-neutral-700
-          "
+            font-medium
+            transition-colors
+            duration-300
+
+            ${
+              scrolled
+                ? "text-neutral-700"
+                : "text-white"
+            }
+          `}
         >
-          <a href="https://automatewithaiagent.com">
+          <a
+            href="https://automatewithaiagent.com"
+            className="hover:opacity-70 transition"
+          >
             Home
           </a>
 
-          <a href="https://automatewithaiagent.com/#capabilities">
-            Capabilities
-          </a>
+          {/* Solutions Dropdown */}
 
           <div
             className="relative"
@@ -126,9 +140,11 @@ className="
                 flex
                 items-center
                 gap-2
+                hover:opacity-70
+                transition
               "
             >
-              Enterprise Solutions
+              Solutions
 
               <svg
                 width="14"
@@ -154,7 +170,7 @@ className="
                   left-0
                   mt-3
 
-                  min-w-[220px]
+                  min-w-[260px]
 
                   rounded-xl
 
@@ -174,6 +190,7 @@ className="
                     block
                     px-5
                     py-3
+                    text-neutral-700
                     hover:bg-neutral-50
                   "
                 >
@@ -186,43 +203,57 @@ className="
                     block
                     px-5
                     py-3
+                    text-neutral-700
                     hover:bg-neutral-50
                   "
                 >
                   LEA
                 </Link>
+
+                <a
+                  href="https://automatewithaiagent.com/digital-workforce"
+                  className="
+                    block
+                    px-5
+                    py-3
+                    text-neutral-700
+                    hover:bg-neutral-50
+                  "
+                >
+                  Digital Workforce
+                </a>
               </div>
             )}
           </div>
 
-          <a href="https://automatewithaiagent.com/iso-iec-42001-2023/">
+          <a
+            href="https://automatewithaiagent.com/iso-iec-42001-2023/"
+            className="hover:opacity-70 transition"
+          >
             ISO/IEC 42001:2023
           </a>
 
-          <a href="https://automatewithaiagent.com/insights">
+          <Link
+            href="/request-briefing"
+            className="hover:opacity-70 transition"
+          >
+            Executive Briefing
+          </Link>
+
+          <a
+            href="https://automatewithaiagent.com/insights"
+            className="hover:opacity-70 transition"
+          >
             Insights
           </a>
 
-          <a href="https://automatewithaiagent.com/digital-workforce">
-            Digital Workforce
-          </a>
-
-          <a href="https://automatewithaiagent.com/company">
+          <a
+            href="https://automatewithaiagent.com/company"
+            className="hover:opacity-70 transition"
+          >
             Company
           </a>
         </nav>
-
-      
-
-        <button
-          className="
-            lg:hidden
-            text-sm
-            font-medium
-          "
-        >
-          Menu
-        </button>
       </div>
     </header>
   );
