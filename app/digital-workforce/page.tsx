@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -215,8 +214,6 @@ export default function DigitalWorkforcePage() {
           </Link>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }
