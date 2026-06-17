@@ -33,14 +33,18 @@ export default function ArchitectureDiagram() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="
-                  border
-                  border-neutral-200
-                  bg-white
-                  rounded-xl
-                  px-5
-                  py-4
-                  "
+className="
+border
+border-neutral-200
+bg-white
+rounded-xl
+px-5
+py-4
+hover-lift
+transition-all
+duration-300
+shadow-[0_8px_25px_rgba(15,23,42,0.04)]
+"
                 >
                   {item}
                 </div>
@@ -118,14 +122,18 @@ export default function ArchitectureDiagram() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="
-                  border
-                  border-neutral-200
-                  bg-white
-                  rounded-xl
-                  px-5
-                  py-4
-                  "
+className="
+border
+border-neutral-200
+bg-white
+rounded-xl
+px-5
+py-4
+hover-lift
+transition-all
+duration-300
+shadow-[0_8px_25px_rgba(15,23,42,0.04)]
+"
                 >
                   {item}
                 </div>

@@ -1,6 +1,7 @@
-"use client";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Shield,
   Database,
@@ -18,6 +19,85 @@ import {
   Users,
 } from "lucide-react";
 
+
+export const metadata: Metadata = {
+  title:
+    "LEA™ Legal Enforcement Assistant",
+
+  description:
+    "LEA™ is an Enterprise Investigation Intelligence and Decision Support Platform from AWAIA (Automate With AI Agent) that helps banks, NBFCs, insurers and regulated institutions accelerate response readiness for regulatory, investigative and law-enforcement requests.",
+
+  keywords: [
+    "LEA",
+    "Legal Enforcement Assistant",
+    "Investigation Intelligence",
+    "Decision Support Platform",
+    "Regulatory Intelligence",
+    "Enterprise Investigation Platform",
+    "Regulatory Response Management",
+    "Law Enforcement Requests",
+    "BFSI Compliance",
+    "Financial Crime Investigation",
+    "AML Investigation",
+    "Case Intelligence",
+    "Regulatory Technology",
+    "Enterprise Intelligence Platform",
+    "AWAIA",
+    "Automate With AI Agent",
+  ],
+
+  alternates: {
+    canonical:
+      "https://products.automatewithaiagent.com/lea",
+  },
+
+  openGraph: {
+    title:
+      "LEA™ Legal Enforcement Assistant",
+
+    description:
+      "Enterprise Investigation Intelligence and Decision Support Platform for BFSI institutions.",
+
+    url:
+      "https://products.automatewithaiagent.com/lea",
+
+    siteName:
+      "AWAIA",
+
+    type:
+      "website",
+
+    images: [
+      {
+        url:
+          "/images/lea-og.jpg",
+
+        width: 1200,
+
+        height: 630,
+
+        alt:
+          "LEA Legal Enforcement Assistant",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "LEA™ Legal Enforcement Assistant",
+
+    description:
+      "Enterprise Investigation Intelligence Platform from AWAIA.",
+
+    images: [
+      "/images/lea-og.jpg",
+    ],
+  },
+};
+
+
 export default function LeaPage() {
   const journey = [
     "Request Intake",
@@ -30,8 +110,50 @@ export default function LeaPage() {
     "Human Decision Desk",
   ];
 
-  return (
-  <>
+  
+return (
+<>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+
+        "@type": "SoftwareApplication",
+
+        name:
+          "LEA Legal Enforcement Assistant",
+
+        applicationCategory:
+          "BusinessApplication",
+
+        operatingSystem:
+          "Web",
+
+        brand: {
+          "@type": "Brand",
+          name: "AWAIA",
+        },
+
+        creator: {
+          "@type": "Organization",
+          name: "AWAIA",
+          url:
+            "https://automatewithaiagent.com",
+        },
+
+        description:
+          "Enterprise Investigation Intelligence and Decision Support Platform for regulatory, investigative and law-enforcement response readiness.",
+
+        url:
+          "https://products.automatewithaiagent.com/lea",
+      }),
+    }}
+  />
+
+  <Navbar />
+
+
     <Navbar />
 
     <main className="bg-white text-neutral-900 overflow-x-hidden">
@@ -127,32 +249,27 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 
         <div className="flex flex-col sm:flex-row gap-4 mt-10">
 
-<button
+<Link
+  href="/request-briefing"
   className="
     w-[240px]
     h-[64px]
-
     flex
     items-center
     justify-center
-
     bg-black
     text-white
-
     rounded-full
-
     text-[18px]
     font-normal
     tracking-[-0.01em]
-
     hover:scale-105
-
     transition
     duration-300
   "
 >
   Request Briefing
-</button>
+</Link>
 
 <button
   className="
@@ -183,6 +300,23 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 >
   Explore Architecture
 </button>
+
+<div className="mt-8">
+
+  <Link
+    href="/meera"
+    className="
+      text-[#3F5E8C]
+      hover:underline
+      text-lg
+      font-medium
+    "
+  >
+    Explore MEERA™ Enterprise Voice Intelligence Platform →
+  </Link>
+
+</div>
+
 
         </div>
 
@@ -1478,13 +1612,53 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 
       <section className="py-32 border-t">
         <div className="max-w-7xl mx-auto px-8 text-center">
-          <h2 className="text-5xl md:text-7xl font-light leading-[0.95] mb-8">
-            Transform Agency Requests Into Decision-Ready Response Packages.
-          </h2>
+          <h2
+  className="
+    text-5xl
+    md:text-7xl
+    leading-[0.95]
+    font-light
+    mb-8
+    max-w-6xl
+    mx-auto
+  "
+>
+  Transform Agency Requests Into
+  <br />
+  Decision-Ready Response Packages.
+</h2>
 
-          <button className="px-8 py-4 bg-black text-white rounded-full">
-            Request Executive Briefing <ArrowRight className="inline w-4 h-4 ml-2"/>
-          </button>
+<Link
+  href="/request-briefing"
+  className="
+    inline-flex
+    items-center
+    justify-center
+    px-10
+    py-5
+    bg-black
+    !text-white
+    rounded-full
+    hover:scale-105
+    transition-all
+    duration-300
+    shadow-[0_12px_40px_rgba(0,0,0,0.25)]
+  "
+>
+  <span className="!text-white">
+    Request Executive Briefing
+  </span>
+
+  <ArrowRight
+    className="
+      w-4
+      h-4
+      ml-3
+      !text-white
+      stroke-white
+    "
+  />
+</Link>
         </div>
       </section>
     </main>

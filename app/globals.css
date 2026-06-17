@@ -16,29 +16,64 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+
   background: var(--background);
   color: var(--foreground);
 
   font-family:
-  "neue-haas-grotesk-display",
-  "neue-haas-grotesk-text",
-  sans-serif;
-
-  margin: 0;
-  padding: 0;
+    "neue-haas-grotesk-display",
+    "neue-haas-grotesk-text",
+    sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #fafafa;
+
+  background-image:
+    linear-gradient(
+      rgba(15, 23, 42, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(15, 23, 42, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
 }
 
-h1,
-h2,
-h3,
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1 {
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+h2 {
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+
+h3 {
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
 h4,
 h5,
 h6 {
-  letter-spacing: -0.04em;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 a {
@@ -50,26 +85,31 @@ button {
   cursor: pointer;
 }
 
-body {
+/* ==========================================
+   DISPLAY TYPOGRAPHY
+========================================== */
 
-  background-color: #fafafa;
-
-  background-image:
-
-    linear-gradient(
-      rgba(15,23,42,0.035) 1px,
-      transparent 1px
-    ),
-
-    linear-gradient(
-      90deg,
-      rgba(15,23,42,0.035) 1px,
-      transparent 1px
-    );
-
-  background-size: 64px 64px;
-
+.display-hero {
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
 }
+
+.display-section {
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.display-card {
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
 
 .waveform-bar {
   width: 8px;
@@ -77,11 +117,11 @@ body {
   border-radius: 999px;
 
   background: linear-gradient(
-  180deg,
-  #9b8cff 0%,
-  #7c6cff 45%,
-  #5b4df7 100%
-);
+    180deg,
+    #9b8cff 0%,
+    #7c6cff 45%,
+    #5b4df7 100%
+  );
 
   transform-origin: bottom;
 
@@ -89,37 +129,59 @@ body {
 }
 
 @keyframes wave {
-
-  0%,100% {
+  0%,
+  100% {
     transform: scaleY(0.4);
   }
 
   50% {
     transform: scaleY(1.4);
   }
-
 }
 
 @keyframes floatCard {
-
-  0%,100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
 
   50% {
     transform: translateY(-8px);
   }
-
 }
 
 .float-card {
   animation: floatCard 8s ease-in-out infinite;
 }
 
+/* ==========================================
+   INTERACTIONS
+========================================== */
+
 .hover-lift {
-transition: all .35s ease;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .hover-lift:hover {
-transform: translateY(-6px);
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 35px 90px rgba(15, 23, 42, 0.12);
+}
+
+/* ==========================================
+   PREMIUM CARD SHADOWS
+========================================== */
+
+.card-shadow {
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+.card-shadow-lg {
+  box-shadow:
+    0 30px 80px rgba(15, 23, 42, 0.10);
 }

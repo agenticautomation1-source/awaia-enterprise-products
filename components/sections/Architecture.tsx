@@ -58,9 +58,19 @@ return ( <section className="py-28 border-t">
       MEERA Capabilities
     </p>
 
-    <h2 className="text-5xl font-light max-w-4xl mb-16">
-      Built for real enterprise conversations, not scripted IVRs.
-    </h2>
+    <h2
+  className="
+  text-5xl
+  md:text-6xl
+  font-light
+  tracking-[-0.045em]
+  leading-[0.95]
+  max-w-6xl
+  mb-20
+  "
+>
+  Built for real enterprise conversations, not scripted IVRs.
+</h2>
 
     <div className="grid lg:grid-cols-4 gap-10">
 
@@ -69,9 +79,17 @@ return ( <section className="py-28 border-t">
 
         return (
           <div
-            key={item.title}
-            className="hover-lift"
-          >
+  key={item.title}
+  className="
+  hover-lift
+  bg-white
+  border
+  border-neutral-200
+  rounded-[28px]
+  p-8
+  shadow-[0_15px_50px_rgba(15,23,42,0.04)]
+  "
+>
             <Icon
               size={22}
               className="text-[#3F5E8C] mb-5"

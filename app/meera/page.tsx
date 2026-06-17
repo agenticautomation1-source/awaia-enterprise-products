@@ -1,13 +1,133 @@
 import SignalBars from "@/components/ui/SignalBars";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
+import Link from "next/link";
 import InstitutionalReach from "@/components/sections/InstitutionalReach";
 import Architecture from "@/components/sections/Architecture";
 import ArchitectureDiagram from "@/components/sections/ArchitectureDiagram";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "MEERA™ Enterprise Voice Intelligence Platform",
+
+  description:
+    "MEERA™ is an enterprise voice intelligence platform delivering human-like multilingual conversations, authentication, workflow automation and secure customer engagement for banks, NBFCs, insurers and regulated enterprises.",
+
+  keywords: [
+    "MEERA",
+    "Enterprise Voice Intelligence",
+    "Conversational AI",
+    "Voice AI Platform",
+    "Banking AI",
+    "Insurance AI",
+    "NBFC AI",
+    "AI Customer Service",
+    "Enterprise AI",
+    "Voice Automation",
+    "AI Authentication",
+    "BFSI AI",
+    "AWAIA",
+    "Automate With AI Agent"
+  ],
+
+  alternates: {
+    canonical:
+      "https://products.automatewithaiagent.com/meera",
+  },
+
+  openGraph: {
+    title:
+      "MEERA™ Enterprise Voice Intelligence Platform",
+
+    description:
+      "Human-like enterprise conversations with built-in authentication, compliance and workflow automation.",
+
+    url:
+      "https://products.automatewithaiagent.com/meera",
+
+    siteName:
+      "AWAIA",
+
+    images: [
+      {
+        url:
+          "/images/meera-og.jpg",
+
+        width: 1200,
+        height: 630,
+
+        alt:
+          "MEERA Enterprise Voice Intelligence Platform",
+      },
+    ],
+
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "MEERA™ Enterprise Voice Intelligence Platform",
+
+    description:
+      "Human-like enterprise conversations with authentication, compliance and workflow automation.",
+
+    images: [
+      "/images/meera-og.jpg",
+    ],
+  },
+};
+
 export default function MeeraPage() {
   return (
-  
-    <main>
+    <>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+
+            "@type": "SoftwareApplication",
+
+            name:
+              "MEERA Enterprise Voice Intelligence Platform",
+
+            applicationCategory:
+              "BusinessApplication",
+
+            operatingSystem:
+              "Web",
+
+            brand: {
+              "@type": "Brand",
+              name: "AWAIA",
+            },
+
+            creator: {
+              "@type": "Organization",
+              name: "AWAIA",
+              url:
+                "https://automatewithaiagent.com",
+            },
+
+            description:
+              "Enterprise Voice Intelligence Platform enabling multilingual customer engagement, authentication workflows, enterprise integrations and customer operations automation.",
+
+            url:
+              "https://products.automatewithaiagent.com/meera",
+          }),
+        }}
+      />
+
+      <main>
+
+
+
   <Navbar />
   
       {/* HERO */}
@@ -203,40 +323,85 @@ export default function MeeraPage() {
 
     <div className="grid md:grid-cols-3 gap-8">
 
-      <div className="rounded-[28px] border border-neutral-200 p-8 bg-white">
-        <h3 className="text-xl mb-4">Multilingual Interaction</h3>
+  <div
+    className="
+    rounded-[28px]
+    border
+    border-neutral-200
+    p-8
+    bg-white
+    hover-lift
+    shadow-[0_15px_40px_rgba(15,23,42,0.04)]
+    hover:shadow-[0_25px_70px_rgba(15,23,42,0.10)]
+    transition-all
+    duration-500
+    "
+  >
+    <h3 className="text-xl mb-4">
+      Multilingual Interaction
+    </h3>
 
-        <ul className="space-y-3 text-neutral-600">
-          <li>✓ Hindi</li>
-          <li>✓ English</li>
-          <li>✓ Hinglish</li>
-          <li>✓ Regional Languages</li>
-        </ul>
-      </div>
+    <ul className="space-y-3 text-neutral-600">
+      <li>✓ Hindi</li>
+      <li>✓ English</li>
+      <li>✓ Hinglish</li>
+      <li>✓ Regional Languages</li>
+    </ul>
+  </div>
 
-      <div className="rounded-[28px] border border-neutral-200 p-8 bg-white">
-        <h3 className="text-xl mb-4">Conversation Intelligence</h3>
+  <div
+    className="
+    rounded-[28px]
+    border
+    border-neutral-200
+    p-8
+    bg-white
+    hover-lift
+    shadow-[0_15px_40px_rgba(15,23,42,0.04)]
+    hover:shadow-[0_25px_70px_rgba(15,23,42,0.10)]
+    transition-all
+    duration-500
+    "
+  >
+    <h3 className="text-xl mb-4">
+      Conversation Intelligence
+    </h3>
 
-        <ul className="space-y-3 text-neutral-600">
-          <li>✓ Context Awareness</li>
-          <li>✓ Interrupt Handling</li>
-          <li>✓ Natural Dialogue</li>
-          <li>✓ Dynamic Responses</li>
-        </ul>
-      </div>
+    <ul className="space-y-3 text-neutral-600">
+      <li>✓ Context Awareness</li>
+      <li>✓ Interrupt Handling</li>
+      <li>✓ Natural Dialogue</li>
+      <li>✓ Dynamic Responses</li>
+    </ul>
+  </div>
 
-      <div className="rounded-[28px] border border-neutral-200 p-8 bg-white">
-        <h3 className="text-xl mb-4">Enterprise Controls</h3>
+  <div
+    className="
+    rounded-[28px]
+    border
+    border-neutral-200
+    p-8
+    bg-white
+    hover-lift
+    shadow-[0_15px_40px_rgba(15,23,42,0.04)]
+    hover:shadow-[0_25px_70px_rgba(15,23,42,0.10)]
+    transition-all
+    duration-500
+    "
+  >
+    <h3 className="text-xl mb-4">
+      Enterprise Controls
+    </h3>
 
-        <ul className="space-y-3 text-neutral-600">
-          <li>✓ Authentication Layer</li>
-          <li>✓ Audit Logging</li>
-          <li>✓ Human Escalation</li>
-          <li>✓ Policy Validation</li>
-        </ul>
-      </div>
+    <ul className="space-y-3 text-neutral-600">
+      <li>✓ Authentication Layer</li>
+      <li>✓ Audit Logging</li>
+      <li>✓ Human Escalation</li>
+      <li>✓ Policy Validation</li>
+    </ul>
+  </div>
 
-    </div>
+</div>
 
   </div>
 
@@ -261,239 +426,303 @@ export default function MeeraPage() {
 
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      <div className="rounded-[28px] bg-white border border-neutral-200 p-8">
-        <h3 className="text-xl mb-4">Customer Service</h3>
+  <div
+    className="
+    rounded-[28px]
+    bg-white
+    border
+    border-neutral-200
+    p-8
+    hover-lift
+    shadow-[0_15px_40px_rgba(15,23,42,0.04)]
+    hover:shadow-[0_25px_70px_rgba(15,23,42,0.10)]
+    transition-all
+    duration-500
+    "
+  >
+    <h3 className="text-xl mb-4">
+      Customer Service
+    </h3>
 
-        <ul className="space-y-2 text-neutral-600">
-          <li>✓ Service Requests</li>
-          <li>✓ Complaint Handling</li>
-          <li>✓ Account Queries</li>
-          <li>✓ Ticket Creation</li>
-        </ul>
-      </div>
+    <ul className="space-y-3 text-neutral-600">
+      <li>✓ Service Requests</li>
+      <li>✓ Complaint Handling</li>
+      <li>✓ Account Queries</li>
+      <li>✓ Ticket Creation</li>
+    </ul>
+  </div>
 
-      <div className="rounded-[28px] bg-white border border-neutral-200 p-8">
-        <h3 className="text-xl mb-4">Collections</h3>
+  <div
+    className="
+    rounded-[28px]
+    bg-white
+    border
+    border-neutral-200
+    p-8
+    hover-lift
+    shadow-[0_15px_40px_rgba(15,23,42,0.04)]
+    hover:shadow-[0_25px_70px_rgba(15,23,42,0.10)]
+    transition-all
+    duration-500
+    "
+  >
+    <h3 className="text-xl mb-4">
+      Collections
+    </h3>
 
-        <ul className="space-y-2 text-neutral-600">
-          <li>✓ EMI Reminders</li>
-          <li>✓ Recovery Campaigns</li>
-          <li>✓ Payment Follow Ups</li>
-          <li>✓ Settlement Workflows</li>
-        </ul>
-      </div>
+    <ul className="space-y-3 text-neutral-600">
+      <li>✓ EMI Reminders</li>
+      <li>✓ Recovery Campaigns</li>
+      <li>✓ Payment Follow Ups</li>
+      <li>✓ Settlement Workflows</li>
+    </ul>
+  </div>
 
-      <div className="rounded-[28px] bg-white border border-neutral-200 p-8">
-        <h3 className="text-xl mb-4">Banking</h3>
+  <div
+    className="
+    rounded-[28px]
+    bg-white
+    border
+    border-neutral-200
+    p-8
+    hover-lift
+    shadow-[0_15px_40px_rgba(15,23,42,0.04)]
+    hover:shadow-[0_25px_70px_rgba(15,23,42,0.10)]
+    transition-all
+    duration-500
+    "
+  >
+    <h3 className="text-xl mb-4">
+      Banking
+    </h3>
 
-        <ul className="space-y-2 text-neutral-600">
-          <li>✓ Balance Enquiry</li>
-          <li>✓ Card Services</li>
-          <li>✓ Transaction History</li>
-          <li>✓ Service Requests</li>
-        </ul>
-      </div>
+    <ul className="space-y-3 text-neutral-600">
+      <li>✓ Balance Enquiry</li>
+      <li>✓ Card Services</li>
+      <li>✓ Transaction History</li>
+      <li>✓ Service Requests</li>
+    </ul>
+  </div>
 
-      <div className="rounded-[28px] bg-white border border-neutral-200 p-8">
-        <h3 className="text-xl mb-4">Customer Onboarding</h3>
+  <div
+    className="
+    rounded-[28px]
+    bg-white
+    border
+    border-neutral-200
+    p-8
+    hover-lift
+    shadow-[0_15px_40px_rgba(15,23,42,0.04)]
+    hover:shadow-[0_25px_70px_rgba(15,23,42,0.10)]
+    transition-all
+    duration-500
+    "
+  >
+    <h3 className="text-xl mb-4">
+      Customer Onboarding
+    </h3>
 
-        <ul className="space-y-2 text-neutral-600">
-          <li>✓ Customer Verification</li>
-          <li>✓ KYC Assistance</li>
-          <li>✓ Application Tracking</li>
-          <li>✓ Status Updates</li>
-        </ul>
-      </div>
+    <ul className="space-y-3 text-neutral-600">
+      <li>✓ Customer Verification</li>
+      <li>✓ KYC Assistance</li>
+      <li>✓ Application Tracking</li>
+      <li>✓ Status Updates</li>
+    </ul>
+  </div>
 
-    </div>
-
+</div>
   </div>
 
 </section>
 
 
 
-<section className="py-28 border-t">
+
+
+<section className="py-32 border-t">
 
   <div className="max-w-7xl mx-auto px-8">
 
-    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
+    <p className="
+      uppercase
+      tracking-[0.35em]
+      text-[11px]
+      text-[#3F5E8C]
+      mb-8
+    ">
       Enterprise Data & Security
     </p>
 
-    <h2 className="text-5xl font-light mb-16">
+    <h2 className="
+      text-5xl
+      md:text-6xl
+      font-light
+      tracking-[-0.02em]
+      leading-[1.05]
+      mb-16
+      max-w-5xl
+    ">
       Built for environments where data matters.
     </h2>
 
-    <div className="grid lg:grid-cols-3 gap-10">
+    <div className="grid lg:grid-cols-3 gap-8">
 
-      <div>
-        <h3 className="mb-4 text-xl">
+      {/* CARD 1 */}
+
+      <div
+        className="
+          bg-white
+          rounded-[32px]
+          p-10
+          border
+          border-neutral-200
+          shadow-[0_20px_60px_rgba(15,23,42,0.05)]
+          hover:-translate-y-2
+          hover:shadow-[0_30px_80px_rgba(15,23,42,0.10)]
+          transition-all
+          duration-500
+        "
+      >
+        <h3 className="text-2xl font-light mb-5">
           Customer Conversations
         </h3>
 
-        <p className="text-neutral-600">
-          Voice interactions across support, collections,
-          servicing and engagement workflows.
+        <p className="text-neutral-600 leading-relaxed">
+          Voice interactions across support,
+          collections, servicing and engagement
+          workflows.
         </p>
       </div>
 
-      <div>
-        <h3 className="mb-4 text-xl">
+      {/* CARD 2 */}
+
+      <div
+        className="
+          bg-white
+          rounded-[32px]
+          p-10
+          border
+          border-neutral-200
+          shadow-[0_20px_60px_rgba(15,23,42,0.05)]
+          hover:-translate-y-2
+          hover:shadow-[0_30px_80px_rgba(15,23,42,0.10)]
+          transition-all
+          duration-500
+        "
+      >
+        <h3 className="text-2xl font-light mb-5">
           Personally Identifiable Information
         </h3>
 
-        <p className="text-neutral-600">
-          Secure handling of customer profile and identity data.
+        <p className="text-neutral-600 leading-relaxed">
+          Secure handling of customer profile,
+          identity and regulated personal data.
         </p>
       </div>
 
-      <div>
-        <h3 className="mb-4 text-xl">
+      {/* CARD 3 */}
+
+      <div
+        className="
+          bg-white
+          rounded-[32px]
+          p-10
+          border
+          border-neutral-200
+          shadow-[0_20px_60px_rgba(15,23,42,0.05)]
+          hover:-translate-y-2
+          hover:shadow-[0_30px_80px_rgba(15,23,42,0.10)]
+          transition-all
+          duration-500
+        "
+      >
+        <h3 className="text-2xl font-light mb-5">
           Authentication Data
         </h3>
 
-        <p className="text-neutral-600">
-          OTP validation, DTMF workflows and consent capture.
+        <p className="text-neutral-600 leading-relaxed">
+          OTP validation, DTMF workflows,
+          consent capture and identity verification.
         </p>
       </div>
 
-      <div>
-        <h3 className="mb-4 text-xl">
+      {/* CARD 4 */}
+
+      <div
+        className="
+          bg-white
+          rounded-[32px]
+          p-10
+          border
+          border-neutral-200
+          shadow-[0_20px_60px_rgba(15,23,42,0.05)]
+          hover:-translate-y-2
+          hover:shadow-[0_30px_80px_rgba(15,23,42,0.10)]
+          transition-all
+          duration-500
+        "
+      >
+        <h3 className="text-2xl font-light mb-5">
           Financial Information
         </h3>
 
-        <p className="text-neutral-600">
-          Account servicing, transaction inquiries and policy workflows.
+        <p className="text-neutral-600 leading-relaxed">
+          Account servicing, transaction inquiries,
+          claims, policies and banking workflows.
         </p>
       </div>
 
-      <div>
-        <h3 className="mb-4 text-xl">
+      {/* CARD 5 */}
+
+      <div
+        className="
+          bg-white
+          rounded-[32px]
+          p-10
+          border
+          border-neutral-200
+          shadow-[0_20px_60px_rgba(15,23,42,0.05)]
+          hover:-translate-y-2
+          hover:shadow-[0_30px_80px_rgba(15,23,42,0.10)]
+          transition-all
+          duration-500
+        "
+      >
+        <h3 className="text-2xl font-light mb-5">
           Call Recordings & Transcripts
         </h3>
 
-        <p className="text-neutral-600">
-          Conversation history, summaries and audit records.
+        <p className="text-neutral-600 leading-relaxed">
+          Conversation history, transcripts,
+          summaries, actions and audit records.
         </p>
       </div>
 
-      <div>
-        <h3 className="mb-4 text-xl">
+      {/* CARD 6 */}
+
+      <div
+        className="
+          bg-white
+          rounded-[32px]
+          p-10
+          border
+          border-neutral-200
+          shadow-[0_20px_60px_rgba(15,23,42,0.05)]
+          hover:-translate-y-2
+          hover:shadow-[0_30px_80px_rgba(15,23,42,0.10)]
+          transition-all
+          duration-500
+        "
+      >
+        <h3 className="text-2xl font-light mb-5">
           Enterprise Integrations
         </h3>
 
-        <p className="text-neutral-600">
-          CRM, Core Banking, ERP and enterprise systems.
+        <p className="text-neutral-600 leading-relaxed">
+          CRM, Core Banking, ERP,
+          Knowledge Bases and enterprise platforms.
         </p>
       </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section className="py-28 border-t">
-
-  <div className="max-w-7xl mx-auto px-8">
-
-    <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
-      MEERA vs Traditional IVR
-    </p>
-
-    <h2 className="text-5xl font-light mb-16 max-w-5xl">
-      Move beyond menus, queues and scripted customer journeys.
-    </h2>
-
-    <div className="overflow-hidden rounded-[28px] border border-neutral-200 bg-white">
-
-      {/* HEADER */}
-
-      <div className="grid grid-cols-3 border-b border-neutral-200 bg-neutral-50">
-
-        <div className="p-6 font-medium">
-          Capability
-        </div>
-
-        <div className="p-6 font-medium text-neutral-500">
-          Traditional IVR
-        </div>
-
-        <div className="p-6 font-medium text-[#3F5E8C]">
-          MEERA
-        </div>
-
-      </div>
-
-      {[
-        [
-          "Customer Experience",
-          "Menu navigation",
-          "Natural conversation",
-        ],
-        [
-          "Availability",
-          "Business hour dependency",
-          "24×7×365 availability",
-        ],
-        [
-          "Language Support",
-          "Limited",
-          "Multilingual",
-        ],
-        [
-          "Authentication",
-          "Basic validation",
-          "OTP + DTMF + workflow controls",
-        ],
-        [
-          "Customer Context",
-          "Session limited",
-          "Context-aware conversations",
-        ],
-        [
-          "Workflow Execution",
-          "Not supported",
-          "Enterprise action execution",
-        ],
-        [
-          "Scalability",
-          "Additional staffing required",
-          "Scale without proportional FTE growth",
-        ],
-        [
-          "Auditability",
-          "Limited visibility",
-          "Full audit traceability",
-        ],
-      ].map((row) => (
-        <div
-          key={row[0]}
-          className="
-          grid
-          grid-cols-3
-          border-b
-          border-neutral-100
-          last:border-0
-          "
-        >
-
-          <div className="p-6 font-medium">
-            {row[0]}
-          </div>
-
-          <div className="p-6 text-neutral-500">
-            {row[1]}
-          </div>
-
-          <div className="p-6 text-neutral-700">
-            {row[2]}
-          </div>
-
-        </div>
-      ))}
 
     </div>
 
@@ -896,8 +1125,10 @@ mx-auto
       compliance controls, and implementation strategy.
     </p>
 
-<a
-  href="mailto:contact@awaia.ai"
+<div className="flex justify-center">
+  
+<Link
+  href="/request-briefing"
   className="
   inline-flex
   items-center
@@ -907,20 +1138,28 @@ mx-auto
   py-5
   rounded-full
   bg-black
+  text-white
+  font-medium
+  text-lg
   hover:scale-105
   transition-all
   duration-300
   shadow-[0_12px_40px_rgba(0,0,0,0.25)]
-  "
+"
 >
-  <span className="!text-white text-lg font-medium">
+  <span className="text-white">
     Request Executive Briefing →
   </span>
-</a>
+</Link>
 
-  </div>
+
+</div>
+</div>
 </section>
 
-    </main>
+
+        </main>
+
+    </>
   );
 }
