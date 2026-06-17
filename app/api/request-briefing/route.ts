@@ -1,10 +1,36 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
   try {
+    const resendApiKey = process.env.RESEND_API_KEY;
+
+    if (!resendApiKey) {
+      return NextResponse.json(
+        {
+          error: "Email service not configured",
+        },
+        {
+          status: 500,
+        }
+      );
+    }
+
+    const briefingEmail = process.env.BRIEFING_EMAIL;
+
+    if (!briefingEmail) {
+      return NextResponse.json(
+        {
+          error: "Recipient email not configured",
+        },
+        {
+          status: 500,
+        }
+      );
+    }
+
+    const resend = new Resend(resendApiKey);
+
     const body = await req.json();
 
     const {
@@ -25,14 +51,18 @@ export async function POST(req: Request) {
       !topics
     ) {
       return NextResponse.json(
-        { error: "All fields are required" },
-        { status: 400 }
+        {
+          error: "All fields are required",
+        },
+        {
+          status: 400,
+        }
       );
     }
 
     await resend.emails.send({
       from: "AWAIA Website <noreply@automatewithaiagent.com>",
-      to: process.env.BRIEFING_EMAIL!,
+      to: briefingEmail,
       subject: "New Executive Briefing Request",
 
       html: `
@@ -54,7 +84,7 @@ export async function POST(req: Request) {
       success: true,
     });
   } catch (error) {
-    console.error(error);
+    console.error("Executive Briefing Error:", error);
 
     return NextResponse.json(
       {
