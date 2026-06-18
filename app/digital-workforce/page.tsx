@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -36,41 +37,129 @@ export default function DigitalWorkforcePage() {
 
       {/* HERO */}
 
-      <section className="pt-40 pb-32">
-        <div className="max-w-7xl mx-auto px-8">
-          <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
-            Digital Workforce
-          </p>
+      {/* HERO */}
 
-          <h1 className="text-6xl md:text-8xl font-light leading-[0.95] max-w-6xl">
-            Designing Human + AI Operating Models
-            <br />
-            For The Agentic Enterprise.
-          </h1>
+<section className="relative min-h-screen overflow-hidden">
 
-          <p className="text-xl text-neutral-600 max-w-3xl mt-10 leading-relaxed">
-            AWAIA helps organizations design, govern and
-            operationalize Digital Workforces that combine
-            AI agents, enterprise systems and human expertise.
-          </p>
+<Image
+  src="/images/digital-workforce-hero.png"
+  alt="Digital Workforce"
+  fill
+  priority
+  className="object-cover object-[70%_center]"
+/>
 
-          <div className="flex flex-wrap gap-4 mt-12">
-            <Link
-              href="/request-briefing"
-              className="px-8 py-4 bg-black text-white rounded-full"
-            >
-              Request Executive Briefing
-            </Link>
 
-            <a
-              href="#architectures"
-              className="px-8 py-4 border border-neutral-300 rounded-full"
-            >
-              Explore Architectures
-            </a>
-          </div>
-        </div>
-      </section>
+  <>
+  <div className="absolute inset-0 bg-black/50" />
+  
+</>
+
+  <div className="relative z-10 min-h-screen flex items-center">
+    <div className="max-w-7xl mx-auto px-8 w-full">
+
+      <p
+        className="
+          uppercase
+          tracking-[0.35em]
+          text-[11px]
+          text-white/80
+          mb-8
+        "
+      >
+        DIGITAL WORKFORCE
+      </p>
+
+      <h1
+        className="
+          text-white
+          text-5xl
+          md:text-7xl
+          max-w-5xl
+          font-light
+          leading-[0.95]
+          
+        "
+      >
+        Designing Human + AI Operating Models
+        <br />
+        For The Agentic Enterprise.
+      </h1>
+
+      <p
+        className="
+          text-xl
+          text-white/80
+          max-w-2xl
+          mt-10
+          leading-relaxed
+        "
+      >
+        AWAIA helps organizations design, govern and
+        operationalize Digital Workforces that combine
+        AI agents, enterprise systems and human expertise
+        into a single operating model.
+      </p>
+
+      <div className="flex flex-wrap gap-4 mt-12">
+
+        <Link
+          href="/request-briefing"
+          className="
+            inline-flex
+            items-center
+            justify-center
+            px-8
+            py-4
+            bg-white
+            text-black
+            rounded-full
+            hover:scale-105
+            transition-all
+            duration-300
+          "
+        >
+          Schedule Executive Workshop 
+
+          <ArrowRight
+            className="
+              w-4
+              h-4
+              ml-3
+            "
+          />
+        </Link>
+
+<a
+  href="#architectures"
+  className="
+    inline-flex
+    items-center
+    justify-center
+    px-8
+    py-4
+    rounded-full
+    border
+    border-white/70
+    !text-white
+    bg-white/10
+    backdrop-blur-md
+    font-light
+    shadow-[0_8px_30px_rgba(255,255,255,0.08)]
+    hover:bg-white/20
+    hover:border-white
+    transition-all
+    duration-300
+  "
+>
+  Explore Architectures
+</a>
+      </div>
+
+    </div>
+  </div>
+
+</section>
 
       {/* WORKFORCE EVOLUTION */}
 
@@ -87,7 +176,8 @@ export default function DigitalWorkforcePage() {
               </h3>
 
               <p className="text-neutral-600">
-                Human teams operating through manual workflows and traditional enterprise systems.
+                Human teams operating through manual workflows and
+                traditional enterprise systems.
               </p>
             </div>
 
@@ -97,7 +187,8 @@ export default function DigitalWorkforcePage() {
               </h3>
 
               <p className="text-neutral-600">
-                AI-driven operational capabilities augmenting business execution.
+                AI-driven operational capabilities augmenting business
+                execution and decision-making.
               </p>
             </div>
 
@@ -107,7 +198,8 @@ export default function DigitalWorkforcePage() {
               </h3>
 
               <p className="text-neutral-600">
-                Humans, AI agents and enterprise systems working together as one operating model.
+                Humans, AI agents and enterprise systems working together
+                as a unified operating model.
               </p>
             </div>
           </div>
@@ -122,7 +214,7 @@ export default function DigitalWorkforcePage() {
       >
         <div className="max-w-7xl mx-auto px-8">
           <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
-            Reference Architectures
+            REFERENCE ARCHITECTURES
           </p>
 
           <h2 className="text-5xl font-light mb-16">
@@ -191,9 +283,9 @@ export default function DigitalWorkforcePage() {
       <section className="py-32 border-t">
         <div className="max-w-7xl mx-auto px-8 text-center">
           <h2 className="text-5xl md:text-7xl font-light mb-8 leading-[0.95]">
-            Ready To Design Your
+            Build Your Enterprise
             <br />
-            Digital Workforce?
+            Digital Workforce.
           </h2>
 
           <Link
@@ -201,19 +293,34 @@ export default function DigitalWorkforcePage() {
             className="
               inline-flex
               items-center
+              justify-center
               px-10
               py-5
               bg-black
-              text-white
+              !text-white
               rounded-full
+              hover:scale-105
+              transition-all
+              duration-300
+              shadow-[0_12px_40px_rgba(0,0,0,0.25)]
             "
           >
-            Request Executive Briefing
+            <span className="!text-white">
+              Discuss Your Digital Workforce
+            </span>
 
-            <ArrowRight className="w-4 h-4 ml-3" />
+            <ArrowRight
+              className="
+                w-4
+                h-4
+                ml-3
+                !text-white
+                stroke-white
+              "
+            />
           </Link>
         </div>
       </section>
     </>
   );
-}
+}   
