@@ -96,7 +96,7 @@ export default function RequestBriefingTestPage() {
 
         {/* HERO */}
 
-        <section className="relative min-h-screen overflow-hidden">
+        <section className="relative min-h-screen overflow-visible">
 
           <Image
             src="/images/request-briefing-v1.png"
@@ -108,9 +108,9 @@ export default function RequestBriefingTestPage() {
 
           <div className="absolute inset-0 bg-black/55" />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-8 pt-32 pb-24">
+          <div className="relative z-10 max-w-7xl mx-auto px-8 pt-32 pb-40">
 
-            <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[850px]">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
 
               {/* LEFT */}
 
@@ -138,23 +138,21 @@ export default function RequestBriefingTestPage() {
                   Executive Engagement
                 </div>
 
-                <h1
-                  className="
-                    text-white
-                    text-[4rem]
-                    md:text-[5.5rem]
-                    leading-[0.9]
-                    tracking-[-0.05em]
-                    font-light
-                  "
-                >
-                  Request An
-                  <br />
-                  Executive
-                  <br />
-                  Briefing
-                </h1>
-
+<h1
+  className="
+    text-white
+    text-[3.5rem]
+    md:text-[4.5rem]
+    leading-[0.9]
+    tracking-[-0.05em]
+    font-light
+    max-w-[800px]
+  "
+>
+  Request An Executive
+  <br />
+  Briefing
+</h1>
                 <p
                   className="
                     mt-8
@@ -182,6 +180,9 @@ export default function RequestBriefingTestPage() {
                   <div>✓ Responsible AI Adoption</div>
 
                   <div>✓ Executive Strategy Consultation</div>
+
+                  <div>✓ Enterprise AI Capability Development</div>
+                  
 
                 </div>
 
@@ -587,7 +588,7 @@ export default function RequestBriefingTestPage() {
 
   </div>
 
-</div>
+</div>  
 
 </section>
 

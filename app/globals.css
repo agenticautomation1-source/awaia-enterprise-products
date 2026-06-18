@@ -185,3 +185,21 @@ button {
   box-shadow:
     0 30px 80px rgba(15, 23, 42, 0.10);
 }
+
+/* ==========================================
+   AWAIA PREMIUM HOVER
+========================================== */
+
+.hover-lift{
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.hover-lift:hover{
+  transform:translateY(-6px);
+  border-color:#d4d4d4;
+  box-shadow:
+    0 24px 60px rgba(0,0,0,0.08);
+}

@@ -3,10 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,16 +32,22 @@ export default function Navbar() {
         ease-out
 
         ${
-          scrolled
-            ? `
-              top-5
-              left-1/2
-              -translate-x-1/2
+  scrolled
+    ? `
+      top-0
+      left-0
+      right-0
 
-              w-[82%]
-              max-w-[1400px]
+      lg:top-5
+      lg:left-1/2
+      lg:right-auto
+      lg:-translate-x-1/2
 
-              rounded-[28px]
+      w-full
+      lg:w-[82%]
+      max-w-[1400px]
+
+      lg:rounded-[28px]
 
               bg-white/82
               backdrop-blur-xl
@@ -64,11 +72,12 @@ export default function Navbar() {
       `}
     >
       <div
-        className="
-          max-w-7xl
-          mx-auto
-          px-6
-          h-14
+  className="
+    max-w-7xl
+    mx-auto
+    px-4
+    md:px-6
+    h-16
           flex
           items-center
           justify-between
@@ -95,32 +104,34 @@ export default function Navbar() {
             height={380}
             priority
             className="
-              w-[118px]
-              h-auto
-              object-contain
-            "
+  w-[105px]
+  md:w-[118px]
+  h-auto
+  object-contain
+"
           />
         </Link>
 
         {/* Navigation */}
 
         <nav
-          className={`
-            flex
-            items-center
-            gap-6
-            text-[14px]
-            font-medium
-            transition-colors
-            duration-300
+  className={`
+    hidden
+    lg:flex
+    items-center
+    gap-6
+    text-[14px]
+    font-medium
+    transition-colors
+    duration-300
 
-            ${
-              scrolled
-                ? "text-neutral-700"
-                : "text-white"
-            }
-          `}
-        >
+    ${
+      scrolled
+        ? "text-neutral-700"
+        : "text-white"
+    }
+  `}
+>
           <a
             href="https://automatewithaiagent.com"
             className="hover:opacity-70 transition"
@@ -254,7 +265,305 @@ export default function Navbar() {
             Company
           </a>
         </nav>
+
+        
+        {/* MOBILE MENU BUTTON */}
+
+{/* MOBILE MENU BUTTON */}
+
+<button
+  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+  className="
+    lg:hidden
+    fixed
+    top-4
+    right-4
+
+    w-11
+    h-11
+
+    rounded-full
+
+    bg-black
+    text-white
+
+    flex
+    items-center
+    justify-center
+
+    z-[99999]
+  "
+>
+  {mobileMenuOpen ? (
+    <X
+      size={20}
+      strokeWidth={2.5}
+      color="#ffffff"
+    />
+  ) : (
+    <Menu
+      size={20}
+      strokeWidth={2.5}
+      color="#ffffff"
+    />
+  )}
+</button>
+
+
+</div>
+
+{mobileMenuOpen && (
+  <div
+    onClick={() => setMobileMenuOpen(false)}
+className="
+  lg:hidden
+  fixed
+
+  top-0
+  right-0
+
+  h-screen
+  w-[88%]
+  max-w-[380px]
+
+bg-black/96
+backdrop-blur-xl
+
+  border-l
+  border-white/10
+
+  z-[100000]
+
+  flex
+  flex-col
+
+  shadow-[-30px_0_80px_rgba(0,0,0,0.6)]
+"
+>
+
+    {/* TOP BAR */}
+
+    <div
+      className="
+        flex
+        items-center
+        justify-between
+
+        px-6
+        pt-6
+        pb-8
+      "
+    >
+      <Image
+        src="/images/awaia-logo-white.png"
+        alt="AWAIA"
+        width={140}
+        height={40}
+        className="w-[120px] h-auto"
+      />
+
+      <button
+        onClick={() => setMobileMenuOpen(false)}
+        className="
+          w-11
+          h-11
+          rounded-full
+
+          border
+          border-white/15
+
+          flex
+          items-center
+          justify-center
+
+          text-white
+        "
+      >
+        <X className="w-5 h-5" />
+      </button>
+    </div>
+
+    {/* MENU */}
+
+<div
+  className="
+    flex-1
+    px-6
+    overflow-y-auto
+    text-white
+    opacity-100
+  "
+>
+
+  <div className="space-y-10">
+
+    <a
+      href="https://automatewithaiagent.com"
+      onClick={() => setMobileMenuOpen(false)}
+      className="
+        block
+        text-[36px]
+        leading-[0.9]
+        font-light
+        tracking-[-0.05em]
+        text-white
+      "
+    >
+      Home
+    </a>
+
+    <div>
+      <div
+        className="
+          text-[11px]
+          uppercase
+          tracking-[0.3em]
+          text-neutral-500
+          mb-5
+        "
+      >
+        Solutions
       </div>
-    </header>
+
+      <div className="space-y-5">
+
+        <Link
+          href="/meera"
+          onClick={() => setMobileMenuOpen(false)}
+          className="
+            block
+            text-[28px]
+            text-white
+            font-light
+          "
+        >
+          MEERA™
+        </Link>
+
+        <Link
+          href="/lea"
+          onClick={() => setMobileMenuOpen(false)}
+          className="
+            block
+            text-[28px]
+            text-white
+            font-light
+          "
+        >
+          LEA™
+        </Link>
+
+        <a
+          href="https://automatewithaiagent.com/digital-workforce"
+          onClick={() => setMobileMenuOpen(false)}
+          className="
+            block
+            text-[28px]
+            text-white
+            font-light
+          "
+        >
+          Digital Workforce
+        </a>
+
+      </div>
+    </div>
+
+    <a
+      href="https://automatewithaiagent.com/iso-iec-42001-2023/"
+      onClick={() => setMobileMenuOpen(false)}
+      className="
+        block
+        text-[36px]
+        leading-[0.9]
+        font-light
+        tracking-[-0.05em]
+        text-white
+      "
+    >
+      ISO/IEC 42001
+    </a>
+
+    <a
+      href="https://automatewithaiagent.com/insights"
+      onClick={() => setMobileMenuOpen(false)}
+      className="
+        block
+        text-[36px]
+        leading-[0.9]
+        font-light
+        tracking-[-0.05em]
+        text-white
+      "
+    >
+      Insights
+    </a>
+
+    <a
+      href="https://automatewithaiagent.com/company"
+      onClick={() => setMobileMenuOpen(false)}
+      className="
+        block
+        text-[36px]
+        leading-[0.9]
+        font-light
+        tracking-[-0.05em]
+        text-white
+      "
+    >
+      Company
+    </a>
+
+  </div>
+
+</div>
+
+    {/* CTA */}
+
+    <div
+      className="
+        px-6
+        pb-8
+        pt-6
+        border-t
+        border-white/10
+      "
+    >
+<Link
+  href="/request-briefing"
+  onClick={() => setMobileMenuOpen(false)}
+className="
+  flex
+  items-center
+  justify-between
+
+  rounded-full
+
+  bg-white
+
+  px-6
+  h-[60px]
+
+  font-medium
+  text-[16px]
+
+  text-[#111111]
+
+"
+>
+        <span className="text-black !text-black opacity-100">
+  Request Executive Briefing
+</span>
+
+       <span className="text-black !text-black opacity-100">
+  →
+</span>
+
+      </Link>
+    </div>
+
+  </div>
+)}
+</header>
   );
 }
