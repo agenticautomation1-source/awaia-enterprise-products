@@ -268,19 +268,52 @@ hover:border-neutral-300
               </h3>
             </div>
 
-            <div className="rounded-[32px] border border-neutral-200 p-10">
+            <div className="
+rounded-[32px]
+border
+border-neutral-200
+bg-white
+p-10
+transition-all
+duration-300
+hover:-translate-y-2
+hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+hover:border-neutral-300
+">
               <h3 className="text-3xl">
                 Human Accountability First
               </h3>
             </div>
 
-            <div className="rounded-[32px] border border-neutral-200 p-10">
+            <div className="
+rounded-[32px]
+border
+border-neutral-200
+bg-white
+p-10
+transition-all
+duration-300
+hover:-translate-y-2
+hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+hover:border-neutral-300
+">
               <h3 className="text-3xl">
                 Enterprise Integration Over Experiments
               </h3>
             </div>
 
-            <div className="rounded-[32px] border border-neutral-200 p-10">
+            <div className="
+rounded-[32px]
+border
+border-neutral-200
+bg-white
+p-10
+transition-all
+duration-300
+hover:-translate-y-2
+hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+hover:border-neutral-300
+">
               <h3 className="text-3xl">
                 Long-Term Capability Over Short-Term Tools
               </h3>
@@ -310,10 +343,22 @@ hover:border-neutral-300
               "Logistics & Supply Chain",
               "Professional Services",
             ].map((industry) => (
+              
               <div
-                key={industry}
-                className="rounded-[28px] border border-neutral-200 bg-white p-8"
-              >
+  key={industry}
+  className="
+    rounded-[28px]
+    border
+    border-neutral-200
+    bg-white
+    p-8
+    transition-all
+    duration-300
+    hover:-translate-y-2
+    hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+    hover:border-neutral-300
+  "
+>
                 <p className="text-xl">
                   {industry}
                 </p>
@@ -334,33 +379,39 @@ hover:border-neutral-300
             Why Organizations Engage AWAIA
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-y-10">
+          <div className="grid md:grid-cols-2 gap-8">
 
-            <div className="text-4xl md:text-5xl font-light">
-              Digital Workforce Design
-            </div>
+  {[
+    "Digital Workforce Design",
+    "AI Governance",
+    "ISO/IEC 42001 Readiness",
+    "Enterprise AI Architecture",
+    "Capability Development",
+    "Responsible AI Adoption",
+  ].map((item) => (
 
-            <div className="text-4xl md:text-5xl font-light">
-              AI Governance
-            </div>
+    <div
+      key={item}
+      className="
+        rounded-[32px]
+        border
+        border-neutral-200
+        bg-white
+        p-10
+        transition-all
+        duration-300
+        hover:-translate-y-2
+        hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+      "
+    >
+      <h3 className="text-4xl md:text-5xl font-light">
+        {item}
+      </h3>
+    </div>
 
-            <div className="text-4xl md:text-5xl font-light">
-              ISO/IEC 42001 Readiness
-            </div>
+  ))}
 
-            <div className="text-4xl md:text-5xl font-light">
-              Enterprise AI Architecture
-            </div>
-
-            <div className="text-4xl md:text-5xl font-light">
-              Capability Development
-            </div>
-
-            <div className="text-4xl md:text-5xl font-light">
-              Responsible AI Adoption
-            </div>
-
-          </div>
+</div>
 
         </div>
       </section>
@@ -376,9 +427,9 @@ hover:border-neutral-300
             Enterprise AI Future.
           </h2>
 
-          <Link
-            href="/request-briefing"
-            className="
+<Link
+  href="/request-briefing"
+  className="
 inline-flex
 items-center
 justify-center
@@ -393,11 +444,13 @@ duration-300
 hover:-translate-y-1
 hover:shadow-[0_20px_60px_rgba(0,0,0,0.18)]
 "
-          >
-            Request Executive Briefing
+>
+  <span className="!text-white">
+    Request Executive Briefing
+  </span>
 
-            <ArrowRight className="w-4 h-4 ml-3" />
-          </Link>
+  <ArrowRight className="w-4 h-4 ml-3 !text-white" />
+</Link>
 
         </div>
       </section>
