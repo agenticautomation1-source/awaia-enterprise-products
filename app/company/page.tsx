@@ -251,7 +251,18 @@ The Agentic Enterprise.
 
           <div className="grid md:grid-cols-2 gap-8">
 
-            <div className="rounded-[32px] border border-neutral-200 p-10">
+            <div className="
+rounded-[32px]
+border
+border-neutral-200
+bg-white
+p-10
+transition-all
+duration-300
+hover:-translate-y-2
+hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+hover:border-neutral-300
+">
               <h3 className="text-3xl">
                 Governed Before Automated
               </h3>
