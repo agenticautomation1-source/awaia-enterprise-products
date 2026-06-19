@@ -18,12 +18,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-<<<<<<< HEAD
-  matcher: ["/((?!api|_next|favicon.ico).*)"],
-};
-=======
   matcher: [
     "/((?!api|_next/static|_next/image|favicon.ico|images).*)",
   ],
 };
->>>>>>> e4d68d1 (fix: resolve LEA client component architecture and production build issues)
