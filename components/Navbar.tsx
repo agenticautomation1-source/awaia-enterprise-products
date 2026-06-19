@@ -23,54 +23,51 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`
-        fixed
-        z-[100]
-        transition-all
-        duration-500
-        ease-out
+  <header
+  className={`
+    fixed
+    z-[100]
+    transition-all
+    duration-500
+    ease-out
 
-        ${
-  scrolled
-    ? `
-      top-0
-      left-0
-      right-0
+    ${
+      scrolled
+        ? `
+          top-3
+          left-1/2
+          -translate-x-1/2
 
-      lg:top-5
-      lg:left-1/2
-      lg:right-auto
-      lg:-translate-x-1/2
+          w-[94%]
+          lg:w-[82%]
 
-      w-full
-      lg:w-[82%]
-      max-w-[1400px]
+          max-w-[1400px]
 
-      lg:rounded-[28px]
+          rounded-[18px]
+          lg:rounded-[28px]
 
-              bg-white/82
-              backdrop-blur-xl
+          bg-white/92
+          backdrop-blur-xl
 
-              border
-              border-white/50
+          border
+          border-white/50
 
-              shadow-[0_8px_30px_rgba(15,23,42,0.08)]
-            `
-            : `
-              top-0
-              left-0
-              right-0
+          shadow-[0_8px_30px_rgba(15,23,42,0.08)]
+        `
+        : `
+          top-0
+          left-0
+          right-0
 
-              bg-transparent
+          bg-transparent
 
-              border-transparent
+          border-transparent
 
-              shadow-none
-            `
-        }
-      `}
-    >
+          shadow-none
+        `
+    }
+  `}
+>
       <div
   className="
     max-w-7xl
@@ -402,10 +399,10 @@ backdrop-blur-xl
       onClick={() => setMobileMenuOpen(false)}
       className="
         block
-        text-[36px]
-        leading-[0.9]
-        font-light
-        tracking-[-0.05em]
+        text-[24px]
+leading-[1]
+font-light
+tracking-[-0.03em]
         text-white
       "
     >
@@ -474,10 +471,10 @@ backdrop-blur-xl
       onClick={() => setMobileMenuOpen(false)}
       className="
         block
-        text-[36px]
-        leading-[0.9]
-        font-light
-        tracking-[-0.05em]
+        text-[24px]
+leading-[1]
+font-light
+tracking-[-0.03em]
         text-white
       "
     >
@@ -489,10 +486,10 @@ backdrop-blur-xl
       onClick={() => setMobileMenuOpen(false)}
       className="
         block
-        text-[36px]
-        leading-[0.9]
-        font-light
-        tracking-[-0.05em]
+        text-[24px]
+leading-[1]
+font-light
+tracking-[-0.03em]
         text-white
       "
     >
@@ -504,10 +501,10 @@ backdrop-blur-xl
       onClick={() => setMobileMenuOpen(false)}
       className="
         block
-        text-[36px]
-        leading-[0.9]
-        font-light
-        tracking-[-0.05em]
+        text-[24px]
+leading-[1]
+font-light
+tracking-[-0.03em]
         text-white
       "
     >
