@@ -1,11 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
 export default function RequestBriefingTestPage() {
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -62,20 +65,22 @@ export default function RequestBriefingTestPage() {
 
       const data = await response.json();
 
-      if (data.success) {
-        alert(
-          "Thank you. Your briefing request has been submitted."
-        );
+     if (data.success) {
+  setShowSuccess(true);
 
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          company: "",
-          topics: "",
-        });
-      } else {
+  setFormData({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    company: "",
+    topics: "",
+  });
+
+  setTimeout(() => {
+    router.push("/company");
+  }, 2500);
+} else {
         alert(
           data.error ||
             "Something went wrong."
@@ -90,6 +95,62 @@ export default function RequestBriefingTestPage() {
 
   return (
     <>
+
+    {showSuccess && (
+  <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm px-6">
+
+    <div
+      className="
+      bg-white
+      max-w-md
+      w-full
+      rounded-[32px]
+      p-10
+      shadow-[0_40px_100px_rgba(0,0,0,0.18)]
+      text-center
+      "
+    >
+
+      <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-6">
+        <span className="text-3xl">✓</span>
+      </div>
+
+      <div className="text-xs tracking-[0.25em] uppercase text-[#1F3D7A] font-semibold mb-4">
+        AWAIA
+      </div>
+
+      <h3 className="text-3xl font-light text-neutral-900 mb-4">
+        Executive Briefing Request Received
+      </h3>
+
+      <p className="text-neutral-600 leading-relaxed">
+        Thank you for your interest in AWAIA.
+        Our team will review your request and
+        contact you shortly to schedule a suitable
+        discussion.
+      </p>
+
+      <button
+        onClick={() => setShowSuccess(false)}
+        className="
+        mt-8
+        w-full
+        h-12
+        rounded-full
+        bg-black
+        text-white
+        hover:opacity-90
+        transition-all
+        "
+      >
+        Return to Company
+      </button>
+
+    </div>
+
+  </div>
+)}
+
       <Navbar />
 
       <main className="bg-white">

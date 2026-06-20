@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import OrganizationSchema from "./organization-schema";
 
+import Footer from "@/components/layout/Footer";
+
 export const metadata: Metadata = {
   metadataBase: new URL(
     "https://products.automatewithaiagent.com"
@@ -190,7 +192,10 @@ export default function RootLayout({
 
 <body>
   <OrganizationSchema />
+
   {children}
+
+  <Footer />
 </body>
     </html>
   );
