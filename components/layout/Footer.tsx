@@ -143,7 +143,7 @@ font-extra  light
 
 {/* Columns */}
 
-<div className="grid md:grid-cols-4 gap-8 mb-6">
+<div className="flex justify-between mb-6">
 
   {/* Solutions */}
 
