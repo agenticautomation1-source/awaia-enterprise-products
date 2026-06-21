@@ -43,13 +43,31 @@ export default function Footer() {
 
         {/* Logo */}
 
-     <div className="mb-6 -ml-3">
-          <img
-            src="/images/awaia-logo-white.png"
-            alt="AWAIA"
-            className="h-12 w-auto"
-          />
-        </div>
+     <div className="mb-6 flex items-center gap-5">
+
+  <img
+    src="/images/awaia-logo-white.png"
+    alt="AWAIA"
+    className="h-12 w-auto"
+  />
+
+  <div className="w-px h-10 bg-white/40 mt-[5px]" />
+
+<span
+  className="
+    text-white/90
+    text-[18px]
+    font-extralight
+    tracking-[0.01em]
+    whitespace-nowrap
+    relative
+    top-[5px]
+  "
+>
+  Automate With AI Agent
+</span>
+
+</div>
 
         {/* Heading */}
 
