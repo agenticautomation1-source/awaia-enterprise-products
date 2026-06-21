@@ -93,7 +93,7 @@ export default function Navbar() {
           <Image
             src={
               scrolled
-                ? "/images/awaia-logo-full-blue.png"
+                ? "/images/awaia-logo-dark.png"
                 : "/images/awaia-logo-white.png"
             }
             alt="AWAIA"

@@ -5,7 +5,7 @@ import Link from "next/link";
 import InstitutionalReach from "@/components/sections/InstitutionalReach";
 import Architecture from "@/components/sections/Architecture";
 import ArchitectureDiagram from "@/components/sections/ArchitectureDiagram";
-import Footer from "@/components/Footer";
+import Footer from '@/components/layout/Footer';
 
 import type { Metadata } from "next";
 
