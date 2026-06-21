@@ -1582,8 +1582,7 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 </Link>
         </div>
       </section>
- <Footer />
-
+ 
 </main>
 </>
 );

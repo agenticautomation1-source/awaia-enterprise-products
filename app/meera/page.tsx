@@ -1158,9 +1158,6 @@ mx-auto
 </div>
 </section>
 
-
-        <Footer />
-
 </main>
 
 </>
