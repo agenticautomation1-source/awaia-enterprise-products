@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 
 import {
@@ -1581,7 +1582,9 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 </Link>
         </div>
       </section>
-    </main>
-  </>
-  );
+ <Footer />
+
+</main>
+</>
+);
 }

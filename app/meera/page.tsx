@@ -5,6 +5,7 @@ import Link from "next/link";
 import InstitutionalReach from "@/components/sections/InstitutionalReach";
 import Architecture from "@/components/sections/Architecture";
 import ArchitectureDiagram from "@/components/sections/ArchitectureDiagram";
+import Footer from "@/components/Footer";
 
 import type { Metadata } from "next";
 
@@ -1158,8 +1159,10 @@ mx-auto
 </section>
 
 
-        </main>
+        <Footer />
 
-    </>
-  );
+</main>
+
+</>
+);
 }
