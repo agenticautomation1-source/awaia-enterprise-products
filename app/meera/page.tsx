@@ -134,14 +134,28 @@ export default function MeeraPage() {
       {/* HERO */}
 
 
-<section className="relative min-h-screen overflow-hidden -mt-14">
+<section
+  className="
+    relative
+    min-h-[100svh]
+    overflow-hidden
+    -mt-14
+  "
+>
 
   <video
     autoPlay
     muted
     loop
     playsInline
-    className="absolute inset-0 w-full h-full object-cover"
+    className="
+      absolute
+      inset-0
+      w-full
+      h-full
+      object-cover
+      object-center
+    "
   >
     <source
       src="/videos/meera-hero.mp4"
@@ -164,49 +178,54 @@ export default function MeeraPage() {
 >
 
 <div
-  className="
-    mt-8
-    max-w-[640px]
-    bg-white/22
-    backdrop-blur-xl
-    border
-    border-white/20
-    rounded-[32px]
-    p-10
-    shadow-[0_20px_80px_rgba(0,0,0,0.15)]
-  "
+className="
+mt-12
+md:mt-16
+w-full
+max-w-[640px]
+
+mx-auto
+
+bg-white/22
+backdrop-blur-xl
+border
+border-white/20
+rounded-[32px]
+p-6 md:p-10
+shadow-[0_20px_80px_rgba(0,0,0,0.15)]
+"
 >
 
 <div
   className="
-  inline-flex
-  items-center
-  rounded-full
-  bg-white/70
-  backdrop-blur-xl
-  border
-  border-white/50
-  px-6
-  py-2
-  mb-8
-  shadow-[0_8px_30px_rgba(0,0,0,0.08)]
+    relative
+    -top-4
+
+    inline-flex
+    items-center
+    justify-center
+
+    rounded-full
+    bg-white/95
+
+    px-6
+    md:px-5
+
+    h-5
+    md:h-6
+
+    text-[8px]
+    md:text-[11px]
+
+    font-thin
+
+    tracking-[0.08em]
+    uppercase
+
+    whitespace-nowrap
   "
 >
-  <p
-    className="
-    uppercase
-    tracking-[0.10em]
-    text-[10px]
-    lg:text-[11px]
-    text-neutral-800
-    font-semibold
-    whitespace-nowrap
-    leading-none
-    m-0
-    "
-  >
-    MEERA • ENTERPRISE VOICE INTELLIGENCE PLATFORM
-  </p>
+  MEERA • ENTERPRISE VOICE INTELLIGENCE PLATFORM
 </div>
 
 
@@ -260,15 +279,20 @@ export default function MeeraPage() {
 
         <div className="mt-8 flex flex-wrap gap-3 items-center">
 
+  <div className="mt-8 flex flex-wrap gap-3 items-center">
+
   <button
     className="
-      px-7
-      py-3
+      w-[170px]
+      h-[52px]
       bg-black
       text-white
       rounded-full
       text-[15px]
       font-medium
+      flex
+      items-center
+      justify-center
       hover:scale-[1.02]
       transition-all
       duration-300
@@ -279,8 +303,8 @@ export default function MeeraPage() {
 
   <button
     className="
-      px-7
-      py-3
+      w-[170px]
+      h-[52px]
       border
       border-white/40
       rounded-full
@@ -288,6 +312,9 @@ export default function MeeraPage() {
       backdrop-blur-sm
       text-[15px]
       font-medium
+      flex
+      items-center
+      justify-center
       hover:bg-white
       transition-all
       duration-300
@@ -295,6 +322,8 @@ export default function MeeraPage() {
   >
     Explore Architecture
   </button>
+
+</div>
 
 </div>
 
