@@ -184,8 +184,6 @@ md:mt-16
 w-full
 max-w-[640px]
 
-mx-auto
-
 bg-white/22
 backdrop-blur-xl
 border
