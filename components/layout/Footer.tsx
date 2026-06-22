@@ -297,7 +297,7 @@ font-extra  light
 
       <li>
         <a
-          href="href="https://automatewithaiagent.com/privacy-policy/""
+          href="https://automatewithaiagent.com/privacy-policy/"
           style={{ color: "rgba(255,255,255,0.90)" }}
           className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
         >
@@ -307,7 +307,7 @@ font-extra  light
 
       <li>
         <a
-          href="href="https://automatewithaiagent.com/cookie-policy/""
+          href="https://automatewithaiagent.com/cookie-policy/"
           style={{ color: "rgba(255,255,255,0.90)" }}
           className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
         >
@@ -317,7 +317,7 @@ font-extra  light
 
       <li>
         <a
-          href="href="https://automatewithaiagent.com/disclaimer/""
+          href="https://automatewithaiagent.com/disclaimer/"
           style={{ color: "rgba(255,255,255,0.90)" }}
           className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
         >
