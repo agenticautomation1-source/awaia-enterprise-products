@@ -217,7 +217,7 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
     text-[8px]
     md:text-[11px]
 
-    font-thin
+    font-medium
 
     tracking-[0.08em]
     uppercase
