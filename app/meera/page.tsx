@@ -179,7 +179,7 @@ export default function MeeraPage() {
 
 <div
 className="
-mt-12
+mt-18
 md:mt-16
 w-full
 max-w-[640px]
