@@ -256,7 +256,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://automatewithaiagent.com/company"
+           href="https://company.automatewithaiagent.com"
             className="hover:opacity-70 transition"
           >
             Company
@@ -497,7 +497,7 @@ tracking-[-0.03em]
     </a>
 
     <a
-      href="https://automatewithaiagent.com/company"
+      href="https://company.automatewithaiagent.com"
       onClick={() => setMobileMenuOpen(false)}
       className="
         block

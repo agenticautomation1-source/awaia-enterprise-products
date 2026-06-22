@@ -253,7 +253,7 @@ font-extra  light
 
       <li>
         <Link
-          href="/company"
+          href="https://company.automatewithaiagent.com"
           style={{ color: "rgba(255,255,255,0.90)" }}
           className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
         >
