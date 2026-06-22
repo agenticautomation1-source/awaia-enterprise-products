@@ -197,7 +197,9 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 <div
   className="
     relative
-    -top-4
+    -top-5
+	-ml-4
+    md:ml-0
 
     inline-flex
     items-center
@@ -206,18 +208,22 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
     rounded-full
     bg-white/95
 
-    px-6
+    px-1
+	
     md:px-5
+
+    w-[240px]
+    md:w-auto
 
     h-5
     md:h-6
 
-    text-[8px]
+    text-[6px]
     md:text-[11px]
 
-    font-medium
+    font-normal
 
-    tracking-[0.08em]
+    tracking-[0.04em]
     uppercase
 
     whitespace-nowrap
@@ -225,7 +231,6 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 >
   MEERA • ENTERPRISE VOICE INTELLIGENCE PLATFORM
 </div>
-
 
 <h1 className="leading-[0.95] font-light">
 
@@ -253,7 +258,7 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
           NBFC and regulated industries.
         </p>
 
-        <div className="mt-7">
+        <div className="mt-5">
 
           <div className="text-[#2F4E7A] text-sm uppercase font-semibold tracking-[0.25em] mb-3">
             Enterprise Outcomes
@@ -275,9 +280,9 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-3 items-center">
+        <div className="mt-2 md:mt-8 flex flex-wrap gap-3 items-center">
 
-  <div className="mt-8 flex flex-wrap gap-3 items-center">
+  <div className="mt-0 flex flex-wrap gap-3 items-center">
 
   <button
     className="
@@ -322,6 +327,21 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
   </button>
 
 </div>
+
+<div className="mt-1 md:mt-4">
+  <Link
+    href="https://products.automatewithaiagent.com/lea"
+    className="
+      text-[#3F5E8C]
+      hover:underline
+      text-lg
+      font-normal
+    "
+  >
+    Explore LEA Legal Enforcement Assistant →
+  </Link>
+</div>
+
 
 </div>
 

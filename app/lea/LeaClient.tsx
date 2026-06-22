@@ -100,18 +100,24 @@ return (
 
   <div className="max-w-7xl mx-auto px-4 lg:px-0 w-full">
 
-    <div
+<div
   className="
-  max-w-[630px]
-  mt-12
-bg-white/18
-backdrop-blur-md
-border
-border-white/20
-rounded-[32px]
-p-12
-lg:p-12
-shadow-[0_20px_80px_rgba(0,0,0,0.15)]
+  max-w-[640px]
+  mt-20
+  md:mt-18
+  bg-white/18
+  backdrop-blur-xl
+
+  border
+  border-white/20
+
+  rounded-[32px]
+
+  p-10
+  lg:p-10
+lg:px-10
+lg:py-4
+  shadow-[0_20px_80px_rgba(0,0,0,0.15)]
   "
 >
 
@@ -123,10 +129,10 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
   uppercase
   tracking-[0.25em]
   text-xs
-  font-semibold
+  font-light
   text-neutral-800
   px-4
-  py-2
+  py-0.75
   rounded-full
   bg-white/60
   backdrop-blur-sm
@@ -168,75 +174,84 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
           readiness for regulatory and law-enforcement requests.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 mt-10">
+<div className="mt-10">
 
-<Link
+  <div className="flex flex-col sm:flex-row gap-4">
+
+    <Link
   href="/request-briefing"
   className="
-    w-[240px]
-    h-[64px]
+    w-[320px]
+    h-[54px]
+
     flex
     items-center
     justify-center
+
+    rounded-full
+
     bg-black
-    text-white
-    rounded-full
-    text-[18px]
-    font-normal
-    tracking-[-0.01em]
-    hover:scale-105
-    transition
-    duration-300
-  "
->
-  Request Briefing
-</Link>
-
-<button
-  className="
-    w-[240px]
-    h-[64px]
-
-    flex
-    items-center
-    justify-center
-
-    border
-    border-gray-300
-
-    rounded-full
-
-    bg-white/70
-    backdrop-blur-sm
+    !text-white
 
     text-[18px]
     font-normal
-    tracking-[-0.01em]
-
-    hover:bg-white
 
     transition-all
     duration-300
+
+    hover:scale-[1.02]
   "
 >
-  Explore Architecture
-</button>
+  <span className="!text-white">
+    Request Briefing
+  </span>
+</Link>
 
-<div className="mt-8">
+    <button
+      className="
+        w-[320px]
+        h-[54px]
 
-  <Link
-    href="/meera"
-    className="
-      text-[#3F5E8C]
-      hover:underline
-      text-lg
-      font-medium
-    "
-  >
-    Explore MEERA™ Enterprise Voice Intelligence Platform →
-  </Link>
+        flex
+        items-center
+        justify-center
 
-</div>
+        rounded-full
+
+        border
+        border-neutral-300
+
+        bg-white/85
+
+        text-neutral-900
+        text-[18px]
+
+        transition-all
+        duration-300
+
+        hover:bg-white
+      "
+    >
+      Explore Architecture
+    </button>
+
+  </div>
+
+  <div className="mt-8">
+
+    <Link
+      href="https://products.automatewithaiagent.com/meera"
+      className="
+        text-[#3F5E8C]
+        hover:underline
+        text-lg
+        font-medium
+      "
+    >
+      Explore MEERA Enterprise Voice Intelligence Platform →
+    </Link>
+
+  </div>
 
 
         </div>
