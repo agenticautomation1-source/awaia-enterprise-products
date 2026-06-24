@@ -26,7 +26,7 @@ export default function Navbar() {
   <header
   className={`
     fixed
-    z-[100]
+    z-[9999]
     transition-all
     duration-500
     ease-out
@@ -141,7 +141,7 @@ export default function Navbar() {
           <div
             className="relative"
             onMouseEnter={() => setShowSolutions(true)}
-            onMouseLeave={() => setShowSolutions(false)}
+/*            onMouseLeave={() => setShowSolutions(false)} */
           >
             <button
               className="
@@ -170,66 +170,84 @@ export default function Navbar() {
               </svg>
             </button>
 
-            {showSolutions && (
-              <div
-                className="
-                  absolute
-                  top-full
-                  left-0
-                  mt-3
+{showSolutions && (
+  <div
+    onMouseLeave={() => setShowSolutions(false)}
+    className="
+      absolute
+      top-full
+      left-0
+      pt-2
+      min-w-[280px]
+      rounded-xl
+      bg-white
+      border
+      border-neutral-200
+      shadow-[0_16px_40px_rgba(0,0,0,0.08)]
+      overflow-hidden
+      text-neutral-900
+      z-[99999]
+    "
+  >
+         		 
+				<Link
+  href="/meera"
+  className="
+    block
+    px-5
+    py-4
+    text-neutral-900
+    hover:bg-neutral-50
+  "
+>
+  <div className="font-medium">
+    MEERA™
+  </div>
 
-                  min-w-[260px]
+  <div className="mt-1 text-xs text-neutral-500">
+    Enterprise Voice Intelligence Platform
+  </div>
+</Link>
 
-                  rounded-xl
+<Link
+  href="/lea"
+  className="
+    block
+    px-5
+    py-4
+    text-neutral-900
+    hover:bg-neutral-50
+  "
+>
+  <div className="font-medium">
+    LEA™
+  </div>
 
-                  bg-white
+  <div className="mt-1 text-xs text-neutral-500">
+    Legal Enforcement Assistant
+  </div>
+</Link>
 
-                  border
-                  border-neutral-200
+<a
+  href="https://products.automatewithaiagent.com/digital-workforce"
+  className="
+    block
+    px-5
+    py-4
+    text-neutral-900
+    hover:bg-neutral-50
+  "
+>
+  <div className="font-medium">
+    Digital Workforce
+  </div>
 
-                  shadow-[0_16px_40px_rgba(0,0,0,0.08)]
-
-                  overflow-hidden
-                "
-              >
-                <Link
-                  href="/meera"
-                  className="
-                    block
-                    px-5
-                    py-3
-                    text-neutral-700
-                    hover:bg-neutral-50
-                  "
-                >
-                  MEERA
-                </Link>
-
-                <Link
-                  href="/lea"
-                  className="
-                    block
-                    px-5
-                    py-3
-                    text-neutral-700
-                    hover:bg-neutral-50
-                  "
-                >
-                  LEA
-                </Link>
-
-                <a
-                  href="https://automatewithaiagent.com/digital-workforce"
-                  className="
-                    block
-                    px-5
-                    py-3
-                    text-neutral-700
-                    hover:bg-neutral-50
-                  "
-                >
-                  Digital Workforce
-                </a>
+  <div className="mt-1 text-xs text-neutral-500">
+    AI Powered Digital Workers
+  </div>
+</a>
+				
+				
               </div>
             )}
           </div>
