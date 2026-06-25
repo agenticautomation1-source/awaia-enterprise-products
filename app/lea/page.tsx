@@ -4,10 +4,10 @@ import LeaClient from "./LeaClient";
 
 export const metadata: Metadata = {
   title:
-    "LEA™ Legal Enforcement Assistant",
+    "LEA Legal Enforcement Assistant",
 
   description:
-    "LEA™ is an Enterprise Investigation Intelligence and Decision Support Platform from AWAIA (Automate With AI Agent) that helps banks, NBFCs, insurers and regulated institutions accelerate response readiness for regulatory, investigative and law-enforcement requests.",
+    "LEA is an Enterprise Investigation Intelligence and Decision Support Platform from AWAIA (Automate With AI Agent) that helps banks, NBFCs, insurers and regulated institutions accelerate response readiness for regulatory, investigative and law-enforcement requests.",
 
   keywords: [
     "LEA",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "LEA™ Legal Enforcement Assistant",
+      "LEA Legal Enforcement Assistant",
 
     description:
       "Enterprise Investigation Intelligence and Decision Support Platform for BFSI institutions.",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "LEA™ Legal Enforcement Assistant",
+      "LEA Legal Enforcement Assistant",
 
     description:
       "Enterprise Investigation Intelligence Platform from AWAIA.",

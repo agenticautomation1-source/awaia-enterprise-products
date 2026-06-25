@@ -452,7 +452,7 @@ tracking-[-0.03em]
             font-light
           "
         >
-          MEERA™
+          MEERA
         </Link>
 
         <Link
@@ -465,7 +465,7 @@ tracking-[-0.03em]
             font-light
           "
         >
-          LEA™
+          LEA
         </Link>
 
         <a

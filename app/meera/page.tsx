@@ -11,10 +11,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "MEERA™ Enterprise Voice Intelligence Platform",
+    "MEERA Enterprise Voice Intelligence Platform",
 
   description:
-    "MEERA™ is an enterprise voice intelligence platform delivering human-like multilingual conversations, authentication, workflow automation and secure customer engagement for banks, NBFCs, insurers and regulated enterprises.",
+    "MEERA is an enterprise voice intelligence platform delivering human-like multilingual conversations, authentication, workflow automation and secure customer engagement for banks, NBFCs, insurers and regulated enterprises.",
 
   keywords: [
     "MEERA",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "MEERA™ Enterprise Voice Intelligence Platform",
+      "MEERA Enterprise Voice Intelligence Platform",
 
     description:
       "Human-like enterprise conversations with built-in authentication, compliance and workflow automation.",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "MEERA™ Enterprise Voice Intelligence Platform",
+      "MEERA Enterprise Voice Intelligence Platform",
 
     description:
       "Human-like enterprise conversations with authentication, compliance and workflow automation.",
