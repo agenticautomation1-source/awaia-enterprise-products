@@ -181,15 +181,16 @@ font-extra  light
 <div
   className="
     mb-6
-    grid
-    grid-cols-1
-    sm:grid-cols-2
-    lg:grid-cols-4
+    flex
+    flex-col
     gap-y-10
-    gap-x-12
+
+    lg:flex
+    lg:flex-row
+    lg:justify-between
+    lg:items-start
   "
 >
-
 
   {/* Solutions */}
 
