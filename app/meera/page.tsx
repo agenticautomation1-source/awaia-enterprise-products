@@ -232,7 +232,7 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
     text-[6px]
     md:text-[11px]
 
-    font-medium
+    font-semibold
 
     tracking-[0.04em]
     uppercase
