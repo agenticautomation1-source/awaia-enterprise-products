@@ -2,7 +2,12 @@ import LegalLayout from "@/components/legal/LegalLayout";
 
 export default function Page() {
   return (
-    <LegalLayout title="Disclaimer">
+
+<LegalLayout
+  title="Disclaimer"
+  heroImage="/images/disclaimer-hero.png"
+>
+
       <h2>General Information</h2>
       <p>
         Information provided on this website is for informational purposes only.
