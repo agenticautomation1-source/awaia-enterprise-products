@@ -210,7 +210,7 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 
     px-1
 	
-    md:px-5
+    md:px-3
 
     w-[240px]
     md:w-auto
@@ -221,7 +221,7 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
     text-[6px]
     md:text-[11px]
 
-    font-normal
+    font-medium
 
     tracking-[0.04em]
     uppercase
