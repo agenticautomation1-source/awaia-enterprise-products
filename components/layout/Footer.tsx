@@ -71,15 +71,20 @@ export default function Footer() {
 
 <span
   className="
-  text-white/90
-  text-[18px]
-  font-extralight
-  tracking-[0.01em]
-  leading-[1.2]
-  max-w-[135px]
-  relative
-  top-[5px]
-"
+    text-white/90
+    text-[16px]
+    lg:text-[16px]
+    md:text-[15px]
+    text-[13px]
+    leading-[1.3]
+    font-extralight
+    tracking-[0.01em]
+    whitespace-nowrap
+    md:whitespace-nowrap
+    max-[768px]:whitespace-normal
+    relative
+    top-[4px]
+  "
 >
   Automate With AI Agent
 </span>
