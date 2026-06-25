@@ -130,6 +130,7 @@ export default function DigitalWorkforcePage() {
             inline-flex
             items-center
             justify-center
+			min-w-[305px]
             px-8
             py-4
             bg-white
@@ -157,6 +158,7 @@ export default function DigitalWorkforcePage() {
     inline-flex
     items-center
     justify-center
+	min-w-[305px]
     px-8
     py-4
     rounded-full
