@@ -191,7 +191,7 @@ export default function MeeraPage() {
 <div
 className="
 mt-18
-md:mt-16
+md:mt-15
 w-full
 max-w-[640px]
 
@@ -208,8 +208,8 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 <div
   className="
     relative
-    -top-5
-	-ml-4
+    -top-3
+	-ml-1
     md:ml-0
 
     inline-flex
@@ -221,15 +221,15 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
 
     px-1
 	
-    md:px-3
+    md:px-5
 
-    w-[240px]
-    md:w-auto
+   min-w-[290px]
+md:min-w-[420px]
 
-    h-5
-    md:h-6
+    h-6
+    md:h-7
 
-    text-[8px]
+    text-[10px]
     md:text-[12px]
 
     font-light
