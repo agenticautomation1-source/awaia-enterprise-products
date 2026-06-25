@@ -315,7 +315,7 @@ const handleSubmit = async (
             </div>
 
             <div className="text-lg text-white">
-              +91 98765 43210
+              +91 7700 915294
             </div>
           </div>
 

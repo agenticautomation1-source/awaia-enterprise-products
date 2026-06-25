@@ -1,5 +1,13 @@
 import Link from "next/link";
 
+import {
+  Globe,
+  Building2,
+  ShieldCheck,
+  Sparkles,
+  BriefcaseBusiness,
+} from "lucide-react";
+
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#2b2f34]">
@@ -51,18 +59,27 @@ export default function Footer() {
     className="h-12 w-auto"
   />
 
-  <div className="w-px h-10 bg-white/40 mt-[5px]" />
+  <div
+  className="
+    w-px
+    h-10
+    bg-white/40
+    mt-[5px]
+    shrink-0
+  "
+/>
 
 <span
   className="
-    text-white/90
-    text-[18px]
-    font-extralight
-    tracking-[0.01em]
-    whitespace-nowrap
-    relative
-    top-[5px]
-  "
+  text-white/90
+  text-[18px]
+  font-extralight
+  tracking-[0.01em]
+  leading-[1.2]
+  max-w-[135px]
+  relative
+  top-[5px]
+"
 >
   Automate With AI Agent
 </span>
@@ -161,15 +178,34 @@ font-extra  light
 
 {/* Columns */}
 
-<div className="flex justify-between mb-6">
+<div
+  className="
+    mb-6
+    grid
+    grid-cols-1
+    sm:grid-cols-2
+    lg:grid-cols-4
+    gap-y-10
+    gap-x-12
+  "
+>
+
 
   {/* Solutions */}
 
-  <div>
+ <div className="min-w-0">
 
-    <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-white/70">
-      Solutions
-    </div>
+<div className="relative mb-4">
+  <Sparkles
+    size={13}
+    strokeWidth={1.6}
+    className="absolute -left-7 top-[1px] text-[#8FB8FF]"
+  />
+
+  <div className="text-[11px] uppercase tracking-[0.25em] text-white/70">
+    Solutions
+  </div>
+</div>
 
     <ul className="space-y-2">
 
@@ -179,7 +215,7 @@ font-extra  light
           style={{ color: "rgba(255,255,255,0.90)" }}
           className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
         >
-          MEERA™
+          MEERA
         </Link>
       </li>
 
@@ -189,7 +225,7 @@ font-extra  light
           style={{ color: "rgba(255,255,255,0.90)" }}
           className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
         >
-          LEA™
+          LEA
         </Link>
       </li>
 
@@ -209,11 +245,28 @@ font-extra  light
 
   {/* Advisory */}
 
-  <div>
+ <div className="min-w-0">
 
-    <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-white/70">
-      Advisory
-    </div>
+<div className="relative mb-4">
+
+  <BriefcaseBusiness
+    size={13}
+    strokeWidth={1.6}
+    className="absolute -left-7 top-[1px] text-[#8FB8FF]"
+  />
+
+  <div
+    className="
+      text-[11px]
+      uppercase
+      tracking-[0.25em]
+      text-white/70
+    "
+  >
+    Advisory
+  </div>
+
+</div>
 
     <ul className="space-y-2">
 
@@ -243,11 +296,28 @@ font-extra  light
 
   {/* Company */}
 
-  <div>
+  <div className="min-w-0">
 
-    <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-white/70">
-      Company
-    </div>
+<div className="relative mb-4">
+
+  <Building2
+    size={13}
+    strokeWidth={1.6}
+    className="absolute -left-7 top-[1px] text-[#8FB8FF]"
+  />
+
+  <div
+    className="
+      text-[11px]
+      uppercase
+      tracking-[0.25em]
+      text-white/70
+    "
+  >
+    Company
+  </div>
+
+</div>
 
     <ul className="space-y-2">
 
@@ -261,15 +331,15 @@ font-extra  light
         </Link>
       </li>
 
-      <li>
-        <a
-          href="https://automatewithaiagent.com/contact/"
-          style={{ color: "rgba(255,255,255,0.90)" }}
-          className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
-        >
-          Contact
-        </a>
-      </li>
+ <li>
+  <a
+    href="https://products.automatewithaiagent.com/contact"
+    style={{ color: "rgba(255,255,255,0.90)" }}
+    className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
+  >
+    Contact
+  </a>
+</li>
 
       <li>
         <a
@@ -287,17 +357,34 @@ font-extra  light
 
   {/* Legal */}
 
-  <div>
+  <div className="min-w-0">
 
-    <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-white/70">
-      Legal
-    </div>
+ <div className="relative mb-4">
+
+  <ShieldCheck
+    size={13}
+    strokeWidth={1.6}
+    className="absolute -left-7 top-[1px] text-[#8FB8FF]"
+  />
+
+  <div
+    className="
+      text-[11px]
+      uppercase
+      tracking-[0.25em]
+      text-white/70
+    "
+  >
+    Legal
+  </div>
+
+</div>
 
     <ul className="space-y-2">
 
       <li>
         <a
-          href="https://automatewithaiagent.com/privacy-policy/"
+          href="https://company.automatewithaiagent.com/privacy-policy"
           style={{ color: "rgba(255,255,255,0.90)" }}
           className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
         >
@@ -307,7 +394,7 @@ font-extra  light
 
       <li>
         <a
-          href="https://automatewithaiagent.com/cookie-policy/"
+          href="https://company.automatewithaiagent.com/cookie-policy"
           style={{ color: "rgba(255,255,255,0.90)" }}
           className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
         >
@@ -317,7 +404,7 @@ font-extra  light
 
       <li>
         <a
-          href="https://automatewithaiagent.com/disclaimer/"
+          href="https://company.automatewithaiagent.com/disclaimer"
           style={{ color: "rgba(255,255,255,0.90)" }}
           className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
         >
@@ -330,20 +417,40 @@ font-extra  light
   </div>
 
 </div>
-        <div className="h-px bg-white/15 mb-5" />
+        <div
+  className="mb-6 h-px"
+  style={{
+    background:
+      "linear-gradient(90deg, transparent 0%, rgba(255,255,255,.16) 20%, rgba(255,255,255,.32) 50%, rgba(255,255,255,.16) 80%, transparent 100%)",
+  }}
+/>
 
         {/* Bottom */}
 
-        <div className="grid lg:grid-cols-3 gap-4 items-center">
+        <div
+  className="
+    grid
+    grid-cols-1
+    lg:grid-cols-3
+    gap-6
+    items-center
+    text-center
+    lg:text-left
+  "
+>
 
           <div className="text-[13px] text-[#E2E8F0]">
             © 2026 AWAIA™ (Automate With AI Agent). All rights reserved.
           </div>
 
-          <div className="text-center">
+          <div className="flex justify-center">
+
 <a
   href="https://automatewithaiagent.com"
   className="
+    inline-flex
+    items-center
+    gap-2
     text-[13px]
     tracking-[0.03em]
     !text-[#E2E8F0]
@@ -351,18 +458,28 @@ font-extra  light
     transition-colors
   "
 >
+  <Globe
+    size={15}
+    strokeWidth={1.5}
+    className="text-[#8FB8FF]"
+  />
+
   automatewithaiagent.com
 </a>
+
+
+
           </div>
 
           <div
             className="
-              text-right
-              text-[10px]
-              uppercase
-              tracking-[0.22em]
-              text-[#D7DEE8]
-            "
+text-[10px]
+uppercase
+tracking-[0.22em]
+text-[#D7DEE8]
+text-center
+lg:text-right
+"
           >
             Enterprise AI • AI Governance • Digital Workforce
           </div>
