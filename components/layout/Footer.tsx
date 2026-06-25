@@ -95,16 +95,16 @@ export default function Footer() {
 
         <div className="max-w-6xl mb-8">
 
-  <h2
-    className="
-    text-[34px]
-md:text-[42px]
-leading-[1.18]
-tracking-[0em]
-font-extra  light
-      text-white
-    "
-  >
+<h2
+  className="
+    text-[30px]
+    md:text-[38px]
+    leading-[1.08]
+    tracking-[-0.02em]
+    font-light
+    text-white
+  "
+>
             Designing Human + AI Operating Models
             <br />
             For The Agentic Enterprise.
