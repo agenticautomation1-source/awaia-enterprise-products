@@ -41,14 +41,35 @@ export default function DigitalWorkforcePage() {
 
 <section className="relative min-h-screen overflow-hidden">
 
+{/* Desktop Hero */}
 <Image
   src="/images/digital-workforce-hero.png"
   alt="Digital Workforce"
   fill
   priority
-  className="object-cover object-[70%_center]"
+  sizes="100vw"
+  className="
+    hidden
+    md:block
+    object-cover
+    object-[70%_center]
+  "
 />
 
+{/* Mobile Hero */}
+<Image
+  src="/images/digital-workforce-hero-mobile.png"
+  alt="Digital Workforce"
+  fill
+  priority
+  sizes="100vw"
+  className="
+    block
+    md:hidden
+    object-cover
+    object-center
+  "
+/>
 
   <>
   <div className="absolute inset-0 bg-black/50" />
