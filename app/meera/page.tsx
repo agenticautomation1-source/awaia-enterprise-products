@@ -143,25 +143,36 @@ export default function MeeraPage() {
   "
 >
 
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="
-      absolute
-      inset-0
-      w-full
-      h-full
-      object-cover
-      object-center
-    "
-  >
-    <source
-      src="/videos/meera-hero.mp4"
-      type="video/mp4"
-    />
-  </video>
+{/* Desktop Video */}
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="hidden md:block absolute inset-0 w-full h-full object-cover"
+>
+  <source
+    src="/videos/meera-hero.mp4"
+    type="video/mp4"
+  />
+</video>
+
+{/* Mobile Video */}
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="block md:hidden absolute inset-0 w-full h-full object-cover"
+>
+  <source
+    src="/videos/meera-hero-mobile.mp4"
+    type="video/mp4"
+  />
+</video>
+
 
   <div className="absolute inset-0 bg-black/15" />
 
