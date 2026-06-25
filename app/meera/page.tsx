@@ -229,10 +229,11 @@ shadow-[0_20px_80px_rgba(0,0,0,0.15)]
     h-5
     md:h-6
 
-    text-[6px]
-    md:text-[11px]
+    text-[8px]
+    md:text-[12px]
 
-    font-semibold
+    font-light
+  
 
     tracking-[0.04em]
     uppercase
