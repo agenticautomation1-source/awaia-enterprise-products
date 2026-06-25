@@ -469,7 +469,7 @@ tracking-[-0.03em]
         </Link>
 
         <a
-          href="https://automatewithaiagent.com/digital-workforce"
+          href="https://products.automatewithaiagent.com/digital-workforce"
           onClick={() => setMobileMenuOpen(false)}
           className="
             block
