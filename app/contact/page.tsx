@@ -78,7 +78,17 @@ const handleSubmit = async (
 <Navbar />
 
      {/* HERO */}
-<section className="relative h-screen overflow-hidden">
+<section
+className="
+relative
+
+/* min-h-[950px] */
+
+xl:h-screen
+overflow-hidden
+"
+>
+
 
   {/* VIDEO */}
   <video
@@ -106,7 +116,17 @@ const handleSubmit = async (
   <div className="absolute inset-0 bg-black/35" />
 
   {/* CONTENT */}
-  <div className="relative z-20 flex h-full items-center">
+  <div
+  className="
+    relative
+    z-20
+    flex
+    h-full
+    items-start
+    pt-36
+  "
+>
+
 
     <div
   className="
@@ -135,8 +155,8 @@ const handleSubmit = async (
       <h1
         className="
           mb-8
-          text-6xl
-          md:text-[110px]
+text-[56px]
+md:text-[110px]
           font-light
           leading-[0.92]
           tracking-[-0.05em]
@@ -183,31 +203,61 @@ const handleSubmit = async (
   </div>
 
   {/* PREMIUM GLASS CONTACT CARD */}
-  <div
-    className="
-      absolute
-      bottom-2
-      right-8
-      z-30
-      hidden
-      xl:block
-    "
-  >
+ 
+<div
+  className="
+    absolute
+    z-30
 
-    <div
-      className="
+    left-1/2
+    -translate-x-1/2
+
+    bottom-24
+
+    w-[92%]
+    max-w-[360px]
+
+    xl:left-auto
+    xl:translate-x-0
+
+    xl:right-[12px]
+
+    xl:top-83
+    xl:-translate-y-[5%]
+
+    xl:bottom-auto
+
+    xl:w-[421px]
+    xl:max-w-none
+  "
+>
+
+<div
+  className="
         relative
-        w-[420px]
+        w-full
         rounded-[32px]
-        border
-        border-white/20
-        bg-white/[0.08]
-        backdrop-blur-[28px]
-        overflow-hidden
-        shadow-[0_20px_80px_rgba(0,0,0,0.45)]
-      "
-    >
 
+        border
+        border-white/15
+
+        bg-white/10
+
+        backdrop-blur-3xl
+        supports-[backdrop-filter]:bg-white/10
+        supports-[backdrop-filter]:backdrop-blur-3xl
+
+        overflow-hidden
+
+        shadow-[0_30px_80px_rgba(0,0,0,0.35)]
+        before:absolute
+        before:inset-0
+        before:bg-gradient-to-br
+        before:from-white/10
+        before:to-transparent
+        before:pointer-events-none
+      "
+>
       {/* GOLD AMBIENT GLOW */}
       <div
         className="
@@ -221,7 +271,7 @@ const handleSubmit = async (
         "
       />
 
-      <div className="relative p-7">
+		<div className="relative p-5 xl:p-7">
 
         {/* TOP */}
         <div className="flex items-start gap-5">
@@ -229,8 +279,10 @@ const handleSubmit = async (
           <div
             className="
               flex
-              h-14
-              w-14
+              h-11
+w-11
+xl:h-14
+xl:w-14
               items-center
               justify-center
               rounded-full
@@ -243,7 +295,7 @@ const handleSubmit = async (
           >
             
 			<Headset
-  size={28}
+  size={22}
   strokeWidth={1.5}
   className="text-[#d8a44d]"
 />
@@ -255,7 +307,8 @@ const handleSubmit = async (
 
             <h3
   className="
-    text-[24px]
+    text-[18px]
+xl:text-[24px]
     leading-[1.2]
     font-light
     text-white
@@ -314,7 +367,7 @@ const handleSubmit = async (
               Phone
             </div>
 
-            <div className="text-lg text-white">
+            <div className="text-base xl:text-lg text-white">
               +91 7700 915294
             </div>
           </div>
@@ -352,7 +405,7 @@ const handleSubmit = async (
               Email
             </div>
 
-            <div className="text-lg text-white">
+            <div className="text-base xl:text-lg text-white">
               contact@automatewithaiagent.com
             </div>
           </div>
@@ -390,8 +443,8 @@ const handleSubmit = async (
               Headquarters
             </div>
 
-            <div className="text-lg text-white">
-              Bengaluru, India
+            <div className="text-base xl:text-lg text-white">
+              Mumbai, India
             </div>
           </div>
 
