@@ -339,7 +339,7 @@ export default function Footer() {
 
  <li>
   <a
-    href="https://products.automatewithaiagent.com/contact"
+    href="https://company.automatewithaiagent.com/contact"
     style={{ color: "rgba(255,255,255,0.90)" }}
     className="text-[15px] font-light tracking-[-0.01em] transition-colors duration-300 hover:text-white"
   >
