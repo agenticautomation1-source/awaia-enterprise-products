@@ -224,7 +224,7 @@ overflow-hidden
     max-w-[1440px]
     px-6
 md:px-1
-mt-7
+mt-12
 xl:px-12
     text-white
   "
@@ -232,7 +232,7 @@ xl:px-12
 
       <p
   className="
-    mb-6
+    mb-8
 	md:mb-8
     text-[10px]
     uppercase
@@ -268,7 +268,7 @@ md:leading-[0.92]
 		md:text-xl
           text-white/85
 		  leading-6
-		  -mt-5
+		  -mt-3
           md:leading-relaxed
         "
       >
@@ -280,7 +280,7 @@ md:leading-[0.92]
 
 <button
   className="
-    mt-4
+    mt-5
     xl:mt-10
 
     w-[235px]
@@ -292,10 +292,10 @@ md:leading-[0.92]
     px-5
 md:px-6
 
-py-1
+py-2
 md:py-3
 
-text-[12px]
+text-[14px]
 md:text-lg
 
     font-medium
@@ -322,7 +322,7 @@ md:text-lg
     left-1/2
 -translate-x-1/2
 
-top-[28%]
+top-[34%]
 
 w-[84%]
 max-w-[335px]
@@ -382,7 +382,7 @@ max-w-[335px]
   className="
     relative
     px-5
-    py-4
+    py-5
     xl:p-7
   "
 >
@@ -458,7 +458,7 @@ tracking-[0.01em]
         <div className="my-2 h-px bg-white/15" />
 
         {/* PHONE */}
-        <div className="flex items-center gap-4 py-1 xl:py-4">
+        <div className="flex items-center gap-4 py-2 xl:py-4">
 
           <div
             className="
@@ -506,7 +506,7 @@ xl:text-xs text-white/60">
         <div className="h-px bg-white/10" />
 
         {/* EMAIL */}
-       <div className="flex items-center gap-4 py-1 xl:py-4">
+       <div className="flex items-center gap-4 py-2 xl:py-4">
 
           <div
             className="
@@ -549,7 +549,7 @@ xl:text-lg text-white">
         <div className="h-px bg-white/10" />
 
         {/* LOCATION */}
-<div className="flex items-center gap-4 py-1 xl:py-4">
+<div className="flex items-center gap-4 py-2 xl:py-4">
 
           <div
             className="
