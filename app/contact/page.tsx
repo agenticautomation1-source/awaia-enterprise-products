@@ -21,54 +21,123 @@ export default function ContactPage() {
 
 const [loading, setLoading] =
   useState(false);
+  
+  const [errors, setErrors] = useState({
+  fullName: "",
+  email: "",
+  organization: "",
+  message: "",
+});
+
+
+
+
+const [submitMessage, setSubmitMessage] = useState("");
+
+const [submitSuccess, setSubmitSuccess] = useState(false);
+
+
 
 const handleSubmit = async (
   e: React.FormEvent
 ) => {
   e.preventDefault();
 
-  try {
-    setLoading(true);
+  const newErrors = {
+    fullName: "",
+    email: "",
+    organization: "",
+    message: "",
+  };
 
-    const response = await fetch(
-      "/api/contact",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type":
-            "application/json",
-        },
-        body: JSON.stringify(
-          formData
-        ),
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(
-        "Failed"
-      );
-    }
-
-    alert(
-      "Consultation request submitted successfully."
-    );
-
-    setFormData({
-      fullName: "",
-      email: "",
-      organization: "",
-      message: "",
-    });
-  } catch (error) {
-    alert(
-      "Unable to submit request."
-    );
-  } finally {
-    setLoading(false);
+  if (!formData.fullName.trim()) {
+    newErrors.fullName = "Please enter your full name.";
   }
-};
 
+  if (!formData.email.trim()) {
+    newErrors.email = "Please enter your work email.";
+  } else if (
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
+  ) {
+    newErrors.email = "Please enter a valid email address.";
+  }
+
+  if (!formData.organization.trim()) {
+    newErrors.organization = "Please enter your organization.";
+  }
+
+  if (!formData.message.trim()) {
+    newErrors.message = "Please tell us how we can help.";
+  } else if (formData.message.trim().length < 20) {
+    newErrors.message =
+      "Please provide a little more detail (minimum 20 characters).";
+  }
+
+  setErrors(newErrors);
+
+  if (
+    Object.values(newErrors).some(
+      (error) => error !== ""
+    )
+  ) {
+    return;
+  }
+
+  try {
+  setLoading(true);
+
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  });
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(
+      result.error ||
+      "Unable to submit your consultation request."
+    );
+  }
+
+setSubmitSuccess(true);
+
+setSubmitMessage(
+  "Thank you for contacting AWAIA. A confirmation email has been sent to your registered email address. Our enterprise consulting team will respond within one business day."
+);
+
+  setFormData({
+    fullName: "",
+    email: "",
+    organization: "",
+    message: "",
+  });
+
+  setErrors({
+    fullName: "",
+    email: "",
+    organization: "",
+    message: "",
+  });
+
+} catch (error: any) {
+
+setSubmitSuccess(false);
+
+setSubmitMessage(
+  error.message ||
+  "Unable to submit your consultation request."
+);
+
+} finally {
+
+  setLoading(false);
+
+}
+};
 	
 	
 	return (
@@ -82,15 +151,24 @@ const handleSubmit = async (
 className="
 relative
 
-/* min-h-[950px] */
+min-h-[1050px]
+sm:min-h-[980px]
 
 xl:h-screen
-overflow-hidden
+
+overflow-visible
 "
 >
 
 
-  {/* VIDEO */}
+  {/* VIDEO WRAPPER */}
+<div
+  className="
+    absolute
+    inset-0
+    overflow-hidden
+  "
+>
   <video
     autoPlay
     muted
@@ -104,6 +182,7 @@ overflow-hidden
       object-cover
       scale-[1.12]
       origin-center
+      [clip-path:inset(0_0_30px_0)]
     "
   >
     <source
@@ -111,38 +190,51 @@ overflow-hidden
       type="video/mp4"
     />
   </video>
+</div>
+  
 
   {/* OVERLAY */}
   <div className="absolute inset-0 bg-black/35" />
+  
 
   {/* CONTENT */}
-  <div
+<div
   className="
     relative
     z-20
     flex
-    h-full
+    min-h-[1050px]
+md:min-h-[980px]
+xl:min-h-screen
     items-start
-    pt-36
+
+    pt-14
+
+    md:pt-30
+
+    xl:pt-36
+overflow-hidden
   "
 >
-
 
     <div
   className="
     mx-auto
     w-full
     max-w-[1440px]
-    px-10
-    xl:px-12
+    px-6
+md:px-1
+mt-7
+xl:px-12
     text-white
   "
 >
 
       <p
   className="
-    mb-8
-    text-[14px]
+    mb-6
+	md:mb-8
+    text-[10px]
     uppercase
     tracking-[0.45em]
     text-white/90
@@ -154,11 +246,13 @@ overflow-hidden
 
       <h1
         className="
-          mb-8
-text-[56px]
-md:text-[110px]
+          mb-5
+		  md:mb-12
+text-[36px]
+md:text-[100px]
           font-light
-          leading-[0.92]
+          leading-[0.88]
+md:leading-[0.92]
           tracking-[-0.05em]
         "
       >
@@ -170,9 +264,12 @@ md:text-[110px]
       <p
         className="
           max-w-3xl
-          text-xl
+          text-[13px]
+		md:text-xl
           text-white/85
-          leading-relaxed
+		  leading-6
+		  -mt-5
+          md:leading-relaxed
         "
       >
         Discuss enterprise AI systems,
@@ -181,22 +278,35 @@ md:text-[110px]
         and responsible AI adoption.
       </p>
 
-      <button
-        className="
-          mt-10
-          rounded-full
-          bg-white
-          px-8
-          py-4
-          text-black
-          text-lg
-          font-medium
-          transition
-          hover:bg-white/90
-        "
-      >
-        Schedule Discovery Call →
-      </button>
+<button
+  className="
+    mt-4
+    xl:mt-10
+
+    w-[235px]
+    md:w-auto
+
+    rounded-full
+    bg-white
+
+    px-5
+md:px-6
+
+py-1
+md:py-3
+
+text-[12px]
+md:text-lg
+
+    font-medium
+    text-black
+
+    transition
+    hover:bg-white/90
+  "
+>
+  Schedule Discovery Call →
+</button>
 
     </div>
 
@@ -210,21 +320,18 @@ md:text-[110px]
     z-30
 
     left-1/2
-    -translate-x-1/2
+-translate-x-1/2
 
-    bottom-24
+top-[28%]
 
-    w-[92%]
-    max-w-[360px]
+w-[84%]
+max-w-[335px]
 
     xl:left-auto
-    xl:translate-x-0
-
     xl:right-[12px]
-
-    xl:top-83
+    xl:top-[30%]
     xl:-translate-y-[5%]
-
+    xl:translate-x-0
     xl:bottom-auto
 
     xl:w-[421px]
@@ -271,16 +378,23 @@ md:text-[110px]
         "
       />
 
-		<div className="relative p-5 xl:p-7">
+		<div
+  className="
+    relative
+    px-5
+    py-4
+    xl:p-7
+  "
+>
 
         {/* TOP */}
-        <div className="flex items-start gap-5">
+        <div className="flex items-start gap-5 py-1 xl:py-1">
 
           <div
             className="
               flex
-              h-11
-w-11
+              h-10
+w-10
 xl:h-14
 xl:w-14
               items-center
@@ -295,7 +409,7 @@ xl:w-14
           >
             
 			<Headset
-  size={22}
+  size={18}
   strokeWidth={1.5}
   className="text-[#d8a44d]"
 />
@@ -305,16 +419,18 @@ xl:w-14
 
           <div className="flex-1">
 
-            <h3
-  className="
-    text-[18px]
+<h3
+className="
+text-[16px]
 xl:text-[24px]
-    leading-[1.2]
-    font-light
-    text-white
-    text-left
-  "
+leading-[1.35]
+font-light
+tracking-[-0.02em]
+text-white
+text-left
+"
 >
+
   Ready to discuss your
   <br />
   AI transformation journey?
@@ -322,9 +438,12 @@ xl:text-[24px]
 
      <button
   className="
-    mt-4
-    text-[#d8a44d]
-    text-[18px]
+mt-4
+text-[#d8a44d]
+text-[13px]
+xl:text-[20px]
+leading-normal
+tracking-[0.01em]
     font-light
     text-left
   "
@@ -336,16 +455,18 @@ xl:text-[24px]
 
         </div>
 
-        <div className="my-6 h-px bg-white/15" />
+        <div className="my-2 h-px bg-white/15" />
 
         {/* PHONE */}
-        <div className="flex items-center gap-4 py-3">
+        <div className="flex items-center gap-4 py-1 xl:py-4">
 
           <div
             className="
               flex
-              h-12
-              w-12
+              h-10
+              w-10
+xl:h-14
+xl:w-14
               items-center
               justify-center
               rounded-full
@@ -363,13 +484,21 @@ xl:text-[24px]
           </div>
 
           <div>
-            <div className="text-xs text-white/60">
-              Phone
+            <div className="text-[9px]
+xl:text-xs text-white/60">
+              Enterprise Contact
             </div>
 
-            <div className="text-base xl:text-lg text-white">
-              +91 7700 915294
-            </div>
+<div
+  className="
+    text-[11px]
+    xl:text-lg
+    text-white
+    whitespace-pre
+  "
+>
+  +91 7700 915294
+</div>
           </div>
 
         </div>
@@ -377,13 +506,16 @@ xl:text-[24px]
         <div className="h-px bg-white/10" />
 
         {/* EMAIL */}
-        <div className="flex items-center gap-4 py-3">
+       <div className="flex items-center gap-4 py-1 xl:py-4">
 
           <div
             className="
               flex
-              h-12
-              w-12
+h-10
+w-10
+
+xl:h-14
+xl:w-14
               items-center
               justify-center
               rounded-full
@@ -394,18 +526,20 @@ xl:text-[24px]
             "
           >
             <Mail
-  size={22}
+  size={18}
   strokeWidth={1.5}
   className="text-[#d8a44d]"
 />
           </div>
 
           <div>
-            <div className="text-xs text-white/60">
+            <div className="text-[9px]
+xl:text-xs text-white/60">
               Email
             </div>
 
-            <div className="text-base xl:text-lg text-white">
+            <div className="text-[11px]
+xl:text-lg text-white">
               contact@automatewithaiagent.com
             </div>
           </div>
@@ -415,13 +549,15 @@ xl:text-[24px]
         <div className="h-px bg-white/10" />
 
         {/* LOCATION */}
-        <div className="flex items-center gap-4 py-3">
+<div className="flex items-center gap-4 py-1 xl:py-4">
 
           <div
             className="
               flex
-              h-12
-              w-12
+              h-10
+              w-10
+xl:h-14
+xl:w-14
               items-center
               justify-center
               rounded-full
@@ -439,11 +575,13 @@ xl:text-[24px]
           </div>
 
           <div>
-            <div className="text-xs text-white/60">
+            <div className="text-[9px]
+xl:text-xs text-white/60">
               Headquarters
             </div>
 
-            <div className="text-base xl:text-lg text-white">
+            <div className="text-[11px]
+xl:text-lg text-white">
               Mumbai, India
             </div>
           </div>
@@ -458,7 +596,7 @@ xl:text-[24px]
 
 </section>
       {/* CONTACT SECTION */}
-      <section className="bg-[#f9f9f8] py-28">
+      <section className="bg-[#f9f9f8] py-20">
 
         <div className="mx-auto max-w-7xl px-8">
 
@@ -466,7 +604,8 @@ xl:text-[24px]
 
             <div>
 
-              <p className="mb-5 text-xs uppercase tracking-[0.3em] text-neutral-500">
+              <p className="mb-5 text-[9px]
+xl:text-xs uppercase tracking-[0.3em] text-neutral-500">
                 Get In Touch
               </p>
 
@@ -487,67 +626,240 @@ xl:text-[24px]
 
             </div>
 
-            <form
+
+<form
   onSubmit={handleSubmit}
   className="space-y-5"
 >
 
-  <input
-    type="text"
-    placeholder="Full Name"
-    value={formData.fullName}
-    onChange={(e) =>
-      setFormData({
-        ...formData,
-        fullName: e.target.value,
-      })
-    }
-    className="h-16 w-full rounded-2xl border border-neutral-200 px-6"
-  />
 
-  <input
-    type="email"
-    placeholder="Work Email"
-    value={formData.email}
-    onChange={(e) =>
-      setFormData({
-        ...formData,
-        email: e.target.value,
-      })
-    }
-    className="h-16 w-full rounded-2xl border border-neutral-200 px-6"
-  />
+{submitMessage && (
 
-  <input
-    type="text"
-    placeholder="Organization"
-    value={formData.organization}
-    onChange={(e) =>
-      setFormData({
-        ...formData,
-        organization: e.target.value,
-      })
-    }
-    className="h-16 w-full rounded-2xl border border-neutral-200 px-6"
-  />
+  <div
+    className={`
+      mb-6
+      rounded-3xl
+      border
+      px-6
+      py-5
+      transition-all
 
-  <textarea
-    rows={8}
-    placeholder="How can we help?"
-    value={formData.message}
-    onChange={(e) =>
-      setFormData({
-        ...formData,
-        message: e.target.value,
-      })
-    }
-    className="w-full rounded-2xl border border-neutral-200 p-6"
-  />
+      ${
+        submitSuccess
+          ? "border-emerald-200 bg-emerald-50"
+          : "border-red-200 bg-red-50"
+      }
+    `}
+  >
+
+    <h3
+      className={`
+        mb-2
+        text-lg
+        font-medium
+
+        ${
+          submitSuccess
+            ? "text-emerald-700"
+            : "text-red-700"
+        }
+      `}
+    >
+      {submitSuccess
+        ? "✓ Consultation Request Submitted"
+        : "Unable to Submit Request"}
+    </h3>
+
+    <p
+      className={`
+        text-sm
+        leading-7
+
+        ${
+          submitSuccess
+            ? "text-emerald-700"
+            : "text-red-700"
+        }
+      `}
+    >
+      {submitMessage}
+    </p>
+
+  </div>
+
+)}
+
+
+
+  {/* FULL NAME */}
+
+  <div>
+
+    <input
+      type="text"
+      placeholder="Full Name"
+      value={formData.fullName}
+      onChange={(e) =>
+        setFormData({
+          ...formData,
+          fullName: e.target.value,
+        })
+      }
+      className={`
+        h-16
+        w-full
+        rounded-2xl
+        px-6
+        transition
+        outline-none
+
+        ${
+          errors.fullName
+            ? "border border-red-500"
+            : "border border-neutral-200 focus:border-black"
+        }
+      `}
+    />
+
+    {errors.fullName && (
+      <p className="mt-2 text-sm text-red-600">
+        {errors.fullName}
+      </p>
+    )}
+
+  </div>
+
+
+  {/* EMAIL */}
+
+  <div>
+
+    <input
+      type="email"
+      placeholder="Work Email"
+      value={formData.email}
+      onChange={(e) =>
+        setFormData({
+          ...formData,
+          email: e.target.value,
+        })
+      }
+      className={`
+        h-16
+        w-full
+        rounded-2xl
+        px-6
+        transition
+        outline-none
+
+        ${
+          errors.email
+            ? "border border-red-500"
+            : "border border-neutral-200 focus:border-black"
+        }
+      `}
+    />
+
+    {errors.email && (
+      <p className="mt-2 text-sm text-red-600">
+        {errors.email}
+      </p>
+    )}
+
+  </div>
+
+
+  {/* ORGANIZATION */}
+
+  <div>
+
+    <input
+      type="text"
+      placeholder="Organization"
+      value={formData.organization}
+      onChange={(e) =>
+        setFormData({
+          ...formData,
+          organization: e.target.value,
+        })
+      }
+      className={`
+        h-16
+        w-full
+        rounded-2xl
+        px-6
+        transition
+        outline-none
+
+        ${
+          errors.organization
+            ? "border border-red-500"
+            : "border border-neutral-200 focus:border-black"
+        }
+      `}
+    />
+
+    {errors.organization && (
+      <p className="mt-2 text-sm text-red-600">
+        {errors.organization}
+      </p>
+    )}
+
+  </div>
+
+
+  {/* MESSAGE */}
+
+  <div>
+
+    <textarea
+      rows={8}
+      placeholder="How can we help?"
+      value={formData.message}
+      onChange={(e) =>
+        setFormData({
+          ...formData,
+          message: e.target.value,
+        })
+      }
+      className={`
+        w-full
+        rounded-2xl
+        p-6
+        transition
+        outline-none
+
+        ${
+          errors.message
+            ? "border border-red-500"
+            : "border border-neutral-200 focus:border-black"
+        }
+      `}
+    />
+
+    {errors.message && (
+      <p className="mt-2 text-sm text-red-600">
+        {errors.message}
+      </p>
+    )}
+
+  </div>
+
 
   <button
     type="submit"
     disabled={loading}
-    className="rounded-full bg-black px-8 py-4 text-white"
+    className="
+      rounded-full
+      bg-black
+      px-8
+      py-4
+      text-white
+      transition
+      hover:bg-neutral-800
+      disabled:cursor-not-allowed
+      disabled:opacity-60
+    "
   >
     {loading
       ? "Submitting..."
@@ -555,6 +867,7 @@ xl:text-[24px]
   </button>
 
 </form>
+
 
           </div>
 
