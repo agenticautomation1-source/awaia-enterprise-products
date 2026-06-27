@@ -224,7 +224,7 @@ overflow-hidden
     max-w-[1440px]
     px-6
 md:px-1
-mt-12
+mt-15
 xl:px-12
     text-white
   "
@@ -246,9 +246,9 @@ xl:px-12
 
       <h1
         className="
-          mb-5
+          mb-8
 		  md:mb-12
-text-[36px]
+text-[44px]
 md:text-[100px]
           font-light
           leading-[0.88]
@@ -268,7 +268,7 @@ md:leading-[0.92]
 		md:text-xl
           text-white/85
 		  leading-6
-		  -mt-3
+		  -mt-2
           md:leading-relaxed
         "
       >
@@ -280,7 +280,7 @@ md:leading-[0.92]
 
 <button
   className="
-    mt-5
+    mt-8
     xl:mt-10
 
     w-[235px]
@@ -322,7 +322,7 @@ md:text-lg
     left-1/2
 -translate-x-1/2
 
-top-[34%]
+top-[40%]
 
 w-[84%]
 max-w-[335px]
