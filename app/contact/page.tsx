@@ -549,6 +549,7 @@ xl:text-lg text-white">
         <div className="h-px bg-white/10" />
 
         {/* LOCATION */}
+		
 <div className="flex items-center gap-4 py-2 xl:py-4">
 
           <div
