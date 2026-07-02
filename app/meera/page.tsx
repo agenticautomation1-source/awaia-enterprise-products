@@ -296,47 +296,59 @@ md:min-w-[420px]
 
   <div className="mt-0 flex flex-wrap gap-3 items-center">
 
-  <button
-    className="
-      w-[170px]
-      h-[52px]
-      bg-black
-      text-white
-      rounded-full
-      text-[15px]
-      font-medium
-      flex
-      items-center
-      justify-center
-      hover:scale-[1.02]
-      transition-all
-      duration-300
-    "
-  >
-    Request Briefing
-  </button>
+  <Link
+  href="/request-briefing"
+  className="
+    w-[170px]
+    h-[52px]
+    bg-black
+    !text-white
+    no-underline
+    rounded-full
+    text-[15px]
+    font-medium
+    flex
+    items-center
+    justify-center
+    hover:!text-white
+    hover:scale-[1.02]
+    transition-all
+    duration-300
+  "
+>
+  Request Briefing
+</Link>
 
-  <button
-    className="
-      w-[170px]
-      h-[52px]
-      border
-      border-white/40
-      rounded-full
-      bg-white/80
-      backdrop-blur-sm
-      text-[15px]
-      font-medium
-      flex
-      items-center
-      justify-center
-      hover:bg-white
-      transition-all
-      duration-300
-    "
-  >
-    Explore Architecture
-  </button>
+ 
+
+
+<Link
+  href="#architecture"
+  scroll={true}
+  className="
+    w-[170px]
+    h-[52px]
+    border
+    border-white/40
+    rounded-full
+    bg-white/80
+    backdrop-blur-sm
+    text-[15px]
+    font-medium
+    flex
+    items-center
+    justify-center
+    !text-black
+    no-underline
+    hover:bg-white
+    hover:!text-black
+    transition-all
+    duration-300
+  "
+>
+  Explore Architecture
+</Link>
+
 
 </div>
 
