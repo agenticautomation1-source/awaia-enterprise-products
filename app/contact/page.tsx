@@ -278,35 +278,35 @@ md:leading-[0.92]
         and responsible AI adoption.
       </p>
 
+
 <button
+  onClick={() => {
+    window.location.href =
+      "/request-briefing";
+  }}
   className="
     mt-8
     xl:mt-10
-
     w-[235px]
     md:w-auto
-
     rounded-full
     bg-white
-
     px-5
-md:px-6
-
-py-2
-md:py-3
-
-text-[14px]
-md:text-lg
-
+    md:px-6
+    py-2
+    md:py-3
+    text-[14px]
+    md:text-lg
     font-medium
     text-black
-
     transition
     hover:bg-white/90
   "
 >
   Schedule Discovery Call →
 </button>
+
+
 
     </div>
 
@@ -629,6 +629,7 @@ xl:text-xs uppercase tracking-[0.3em] text-neutral-500">
 
 
 <form
+  id="contact-form"
   onSubmit={handleSubmit}
   className="space-y-5"
 >

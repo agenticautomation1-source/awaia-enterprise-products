@@ -52,10 +52,7 @@ items: [
 ];
 
 return (
-<section
-  id="architecture"
-  className="py-28 border-t"
->
+<section className="py-28 border-t">
   <div className="max-w-7xl mx-auto px-8">
 
     <p className="uppercase tracking-[0.35em] text-[11px] text-[#3F5E8C] mb-8">
