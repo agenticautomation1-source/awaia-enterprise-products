@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SocialSignature from "../shared/SocialSignature";
 
 import {
   Globe,
@@ -10,6 +11,8 @@ import {
 
 export default function Footer() {
   return (
+
+    <>
     <footer className="relative overflow-hidden bg-[#2b2f34]">
 
       {/* Frost / Metallic Texture */}
@@ -28,6 +31,7 @@ export default function Footer() {
           `,
         }}
       />
+
 
       {/* Ambient Glow */}
 
@@ -58,16 +62,20 @@ export default function Footer() {
     alt="AWAIA"
     className="h-12 w-auto"
   />
-
+{/*
   <div
-  className="
+   className="
     w-px
     h-10
     bg-white/40
     mt-[5px]
     shrink-0
   "
-/>
+
+  /> 
+*/}
+
+
 
 <span
   className="
@@ -86,7 +94,7 @@ export default function Footer() {
     top-[4px]
   "
 >
-  Automate With AI Agent
+  {/* Automate With AI Agent */} 
 </span>
 
 </div>
@@ -186,13 +194,11 @@ export default function Footer() {
 <div
   className="
     mb-6
-    flex
-    flex-col
+    grid
     gap-y-10
 
-    lg:flex
-    lg:flex-row
-    lg:justify-between
+    lg:grid-cols-[minmax(260px,1.55fr)_repeat(3,minmax(160px,1fr))]
+    lg:gap-x-12
     lg:items-start
   "
 >
@@ -423,15 +429,17 @@ export default function Footer() {
   </div>
 
 </div>
-        <div
-  className="mb-6 h-px"
+<SocialSignature />
+
+<div
+  className="mt-6 mb-6 h-px"
   style={{
     background:
       "linear-gradient(90deg, transparent 0%, rgba(255,255,255,.16) 20%, rgba(255,255,255,.32) 50%, rgba(255,255,255,.16) 80%, transparent 100%)",
   }}
 />
 
-        {/* Bottom */}
+{/* Bottom */}
 
         <div
   className="
@@ -446,7 +454,7 @@ export default function Footer() {
 >
 
           <div className="text-[13px] text-[#E2E8F0]">
-            © 2026 AWAIA™ (Automate With AI Agent). All rights reserved.
+            © 2026 AWAIA.  All rights reserved.
           </div>
 
           <div className="flex justify-center">
@@ -487,13 +495,20 @@ text-center
 lg:text-right
 "
           >
-            Enterprise AI • AI Governance • Digital Workforce
+             {/* Enterprise AI • AI Governance • Digital Workforce */} 
+             
           </div>
 
         </div>
 
+
       </div>
 
     </footer>
+
+
+  
+  </>
+
   );
 }

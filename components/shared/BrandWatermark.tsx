@@ -1,0 +1,31 @@
+export default function BrandWatermark() {
+  return (
+   <div
+  aria-hidden="true"
+  className="
+    absolute
+    left-1/2
+    top-1/2
+    -translate-x-1/2
+    -translate-y-[75%]
+    pointer-events-none
+    select-none
+    z-0
+  "
+>
+      <img
+        src="/images/awaia-monogram-white.png"
+        alt=""
+        className="
+          w-[300px]
+          md:w-[460px]
+          lg:w-[600px]
+          object-contain
+          opacity-[0.015]
+          blur-[0px]
+          translate-y-2
+        "
+      />
+    </div>
+  );
+}
