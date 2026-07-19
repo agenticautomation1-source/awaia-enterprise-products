@@ -1,5 +1,11 @@
 import Link from "next/link";
-import SocialSignature from "../shared/SocialSignature";
+
+import { ArrowUpRight } from "lucide-react";
+import {
+  LinkedInIcon,
+  YouTubeIcon,
+  XIcon,
+} from "@/components/shared/icons";
 
 import {
   Globe,
@@ -9,10 +15,9 @@ import {
   BriefcaseBusiness,
 } from "lucide-react";
 
+
 export default function Footer() {
   return (
-
-    <>
     <footer className="relative overflow-hidden bg-[#2b2f34]">
 
       {/* Frost / Metallic Texture */}
@@ -31,7 +36,6 @@ export default function Footer() {
           `,
         }}
       />
-
 
       {/* Ambient Glow */}
 
@@ -62,20 +66,18 @@ export default function Footer() {
     alt="AWAIA"
     className="h-12 w-auto"
   />
-{/*
+
+ {/*
   <div
-   className="
+  className="
     w-px
     h-10
     bg-white/40
     mt-[5px]
     shrink-0
   "
-
-  /> 
+/>
 */}
-
-
 
 <span
   className="
@@ -94,7 +96,7 @@ export default function Footer() {
     top-[4px]
   "
 >
-  {/* Automate With AI Agent */} 
+ {/* Automate With AI Agent*/}
 </span>
 
 </div>
@@ -194,11 +196,13 @@ export default function Footer() {
 <div
   className="
     mb-6
-    grid
+    flex
+    flex-col
     gap-y-10
 
-    lg:grid-cols-4
-    lg:gap-x-12
+    lg:flex
+    lg:flex-row
+    lg:justify-between
     lg:items-start
   "
 >
@@ -257,7 +261,7 @@ export default function Footer() {
 
   {/* Advisory */}
 
-<div className="min-w-0 lg:pl-8">
+ <div className="min-w-0">
 
 <div className="relative mb-4">
 
@@ -308,7 +312,7 @@ export default function Footer() {
 
   {/* Company */}
 
-  <div className="min-w-0 lg:pl-17">
+  <div className="min-w-0">
 
 <div className="relative mb-4">
 
@@ -369,7 +373,7 @@ export default function Footer() {
 
   {/* Legal */}
 
-  <div className="min-w-0 lg:pl-19">
+  <div className="min-w-0">
 
  <div className="relative mb-4">
 
@@ -429,17 +433,224 @@ export default function Footer() {
   </div>
 
 </div>
-<SocialSignature />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* Social Signature */}
 
 <div
-  className="mt-6 mb-6 h-px"
+  className="
+    mt-12
+
+    flex
+    flex-col
+    gap-y-6
+
+    lg:grid
+    lg:grid-cols-[2.35fr_1.35fr_1fr_0.9fr]
+    lg:items-center
+    lg:gap-x-12
+  "
+>
+
+  {/* Left Heading */}
+
+  <div className="w-full">
+    <div
+      className="
+        text-[13px]
+        uppercase
+        tracking-[0.08em]
+        text-white/60
+      "
+    >
+      CONNECT WITH AWAIA
+    </div>
+  </div>
+
+  {/* LinkedIn */}
+
+  <div className="w-full">
+  <a
+    href="https://www.linkedin.com/company/automate-with-ai-agent"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center gap-3"
+  >
+    <div className="relative flex h-11 w-11 items-center justify-center rounded-xl">
+
+      <div
+        className="
+          absolute
+          inset-0
+          rounded-xl
+          bg-[#9EC8FF]/[0.05]
+          blur-xl
+          opacity-50
+          transition-all
+          duration-300
+          group-hover:bg-white/[0.08]
+          group-hover:opacity-100
+        "
+      />
+
+      <div
+        className="
+          relative
+          flex
+          h-11
+          w-11
+          items-center
+          justify-center
+          rounded-xl
+          border
+          border-white/6
+        "
+      >
+        <LinkedInIcon className="h-5 w-5 text-white/80" />
+      </div>
+
+    </div>
+
+    <span className="text-[15px] text-white">LinkedIn</span>
+
+    <ArrowUpRight className="h-4 w-4 text-white/30 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />
+  </a>
+</div>
+
+  {/* YouTube */}
+<div className="w-full">
+  <a
+    href="https://www.youtube.com/@AutomateWithAIAgent"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center gap-3"
+  >
+    <div className="relative flex h-11 w-11 items-center justify-center rounded-xl">
+
+      <div
+        className="
+          absolute
+          inset-0
+          rounded-xl
+          bg-[#9EC8FF]/[0.05]
+          blur-xl
+          opacity-50
+          transition-all
+          duration-300
+          group-hover:bg-white/[0.08]
+          group-hover:opacity-100
+        "
+      />
+
+      <div
+        className="
+          relative
+          flex
+          h-11
+          w-11
+          items-center
+          justify-center
+          rounded-xl
+          border
+          border-white/6
+        "
+      >
+        <YouTubeIcon className="h-5 w-5 text-white/80" />
+      </div>
+
+    </div>
+
+    <span className="text-[15px] text-white">YouTube</span>
+
+    <ArrowUpRight className="h-4 w-4 text-white/30 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />
+  </a>
+</div>
+  {/* X */}
+
+<div className="w-full">
+  <a
+    href="https://x.com/AutomateWithAI"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center gap-3"
+  >
+    <div className="relative flex h-11 w-11 items-center justify-center rounded-xl">
+
+      <div
+        className="
+          absolute
+          inset-0
+          rounded-xl
+          bg-[#9EC8FF]/[0.05]
+          blur-xl
+          opacity-50
+          transition-all
+          duration-300
+          group-hover:bg-white/[0.08]
+          group-hover:opacity-100
+        "
+      />
+
+      <div
+        className="
+          relative
+          flex
+          h-11
+          w-11
+          items-center
+          justify-center
+          rounded-xl
+          border
+          border-white/6
+        "
+      >
+        <XIcon className="h-5 w-5 text-white/80" />
+      </div>
+
+    </div>
+
+    <span className="text-[15px] text-white">X</span>
+
+    <ArrowUpRight className="h-4 w-4 text-white/30 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white" />
+  </a>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div
+  className="mb-6 h-px"
   style={{
     background:
       "linear-gradient(90deg, transparent 0%, rgba(255,255,255,.16) 20%, rgba(255,255,255,.32) 50%, rgba(255,255,255,.16) 80%, transparent 100%)",
   }}
 />
 
-{/* Bottom */}
+        {/* Bottom */}
 
         <div
   className="
@@ -454,7 +665,7 @@ export default function Footer() {
 >
 
           <div className="text-[13px] text-[#E2E8F0]">
-            © 2026 AWAIA.  All rights reserved.
+            © 2026 AWAIA. All rights reserved.
           </div>
 
           <div className="flex justify-center">
@@ -495,20 +706,13 @@ text-center
 lg:text-right
 "
           >
-             {/* Enterprise AI • AI Governance • Digital Workforce */} 
-             
+            Enterprise AI • AI Governance • Digital Workforce
           </div>
 
         </div>
 
-
       </div>
 
     </footer>
-
-
-  
-  </>
-
   );
 }

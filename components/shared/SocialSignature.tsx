@@ -40,7 +40,7 @@ export default function SocialSignature() {
           md:grid-cols-2
           md:gap-x-10
 
-          lg:grid-cols-[minmax(260px,1.55fr)_repeat(3,minmax(160px,1fr))]
+          lg:grid-cols-4
           lg:gap-x-12
           lg:items-center
         "
@@ -63,90 +63,209 @@ export default function SocialSignature() {
 
         {/* Social Links */}
 
-        {socials.map(({ name, href, Icon }) => (
-          <a
-            key={name}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              group
-              flex
-              items-center
-              gap-3
-              py-2
-              transition-all
-              duration-300
-            "
-          >
-            {/* Icon */}
+        <div className="lg:pl-8">
+  <a
+    href="https://www.linkedin.com/company/automate-with-ai-agent"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center gap-3 py-2 transition-all duration-300"
+  >
+    <div className="relative flex h-11 w-11 items-center justify-center rounded-xl">
 
-            <div className="relative flex h-11 w-11 items-center justify-center rounded-xl">
-              {/* Glow */}
+      <div
+        className="
+          absolute
+          inset-0
+          rounded-xl
+          bg-[#9EC8FF]/[0.05]
+          blur-xl
+          opacity-50
+          transition-all
+          duration-300
+          group-hover:bg-white/[0.08]
+          group-hover:opacity-100
+        "
+      />
 
-              <div
-                className="
-                  absolute
-                  inset-0
-                  rounded-xl
-                  bg-[#9EC8FF]/[0.05]
-                  blur-xl
-                  opacity-50
-                  transition-all
-                  duration-300
-                  group-hover:bg-white/[0.08]
-                  group-hover:opacity-100
-                "
-              />
+      <div
+        className="
+          relative
+          flex
+          h-11
+          w-11
+          items-center
+          justify-center
+          rounded-xl
+          border
+          border-white/6
+        "
+      >
+        <LinkedInIcon className="h-5 w-5 text-white/80" />
+      </div>
 
-              {/* Icon Container */}
+    </div>
 
-              <div
-                className="
-                  relative
-                  flex
-                  h-11
-                  w-11
-                  items-center
-                  justify-center
-                  rounded-xl
-                  border
-                  border-white/6
-                "
-              >
-                <Icon className="h-5 w-5 text-white/80" />
-              </div>
-            </div>
+    <div className="flex items-center gap-2">
 
-            {/* Text */}
+      <span
+        className="text-[15px] text-white"
+        style={{
+          fontFamily:
+            '"Neue Haas Grotesk Display Pro","Avenir Next","Helvetica Neue",sans-serif',
+          fontWeight: 400,
+        }}
+      >
+        LinkedIn
+      </span>
 
-            <div className="flex items-center gap-2">
-              <span
-                className="text-[15px] text-white"
-                style={{
-                  fontFamily:
-                    '"Neue Haas Grotesk Display Pro","Avenir Next","Helvetica Neue",sans-serif',
-                  fontWeight: 400,
-                }}
-              >
-                {name}
-              </span>
+      <ArrowUpRight className="h-4 w-4 text-white/30 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" />
 
-              <ArrowUpRight
-                className="
-                  h-4
-                  w-4
-                  text-white/30
-                  transition-all
-                  duration-300
-                  group-hover:-translate-y-0.5
-                  group-hover:translate-x-0.5
-                  group-hover:text-white
-                "
-              />
-            </div>
-          </a>
-        ))}
+    </div>
+
+  </a>
+</div>
+
+
+<div className="lg:pl-17">
+  <a
+    href="https://www.youtube.com/@AutomateWithAIAgent"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center gap-3 py-2 transition-all duration-300"
+  >
+    <div className="relative flex h-11 w-11 items-center justify-center rounded-xl">
+      {/* Glow */}
+      <div
+        className="
+          absolute
+          inset-0
+          rounded-xl
+          bg-[#9EC8FF]/[0.05]
+          blur-xl
+          opacity-50
+          transition-all
+          duration-300
+          group-hover:bg-white/[0.08]
+          group-hover:opacity-100
+        "
+      />
+
+      {/* Icon Container */}
+      <div
+        className="
+          relative
+          flex
+          h-11
+          w-11
+          items-center
+          justify-center
+          rounded-xl
+          border
+          border-white/6
+        "
+      >
+        <YouTubeIcon className="h-5 w-5 text-white/80" />
+      </div>
+    </div>
+
+    <div className="flex items-center gap-2">
+      <span
+        className="text-[15px] text-white"
+        style={{
+          fontFamily:
+            '"Neue Haas Grotesk Display Pro","Avenir Next","Helvetica Neue",sans-serif',
+          fontWeight: 400,
+        }}
+      >
+        YouTube
+      </span>
+
+      <ArrowUpRight
+        className="
+          h-4
+          w-4
+          text-white/30
+          transition-all
+          duration-300
+          group-hover:-translate-y-0.5
+          group-hover:translate-x-0.5
+          group-hover:text-white
+        "
+      />
+    </div>
+  </a>
+</div>
+
+
+<div className="lg:pl-19">
+  <a
+    href="https://x.com/AutomateWithAI"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center gap-3 py-2 transition-all duration-300"
+  >
+    <div className="relative flex h-11 w-11 items-center justify-center rounded-xl">
+      {/* Glow */}
+      <div
+        className="
+          absolute
+          inset-0
+          rounded-xl
+          bg-[#9EC8FF]/[0.05]
+          blur-xl
+          opacity-50
+          transition-all
+          duration-300
+          group-hover:bg-white/[0.08]
+          group-hover:opacity-100
+        "
+      />
+
+      {/* Icon Container */}
+      <div
+        className="
+          relative
+          flex
+          h-11
+          w-11
+          items-center
+          justify-center
+          rounded-xl
+          border
+          border-white/6
+        "
+      >
+        <XIcon className="h-5 w-5 text-white/80" />
+      </div>
+    </div>
+
+    <div className="flex items-center gap-2">
+      <span
+        className="text-[15px] text-white"
+        style={{
+          fontFamily:
+            '"Neue Haas Grotesk Display Pro","Avenir Next","Helvetica Neue",sans-serif',
+          fontWeight: 400,
+        }}
+      >
+        X
+      </span>
+
+      <ArrowUpRight
+        className="
+          h-4
+          w-4
+          text-white/30
+          transition-all
+          duration-300
+          group-hover:-translate-y-0.5
+          group-hover:translate-x-0.5
+          group-hover:text-white
+        "
+      />
+    </div>
+  </a>
+</div>
       </div>
     </section>
   );
