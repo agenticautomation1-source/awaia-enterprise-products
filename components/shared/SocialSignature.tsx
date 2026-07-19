@@ -199,7 +199,7 @@ export default function SocialSignature() {
 
 <div className="lg:pl-19">
   <a
-    href="https://x.com/AutomateWithAI"
+    href="https://x.com/awaia_ai"
     target="_blank"
     rel="noopener noreferrer"
     className="group flex items-center gap-3 py-2 transition-all duration-300"
